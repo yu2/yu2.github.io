@@ -11,9 +11,13 @@ button#b1 {
 }
 
 button#b2 {
-  background-color: mistyrose;
+  background-color: tomato;
 }
 
 button#b3 {
-  background-color: palegreen;
+  background-color: royalblue;
+}
+
+button#b4 {
+  background-color: gold;
 }
