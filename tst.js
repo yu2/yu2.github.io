@@ -10,3 +10,7 @@ function counter() {
   x++;
   document.getElementById("description").innerHTML = x;
 }
+
+function counterReset() {
+  x = 0;
+}
