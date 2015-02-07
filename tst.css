@@ -5,3 +5,11 @@ body {
 button {
   background-color: springgreen;
 }
+
+button#b1 {
+  background-color: mistyrose;
+}
+
+button#b2 {
+  background-color: tomato;
+}
