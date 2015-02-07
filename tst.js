@@ -15,3 +15,15 @@ function counterReset() {
   x = 0;
   document.getElementById("body").innerHTML = x;
 }
+
+function colour1() {
+  document.body.style.backgroundColor = mistyrose;
+}
+
+function colour2() {
+  document.body.style.backgroundColor = tomato;
+}
+
+function colour3() {
+  document.body.style.backgroundColor = royalblue;
+}
