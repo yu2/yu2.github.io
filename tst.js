@@ -16,14 +16,14 @@ function counterReset() {
   document.getElementById("body").innerHTML = x;
 }
 
-function colourone() {
+function colour1() {
   document.body.style.backgroundColor = "mistyrose";
 }
 
 function colour2() {
-  document.body.style.backgroundColor = tomato;
+  document.body.style.backgroundColor = "tomato";
 }
 
 function colour3() {
-  document.body.style.backgroundColor = royalblue;
+  document.body.style.backgroundColor = "royalblue"";
 }
