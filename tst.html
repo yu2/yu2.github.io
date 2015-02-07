@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-</head>
+  <head>
+  </head>
 
-<body>
-<h1>text</h1>
-<script>
-  confirm("I exist")
-</script>
-</body>
+  <body>
+  
+    <h1 id="main">text</h1>
+    
+     <button type="button" onclick="myFunction()">Confirm</button>
+    
+     <script>
+      function myFunction() {
+        document.getElementByID("main").innerHTML = "I exist";
+      }
+      </script>
+  
+    
+  </body>
+  
 </html>
