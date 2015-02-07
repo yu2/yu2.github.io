@@ -16,7 +16,7 @@ function counterReset() {
   document.getElementById("body").innerHTML = x;
 }
 
-function colour1() {
+function colourone() {
   document.body.style.backgroundColor = mistyrose;
 }
 
