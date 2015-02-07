@@ -21,9 +21,13 @@ function colour1() {
 }
 
 function colour2() {
-  document.body.style.backgroundColor = "mistyrose";
+  document.body.style.backgroundColor = "tomato";
 }
 
 function colour3() {
-  document.body.style.backgroundColor = "palegreen";
+  document.body.style.backgroundColor = "royalblue";
+}
+
+function colour4() {
+  document.body.style.backgroundColor = "gold";
 }
