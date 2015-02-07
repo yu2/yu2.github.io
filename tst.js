@@ -25,5 +25,5 @@ function colour2() {
 }
 
 function colour3() {
-  document.body.style.backgroundColor = "royalblue"";
+  document.body.style.backgroundColor = "royalblue";
 }
