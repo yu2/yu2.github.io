@@ -5,8 +5,9 @@
   
     <script>
       function myFunction() {
-        document.getElementById("description").innerHTML = "I exist";
-        document.getElementById("title").innerHTML = "Behold!";
+        var resp = prompt("Rename");
+        document.getElementById("description").innerHTML = resp;
+        document.getElementById("title").innerHTML = resp;
       }
     </script>
   
