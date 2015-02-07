@@ -17,7 +17,7 @@ function counterReset() {
 }
 
 function colourone() {
-  document.body.style.backgroundColor = mistyrose;
+  document.body.style.backgroundColor = "mistyrose";
 }
 
 function colour2() {
