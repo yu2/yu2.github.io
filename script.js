@@ -17,7 +17,7 @@ function counterReset() {
 }
 
 function color1(name) {
-  var color = name.style.backgroundColor;
+  var color = this.style.backgroundColor;
   document.body.style.backgroundColor = color;
 }
 
