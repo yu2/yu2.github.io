@@ -16,18 +16,19 @@ function counterReset() {
   document.getElementById("body").innerHTML = x;
 }
 
-function colour1() {
-  document.body.style.backgroundColor = "aliceblue";
+function color1() {
+  var color = document.getElementById("b1").style.backgroundColor;
+  document.body.style.backgroundColor = color;
 }
 
-function colour2() {
+function color2() {
   document.body.style.backgroundColor = "tomato";
 }
 
-function colour3() {
+function color3() {
   document.body.style.backgroundColor = "royalblue";
 }
 
-function colour4() {
+function color4() {
   document.body.style.backgroundColor = "gold";
 }
