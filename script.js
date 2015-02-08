@@ -16,7 +16,7 @@ function counterReset() {
   document.getElementById("body").innerHTML = x;
 }
 
-function color(name) {
+function colorChange(name) {
   var color = getComputedStyle(elem).getPropertyValue("background-color");
   document.body.style.backgroundColor = color;
 }
