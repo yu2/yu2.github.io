@@ -16,19 +16,7 @@ function counterReset() {
   document.getElementById("body").innerHTML = x;
 }
 
-function color1(name) {
+function color(name) {
   var color = this.style.backgroundColor;
   document.body.style.backgroundColor = color;
-}
-
-function color2() {
-  document.body.style.backgroundColor = "tomato";
-}
-
-function color3() {
-  document.body.style.backgroundColor = "royalblue";
-}
-
-function color4() {
-  document.body.style.backgroundColor = "gold";
 }
