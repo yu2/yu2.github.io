@@ -17,7 +17,7 @@ function counterReset() {
 }
 
 function color1() {
-  var color = document.getElementById("b1").style.backgroundColor;
+  var color = b1.style.backgroundColor;
   document.body.style.backgroundColor = color;
 }
 
