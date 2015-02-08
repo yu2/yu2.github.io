@@ -16,8 +16,8 @@ function counterReset() {
   document.getElementById("body").innerHTML = x;
 }
 
-function color1() {
-  var color = b1.style.backgroundColor;
+function color1(name) {
+  var color = name.style.backgroundColor;
   document.body.style.backgroundColor = color;
 }
 
