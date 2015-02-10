@@ -21,3 +21,11 @@ function colorChange(name) {
   var color = getComputedStyle(elem).getPropertyValue("background-color");
   document.body.style.backgroundColor = color;
 }
+
+var main = function() {
+  ('.finn').click(function() {
+    ('.finn').animate( {
+      left: '300px'
+    }, 200);
+  });
+};
