@@ -22,10 +22,18 @@ function colorChange(name) {
   document.body.style.backgroundColor = color;
 }
 
-var main = function() {
-  ('button').click(function() {
-    ('body').animate( {
-      left: '300px'
-    }, 200);
+$(document).ready(function() {
+  
+  $('#left').click(function() {
+    $('#finn').animate({
+      left:'-=150px'
+    }, 'slow');
   });
-};
+  
+  $('#right').click(function() {
+    $('#finn').animate({
+      left:'+=150px'
+    }, 'slow');
+  });
+  
+});
