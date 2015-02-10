@@ -23,7 +23,7 @@ function colorChange(name) {
 }
 
 var main = function() {
-  ('body').click(function() {
+  ('button').click(function() {
     ('body').animate( {
       left: '300px'
     }, 200);
