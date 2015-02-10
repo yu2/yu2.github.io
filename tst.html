@@ -2,9 +2,6 @@
 <html>
 
   <head>
-  
-    <script src="script.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
   
@@ -12,30 +9,39 @@
 
   <body>
   
-    <h1 id="title">text</h1>
+    <h1 id="title">title</h1>
     
-      <p id="body">sentence4</p>
+    <p id="body">sentence4</p>
+  
+    <p>
+      <button class='func' type="button" onclick="myFunction()">Confirm</button>
+      <button class='func' type="button" onclick="counter()">Counter</button>
+      <button class='func' type="button" onclick="counterReset()">Reset</button>
+    </p>
     
-      <p>
-        <button type="button" onclick="myFunction()">Confirm</button>
-        <button type="button" onclick="counter()">Counter</button>
-        <button type="button" onclick="counterReset()">Reset</button>
-      </p>
+    <a href="https://www.youtube.com/watch?v=1nCqRmx3Dnw" target="_blank">Once upon a time...</a>
+    
+    <p>
+      <img id= 'finn' src="http://i.imgur.com/MaxmUXa.gif" alt="awesome image">
+    </p>
+    
+    <p>
+      <button class='move' id='left' type="button">Left</button>
+      <button class='move' id='right' type="button">Right</button>
+    </p>
+    
+    <a href="https://github.com/yu2/yu2.github.io" target="_blank">GitHub</a>
+  
+    <p>
+      <button class='bg' id="b1" type="button" onclick="colorChange(this.id)"></button>
+      <button class='bg' id="b2" type="button" onclick="colorChange(this.id)"></button>
+      <button class='bg' id="b3" type="button" onclick="colorChange(this.id)"></button>
+      <button class='bg' id="b4" type="button" onclick="colorChange(this.id)"></button>
+    </p>
       
-      <a href="https://www.youtube.com/watch?v=1nCqRmx3Dnw" target="_blank">Once upon a time...</a>
-      
-      <p>
-        <img id= 'finn' src="http://i.imgur.com/MaxmUXa.gif" alt="awesome image">
-      </p>
-
-      <p>
-        <button type="button" id="b1" onclick="colorChange(this.id)">test1</button>
-        <button type="button" id="b2" onclick="colorChange(this.id)">test2</button>
-        <button type="button" id="b3" onclick="colorChange(this.id)">test3</button>
-        <button type="button" id="b4" onclick="colorChange(this.id)">test4</button>
-      </p>
-      
-      <a href="https://github.com/yu2/yu2.github.io" target="_blank">GitHub</a>
+  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="script.js"></script>
     
   </body>
   
