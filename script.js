@@ -22,6 +22,8 @@ function colorChange(name) {
   document.body.style.backgroundColor = color;
 }
 
+document.getElementById('date').innerHTML = Date();
+
 $(document).ready(function() {
   
   $('#left').click(function() {
