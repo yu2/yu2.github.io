@@ -24,6 +24,10 @@ function colorChange(name) {
 
 document.getElementById('date').innerHTML = Date();
 
+function update() {
+  document.getElementById('date').innerHTML = Date();
+}
+
 $(document).ready(function() {
   
   $('#left').click(function() {
