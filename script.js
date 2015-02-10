@@ -23,8 +23,8 @@ function colorChange(name) {
 }
 
 var main = function() {
-  ('.finn').click(function() {
-    ('.finn').animate( {
+  ('body').click(function() {
+    ('body').animate( {
       left: '300px'
     }, 200);
   });
