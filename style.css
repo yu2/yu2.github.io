@@ -2,8 +2,15 @@ body {
   background-color: aliceblue;
 }
 
-button {
-  background-color: springgreen;
+.func {
+  background-color: limegreen;
+  color: white;
+  font-weight: bold;
+}
+
+.bg {
+  height: 30px;
+  width: 50px;
 }
 
 #b1 {
@@ -20,4 +27,14 @@ button {
 
 #b4 {
   background-color: gold;
+}
+
+.move {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+
+#finn {
+  position: relative;
 }
