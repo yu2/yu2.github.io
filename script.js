@@ -22,7 +22,7 @@ function colorChange(name) {
   document.body.style.backgroundColor = color;
 }
 
-document.getElementById('date').innerHTML = Date();
+document.getElementById('date').innerHTML = x;
 
 $(document).ready(function() {
   
