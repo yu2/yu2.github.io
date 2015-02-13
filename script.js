@@ -42,4 +42,16 @@ $(document).ready(function() {
     }, 'slow');
   });
   
+  $('button').mousedown(function() {
+    $(this).toggleClass('onclick');
+  });
+  
+  $('button').mouseup(function() {
+    $(this).toggleClass('release');
+  });
+  
+  $('#save').click(function() {
+    document.getElementById('body').innerHTML = document.getElementById('name').value;
+  });
+  
 });
