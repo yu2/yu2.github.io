@@ -1,5 +1,42 @@
-body {
+header {
+  font: 30px serif;
+  text-align: center;
+  padding: 10px;
+  color: seashell;
+  background-color: slategrey;
+}
+
+nav {
+  float: left;
+  padding: 1%;
+  line-height: 30px;
+  height: 100%;
+  width: 10%;
+  background-color: steelblue;
+  color: white;
+}
+
+section {
+  padding: 1%;
   background-color: aliceblue;
+  float: left;
+  width: 86%;
+}
+
+footer {
+  text-align: center;
+  clear: both;
+  padding: 10px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .func {
@@ -11,6 +48,14 @@ body {
 .bg {
   height: 30px;
   width: 50px;
+}
+
+.onclick {
+  border-style: inset;
+}
+
+.release {
+  border-style: outset;
 }
 
 #b1 {
@@ -38,4 +83,27 @@ body {
 
 #finn {
   position: relative;
+}
+
+.solitude {
+  font: 16px Georgia;
+  line-height: 130%;
+  color: seashell;
+  background-color: cornflowerblue;
+  text-align: center;
+  border: 2px solid coral;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 70px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#solitude-title {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#solitude-author {
+  font-style: italic;
 }
