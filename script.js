@@ -54,4 +54,8 @@ $(document).ready(function() {
     document.getElementById('body').innerHTML = document.getElementById('name').value;
   });
   
+  $('#poem').click(function() {
+    $('.solitude').hide()
+  });
+  
 });
