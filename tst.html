@@ -4,19 +4,27 @@
   <head>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-  
+   
   </head>
-
-  <body>
   
-    <p id='date'></p><button type='button' onclick='update()'>Update</button><br><br>
+  <header>Home</header>
+  
+  <nav>
+    first object<br>
+    second object<br>
+    third object<br>
+  </nav>
+
+  <section>
+  
+    <p id='date'></p><button type='button' onclick='update()'>Update</button><br><hr>
     
     What is your name? <input type='text' id='name'>
     <button type='button' id='save'>Save</button> <br>
     
-    <h1 id="title">title</h1>
+    <h1 id="title">Home Page</h1>
     
-    <p id="body">sentence4</p>
+    <p title='sentence' id="body">sentence4</p>
   
     <p>
       <button class='func' type="button" onclick="myFunction()">Confirm</button>
@@ -43,11 +51,52 @@
       <button class='bg' id="b3" type="button" onclick="colorChange(this.id)"></button>
       <button class='bg' id="b4" type="button" onclick="colorChange(this.id)"></button>
     </p>
+    
+    <br>
+    <button type='button' id='poem'>Solitude</button>
+    
+    <pre class='solitude'>
+      <span id='solitude-title'>Solitude</span>
+      <span id='solitude-author'>By Ella Wheeler Wilcox</span>
+    
+      Laugh, and the world laughs with you;
+      Weep, and you weep alone;
+      For the sad old earth must borrow its mirth,
+      But has trouble enough of its own.
+
+      Sing, and the hills will answer;
+      Sigh, it is lost on the air;
+      The echoes bound to a joyful sound,
+      But shrink from voicing care.
+
+      Rejoice, and men will seek you;
+      Grieve, and they turn and go;
+      They want full measure of all your pleasure,
+      But they do not need your woe.
       
+      Be glad, and your friends are many;
+      Be sad, and you lose them all,-
+      There are none to decline your nectared wine,
+      But alone you must drink life's gall.
+  
+      Feast, and your halls are crowded;
+      Fast, and the world goes by.
+      Succeed and give, and it helps you live,
+      But no man can help you die.
+
+      There is room in the halls of pleasure
+      For a large and lordly train,
+      But one by one we must all file on
+      Through the narrow aisles of pain.
+    </pre>
   
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="script.js"></script>
     
-  </body>
+  </section>
+  
+  <footer>
+    Footer
+  </footer>
   
 </html>
