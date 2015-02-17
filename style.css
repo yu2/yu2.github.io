@@ -1,7 +1,21 @@
+#github_logo {
+  margin-top: 15px;
+  height: 22%;
+  width: 22%;
+}
+
 #home {
   text-align: center;
   background-color: lemonchiffon;
   font-family: courier;
+}
+
+.button-group {
+  margin-top: 23px;
+}
+
+.button-group button {
+  height: 30px;
 }
 
 .nav {
