@@ -1,102 +1,97 @@
 <!DOCTYPE html>
-<html>
-
+<html lang='en'>
   <head>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-   
+    <title>Home</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
   </head>
-  
-  <header>Home</header>
-  
-  <nav>
-    first object<br>
-    second object<br>
-    third object<br>
-  </nav>
-
-  <section>
-  
-    <p id='date'></p><button type='button' onclick='update()'>Update</button><br><hr>
-    
-    What is your name? <input type='text' id='name'>
-    <button type='button' id='save'>Save</button> <br>
-    
-    <h1 id="title">Home Page</h1>
-    
-    <p title='sentence' id="body">sentence4</p>
-  
-    <p>
-      <button class='func' type="button" onclick="myFunction()">Confirm</button>
-      <button class='func' type="button" onclick="counter()">Counter</button>
-      <button class='func' type="button" onclick="counterReset()">Reset</button>
-    </p>
-    
-    <a href="https://www.youtube.com/watch?v=1nCqRmx3Dnw" target="_blank">Once upon a time...</a>
-    
-    <p>
-      <img id= 'finn' src="http://i.imgur.com/MaxmUXa.gif" alt="awesome image">
-    </p>
-    
-    <p>
-      <button class='move' id='left' type="button">Left</button>
-      <button class='move' id='right' type="button">Right</button>
-    </p>
-    
-    <a href="https://github.com/yu2/yu2.github.io" target="_blank">GitHub</a>
-  
-    <p>
-      <button class='bg' id="b1" type="button" onclick="colorChange(this.id)"></button>
-      <button class='bg' id="b2" type="button" onclick="colorChange(this.id)"></button>
-      <button class='bg' id="b3" type="button" onclick="colorChange(this.id)"></button>
-      <button class='bg' id="b4" type="button" onclick="colorChange(this.id)"></button>
-    </p>
-    
-    <br>
-    <button type='button' id='poem'>Solitude</button>
-    
-    <pre class='solitude'>
-      <span id='solitude-title'>Solitude</span>
-      <span id='solitude-author'>By Ella Wheeler Wilcox</span>
-    
-      Laugh, and the world laughs with you;
-      Weep, and you weep alone;
-      For the sad old earth must borrow its mirth,
-      But has trouble enough of its own.
-
-      Sing, and the hills will answer;
-      Sigh, it is lost on the air;
-      The echoes bound to a joyful sound,
-      But shrink from voicing care.
-
-      Rejoice, and men will seek you;
-      Grieve, and they turn and go;
-      They want full measure of all your pleasure,
-      But they do not need your woe.
+  <body>
+    <div class='container-fluid'>
       
-      Be glad, and your friends are many;
-      Be sad, and you lose them all,-
-      There are none to decline your nectared wine,
-      But alone you must drink life's gall.
-  
-      Feast, and your halls are crowded;
-      Fast, and the world goes by.
-      Succeed and give, and it helps you live,
-      But no man can help you die.
+      <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-8'>
+          <h1 id='home'>Home Page</h1>
+        </div>
+        <div class='col-md-2'></div>
+      </div>
 
-      There is room in the halls of pleasure
-      For a large and lordly train,
-      But one by one we must all file on
-      Through the narrow aisles of pain.
-    </pre>
-  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="script.js"></script>
-    
-  </section>
-  
-  <footer>
-    Footer
-  </footer>
-  
+      
+      <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-8'>
+          <ul class='nav nav-pills'>
+            <li class='active'><a href='#pill_a' data-toggle='pill'>Solitude</a></li>
+            <li><a href='#pill_b' data-toggle='pill'>Finn</a></li>
+            <li><a href='#pill_c' data-toggle='pill'>Counter</a></li>
+            <li><a href='#pill_d' data-toggle='pill'>Greeting</a></li>
+          </ul>
+        </div>
+        <div class='col-md-2'></div>
+      </div>
+      
+      <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-8'>
+          <div class='tab-content'>
+            <div class='tab-pane active' id='pill_a'>
+              <h1 id='solitude-title'>Solitude</h1>
+                <pre>
+              By Ella Wheeler Wilcox
+              
+              Laugh, and the world laughs with you;
+              Weep, and you weep alone;
+              For the sad old earth must borrow its mirth,
+              But has trouble enough of its own.
+        
+              Sing, and the hills will answer;
+              Sigh, it is lost on the air;
+              The echoes bound to a joyful sound,
+              But shrink from voicing care.
+        
+              Rejoice, and men will seek you;
+              Grieve, and they turn and go;
+              They want full measure of all your pleasure,
+              But they do not need your woe.
+              
+              Be glad, and your friends are many;
+              Be sad, and you lose them all,-
+              There are none to decline your nectared wine,
+              But alone you must drink life's gall.
+          
+              Feast, and your halls are crowded;
+              Fast, and the world goes by.
+              Succeed and give, and it helps you live,
+              But no man can help you die.
+        
+              There is room in the halls of pleasure
+              For a large and lordly train,
+              But one by one we must all file on
+              Through the narrow aisles of pain.</pre>
+            </div>
+            <div class='tab-pane' id='pill_b'>
+              <h1>Finn</h1>
+              <img class='finn' src="http://i.imgur.com/MaxmUXa.gif" alt="awesome image"><br>
+              <div class='finn-move'>
+                <button id='left'>Left</button>
+                <button id='right'>Right</button>
+              </div>
+            </div>
+            <div class='tab-pane' id='pill_c'>
+              <h1>Counter</h1>
+            </div>
+            <div class='tab-pane' id='pill_d'>
+              <h1>Greeting</h1>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-2'></div>
+      </div>
+            
+            
+    </div>
+  </body>
 </html>
