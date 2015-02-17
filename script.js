@@ -11,5 +11,10 @@ $(document).ready(function() {
       left:'+=150px'
     }, 'slow');
   });
+  
+  $('.button-group button').click(function() {
+    var color = $(this).css('background-color');
+    $('body').css("background-color", color);
+  });
 
 });
