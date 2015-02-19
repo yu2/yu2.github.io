@@ -26,4 +26,22 @@ $(document).ready(function() {
       }, 1);
     }
   });
+  
+  $('#pill_c button').click(function() {
+    var response = prompt('Do YOU own a counter?');
+    if (response === 'yes') {
+      alert('Welcome to the club!');
+    } else {
+      alert("How unfortunate.");
+    }
+  });
+  
+  $('#bird').click(function() {
+    var mySrc = this.getAttribute('src');
+    if (mySrc === 'http://i.imgur.com/JZ3qfxb.gif') {
+      this.setAttribute('src', 'http://i.imgur.com/BePpGDW.gif');
+    } else {
+      this.setAttribute('src', 'http://i.imgur.com/JZ3qfxb.gif');
+    }
+  });
 });
