@@ -32,7 +32,7 @@ $(document).ready(function() {
   $('#pill_c button').click(function() {
     var response = prompt('Do YOU own a counter?');
     if (response === 'yes') {
-      alert('Welcome to the club!');
+      alert('Welcome to the club...');
       var txt = document.querySelector('#clickcounter');
       localStorage.clickcount = Number(localStorage.clickcount) + 1;
       txt.innerHTML = 'You have clicked this button ' + localStorage.getItem('clickcount') + ' time(s).';
