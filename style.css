@@ -7,7 +7,7 @@
 #home {
   text-align: center;
   background-color: lemonchiffon;
-  font-family: courier;
+  font-family: Inconsolata;
 }
 
 .button-group {
@@ -21,11 +21,12 @@
 .nav {
   background-color: lavenderblush;
   padding: 5px;
-  font: 20px courier;
+  font: 20px Inconsolata;
 }
 
 .tab-content h1 {
-  font-family: courier;
+  font-family: Inconsolata;
+  color: black;
   background-color: lavender;
 }
 
@@ -44,5 +45,13 @@
 }
 
 #pill_e {
-  font-family: Helvetica;
+  font-family: Roboto;
+  color:rgb(76, 213, 255);
+  background-color:rgb(21, 102, 127);
+}
+
+pre {
+  font-family: Roboto;
+  font-size: 1em;
+  line-height: 1.5em;
 }
