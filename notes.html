@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <link href="notes_style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Zilla-Slab" type="text/css" rel="stylesheet">
+  <title>notes</title>
+</head>
+<body>
+  <div class="content">
+    <h1>HTML Notes</h1>
+      <div class="paragraph">
+        <b>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</b>: unordered list<br>
+        <b>&lt;ol&gt;</b>: ordered list<br>
+        <b>&lt;a href=""&gt;&lt;/a&gt;</b>: link<br>
+        <b>target="_blank"</b>: open link in a new tab<br>
+        <b>&lt;img src="" /&gt;</b>: image<br>
+        <ul>
+          <li><b>alt:</b> description of image to be displayed if image fails to load and for visually-impaired users</li>
+        </ul>
+        <b>&lt;!-- --&gt;</b>: comment<br>
+      </div>
+      
+    <h2>CSS</h2>
+      <div class="paragraph">
+        <b>&lt;style&gt;</b> element must be placed within the head<br>
+        <b>link to css file</b>: &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;<br>
+        property + value = <b>declaration</b><br>
+        selector(s) + declaration(s) = <b>rule</b><br>
+        <b>comments</b>: /* */<br>
+        <a href="http://www.colors.commutercreative.com/grid/" target="_blank">named colours</a>,
+        <a href="https://color.adobe.com/create/color-wheel/" target="_blank">RGB colours</a>
+        <ul>
+          <li>rgb(a), hex, hsl(a)</li>
+        </ul>
+        serifs better for long paragraphs?<br>
+        link to fonts to avoid users not having them installed<br>
+        increase <b>leading</b> with <b>line-height</b> to make more readable<br>
+        pixels for precise control, ems for fluid layout<br>
+        line-height, word-spacing, letter-spacing, font-weight(100-900, normal, bold, italic), text-transform, text-align<br>
+        <b>selecting elements</b>
+        <ul>
+          <li>#(octothorpe) is used to select id</li>
+          <li>. is used to select class</li>
+          <li>multiple classes can be assigned to one element to further categorize</li>
+          <li>element.class selector</li>
+        </ul>
+      </div>
+      
+    <h2>Box Model</h2>
+      <div class="paragraph">
+        <b>everything is a box</b><br>
+        <ul>
+          <li>ems of a box: relative to the size of the text within</li>
+          <li>%: relative to the size of the box it is enclosed in</li>
+        </ul>
+        <a href="https://en.wikipedia.org/wiki/Responsive_web_design" target="_blank">Responsive web design</a><br>
+        <b>min-width and max-width; min-height and max-height</b>: minimum and maximum size of elements to ensure they don't appear too small or large on screens of different sizes<br>
+        border-style(solid, dashed, grooved, etc), border-width(px, clockwise from top to set each border), set individually with border-top-width, border-right-width, border-left-width, border-bottom-width<br>
+        shorthand to reduce <b>code bloat</b>: border: width style color;<br>
+        <b>border-radius</b>: set corners to curvature equal to a circle's radius, in px or percentage
+      </div>
+  </div>
+</body>
