@@ -1,11 +1,16 @@
 * {
   font-family: "Roboto";
+  color: white;
   margin: auto;
   width: 90%;
 }
 
+body {
+  background-color: rgba(6, 93, 117, 100%);
+}
+
 .content {
-  background-color: rgb(176, 215, 255);
+  background-color: rgb(6, 93, 117);
   font-size: 120%;
   line-height: 1.4em;
   border-radius: 1%;
