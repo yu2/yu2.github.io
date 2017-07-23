@@ -2,6 +2,8 @@
   font-family: "Roboto";
   color: white;
 /*border: 1px solid black; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,8 +12,8 @@ body {
 
 /* All text and headings */
 .content {
-  font-size: 120%;
-  line-height: 1.4em;
+  font-size: 115%;
+  line-height: 1.5em;
   background-color: rgb(6, 93, 117);
   margin: 1%;
   border: 0.07em solid black
@@ -23,13 +25,17 @@ h1, h2 {
   text-align: center;
   background-color: rgb(125, 197, 250);
   padding: 0.5em;
-  
+  margin: 0em;
 }
 
-h1 {
-  margin: 0em 0em 0.5em 0em;
+.paragraph {
+  margin: 0.75em 0.5em 0.75em 0.5em;
 }
 
 ul {
   margin: 0px;
+}
+
+li {
+  margin-left: 1em;
 }
