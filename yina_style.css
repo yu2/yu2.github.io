@@ -2,23 +2,49 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Sans;
-  border: 1px solid black;
+  font-family: Roboto;
+/*  border: 1px solid black */
+}
+
+.banner {
+  width: 100%;
+  height: 175px;
+  background-image: url("http://i.imgur.com/MRD3cIw.jpg");
+  background-size: cover;
+  position: absolute;
+  filter: brightness(95%);
+  z-index: -1;
+}
+
+body {
+  background-color: aliceblue;
 }
 
 h1 {
   width: 100%;
   text-align: center;
+  font-size: 300%;
+  color: white;
+  position: relative;
+  top: 40px;
 }
 
 .navigation {
-  position: fixed;
   width: 100%;
+  position: relative;
+  top: 70px;
+  background-color: rgba(164, 173, 207, 0.95);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 5% 0 5%;
 }
 
 li {
-  background-color: white;
-  display: inline-block;
+    display: inline-block;
   width: 19.5%;
   height: 2em;
   font-size: 1.5em;
@@ -29,8 +55,8 @@ li {
 
 .content {
   position: relative;
-  top: 55px;
+  top: 66px;
   background-color: aliceblue;
   height: 800px;
-  z-index: -1;
+  z-index: -2;
 }
