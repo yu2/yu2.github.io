@@ -34,7 +34,7 @@ h1 {
   position: fixed;
   top: -2px;
   padding-top: 35px;
-  background-color: rgba(208, 231, 247, 0.95);
+  background-color: rgba(208, 231, 247, 0.9);
   
 }
 
@@ -42,7 +42,7 @@ h1 {
   width: 100%;
   position: fixed;
   top: 120px;
-  background-color: rgba(215, 224, 142, 0.95);
+  background-color: rgba(215, 224, 142, 0.9);
 }
 
 a {
