@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sans;
+  border: 1px solid black;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+}
+
+li {
+  background-color: white;
+  display: inline-block;
+  width: 19.5%;
+  height: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.content {
+  position: relative;
+  top: 55px;
+  background-color: aliceblue;
+  height: 800px;
+  z-index: -1;
+}
