@@ -14,7 +14,7 @@ body {
 .content {
   font-size: 115%;
   line-height: 1.5em;
-  background-color: rgb(6, 93, 117);
+  background-color: rgb(53, 135, 164);
   margin: 1%;
   border: 0.07em solid black
 }
@@ -23,9 +23,9 @@ h1, h2 {
   color: FFF;
   text-shadow: 0.07em 0.07em black;
   text-align: center;
-  background-color: rgb(125, 197, 250);
+  background-color: rgb(136, 204, 241);
   padding: 0.5em;
-  margin: 0em;
+  margin: 0;
 }
 
 .paragraph {
@@ -33,7 +33,7 @@ h1, h2 {
 }
 
 ul {
-  margin: 0px;
+  margin: 0;
 }
 
 li {
