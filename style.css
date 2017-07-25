@@ -46,8 +46,22 @@
 
 #pill_e {
   font-family: Roboto;
-  color:rgb(76, 213, 255);
-  background-color:rgb(21, 102, 127);
+  color: white;
+  background-color: rgb(53, 135, 164);
+}
+
+.content {
+  padding: 0 2px;
+}
+
+#pill_e h2 {
+  text-shadow: 1px 1px 1px rgb(53, 135, 164);
+  background-color: rgb(136, 204, 241);
+}
+
+#pill_e p {
+  text-decoration: underline;
+  margin: 0;
 }
 
 pre {
