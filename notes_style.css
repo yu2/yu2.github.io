@@ -19,8 +19,11 @@ body {
   border: 0.07em solid black
 }
 
-h1, h2 {
-  color: FFF;
+.navigation {
+  
+}
+
+.navigation, h2 {
   text-shadow: 0.07em 0.07em black;
   text-align: center;
   background-color: rgb(136, 204, 241);
