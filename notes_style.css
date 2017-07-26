@@ -16,14 +16,25 @@ body {
   line-height: 1.5em;
   background-color: rgb(53, 135, 164);
   margin: 1%;
-  border: 0.07em solid black
+  border: 0.07em solid black;
 }
 
-.navigation {
-  
+#bar {
+  font-size: 170%;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.5em 0;
+  background-color: rgb(136, 204, 241);
 }
 
-.navigation, h2 {
+.navigation a {
+  text-decoration: none;
+  text-shadow: 0.07em 0.07em black;
+  padding: 0.2em 0.5em;
+  box-shadow: inset 2px 2px 1px white;
+}
+
+h2 {
   text-shadow: 0.07em 0.07em black;
   text-align: center;
   background-color: rgb(136, 204, 241);
