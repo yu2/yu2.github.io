@@ -43,6 +43,11 @@ h2 {
   margin: 0;
 }
 
+.small-head {
+  font-size: 100%;
+  background-color: rgb(73, 155, 184);
+}
+
 .paragraph {
   margin: 0.75em 0.5em 0.75em 0.5em;
 }
