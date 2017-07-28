@@ -117,30 +117,33 @@
 }
 
 #ball {
-  display: block;
   position: absolute;
   bottom: 0;
-  width: 5em;
-  height: 5em;
   border: 1em solid white;
   border-radius: 100%;
-  margin-top: 250px;
-  padding: 10em;
-  background-color: #55F;
+  padding: 15em;
+  background-color: #F55;
   z-index: 5;
 }
 
 #ball2 {
-  display: block;
   position: absolute;
   bottom: 0;
-  width: 1em;
-  height: 1em;
-  margin-left: 40%;
-  margin-top: 250px;
   border: 1em solid white;
+  margin-left: 31em;
   border-radius: 100%;
   padding: 10em;
-  background-color: #F55;
+  background-color: #5F5;
+  z-index: 5;
+}
+
+#ball3 {
+  position: absolute;
+  bottom: 0;
+  border: 1em solid white;
+  margin-left: 52em;
+  border-radius: 100%;
+  padding: 5em;
+  background-color: #55F;
   z-index: 5;
 }
