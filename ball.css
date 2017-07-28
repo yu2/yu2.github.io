@@ -121,7 +121,7 @@
   bottom: 0;
   border: 1em solid white;
   border-radius: 100%;
-  padding: 15em;
+  padding: 25%;
   background-color: #F55;
   z-index: 5;
 }
@@ -131,7 +131,7 @@
   bottom: 0;
   border: 1em solid white;
   border-radius: 100%;
-  padding: 10em;
+  padding: 12.5%;
   background-color: #5F5;
   z-index: 5;
 }
@@ -141,7 +141,7 @@
   bottom: 0;
   border: 1em solid white;
   border-radius: 100%;
-  padding: 5em;
+  padding: 5.75%;
   background-color: #55F;
   z-index: 5;
 }
