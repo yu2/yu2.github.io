@@ -2,6 +2,7 @@
   font-family: "zilla slab";
   margin: 0;
   padding: 0;
+/*  border: 1px solid black; */
 }
 
 html {
@@ -20,7 +21,7 @@ h1 {
   color: black;
   text-shadow: 1px 1px white;
   margin-bottom: 1em;
-  padding-bottom: 0;
+  padding-top: 0.5em;
 }
 
 #home {
@@ -41,16 +42,20 @@ h1 {
  background-color: #fff;
 }
 
+.snapshots {
+  width: 90%;
+  margin-left: auto;
+}
 
 .img-container {
   border: 1px solid black;
-  height: 100%;
+  width: 20%;
+  margin: 1%;
 }
 
 .img-container img {
   margin: auto;
   width: 100%;
-  overflow: hidden;
 }
 
 #contact {
