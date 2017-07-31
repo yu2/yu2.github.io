@@ -2,23 +2,114 @@
 <html>
 <head>
   <title>Portfolio</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" type="text/css" rel="stylesheet">
   <link href="portfolio.css" rel="stylesheet" type="text/css">
 </head>
 <body data-spy="scroll" data-target=".navbar-fixed-top">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Portfolio</a>
+  
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Portfolio</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
-    
+  </nav>
+
+  <section id="home">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">YuTu Web Design</h1>  
+          <h3 class="text-info text-center">I'm an aspiring web developer learning to create beautiful and functional user experiences.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">About Me</h1>
+          <h3 class="text-info text-center">Since graduating with a BA in 2017, I have been educating myself in various web technologies to become a well-rounded web developer. My skillset includes: </h3>
+        </div>
+      </div>    
+    </div>
+  </section>
+  
+  <section id="portfolio">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">My Work <i class="fa fa-cogs"></i></h1>
+        </div>
+      </div>
+      <div class="row snapshots">
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+      </div>
+      <div class="row snapshots">
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+        <div class="col-lg-3 img-container">
+          <a href="https://github.com/"><img src="http://i.imgur.com/1J3TmnI.png"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Contact</h1>
+          <h2 class="text-primary text-center">Find me on social media</h2>
+          <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+              <ul class="sm-icons" style="list-style-type: none">
+                <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/uas/login" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jquery.easing.min.js"></script>
+  <script src="portfolio.js"></script>
+
 </body>
 </html>

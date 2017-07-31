@@ -1,3 +1,67 @@
 * {
-  
+  font-family: "zilla slab";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 70%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3em;
+  color: black;
+  text-shadow: 1px 1px white;
+  margin-bottom: 1em;
+  padding-bottom: 0;
+}
+
+#home {
+ height: 100%;
+ padding: 4em 0 0 0;
+ background-color: #fff;
+}
+
+#about {
+ height: 100%; 
+ padding-top: 3em;
+ background-color: #eee;
+}
+
+#portfolio {
+ padding-top: 3em;
+ height: 100%; 
+ background-color: #fff;
+}
+
+
+.img-container {
+  border: 1px solid black;
+  height: 100%;
+}
+
+.img-container img {
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+#contact {
+ height: 50%; 
+ padding-top: 3em;
+ background-color: #eee;
+}
+
+.sm-icons li {
+  font-size: 5em;
+  text-align: center;
+  padding: 0 0.3em;
+  display: inline-block;
 }
