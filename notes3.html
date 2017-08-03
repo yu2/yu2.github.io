@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <link href="notes.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Zilla-Slab" type="text/css" rel="stylesheet">
+  <title>notes3</title>
+</head>
+<body>
+  <div class="content">
+    <div class="navigation" id="bar">
+      <a id="link1" href="notes.html">Codecademy</a>
+      <a id="link2" href="notes2.html">freeCodeCamp</a>
+      <a id="link3" href="notes3.html">freeCodeCamp2</a>
+    </div>
+    <h2>Object-Oriented and Functional Programming</h2>
+    <div class="paragraph">
+      <b>Constructor function</b>: Used to create objects
+      <li>Define a Constructor function: var Car = function() {this.wheels = 4;}</li>
+      <li>Use the Constructor to create a new instance: var myCar = new Car();</li>
+      <li>Use <b>parameters</b> to assign values: var Car = function(wheels) {this.wheels = wheels;}</li>
+      <li>Define <b>private</b> properties with var privateProp = 1;</li>
+      <li><b>Public methods</b> to change private properties: this.doSomething = function(something) {};</li>
+      <b class="small-head">Array functions</b>
+      <li><b>Map</b>: Iterates over an array to produce a new array.<br></li>
+      <li>var arrMap = oldArray.map(function(val){return val + 3;});</li>
+      <li><b>Reduce</b>: Iterates through an array two items at a time, to condense the array into a single value</li>
+      <li><b>Filter</b>: Iterates through an array, taking out members that don't satisfy a condition</li>
+      <li><b>Sort</b>: Sorts an array depending on  smallest to largest (a - b), or largest to smallest (b - a)</li>
+      <li><b>Reverse</b>: myArray.reverse();</li>
+      <li><b>Concat</b>: newArray = oldArray.concat(arrayToTheEnd);</li>
+      <li>Split a string into an array: string.split("delimiter");</li>
+      <li>Join elements of an array into a string: myArray.join("delimiter");</li>
+    </div>
+  </div>
+</body>

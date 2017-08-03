@@ -9,6 +9,7 @@
     <div class="navigation" id="bar">
       <a id="link1" href="notes.html">Codecademy</a>
       <a id="link2" href="notes2.html">freeCodeCamp</a>
+      <a id="link3" href="notes3.html">freeCodeCamp2</a>
     </div>
     <div class="paragraph">
       <b>&lt;form action="URL"&gt;</b>: <b>Input form</b> with location to submit input<br>
@@ -65,54 +66,60 @@
       <b>Function chaining</b>: Using the output of a function as the argument of another function e.g. clone().appendTo()<br>
     </div>
     <h2>Javascript</h2>
-      <b>Comments</b>: // for single line; /* */ for multi-line.<br>
-      <b>=</b>: Assignment operator<br>
-      Variable names should be in <b>camelCase</b><br>
-      <b>Increment operator</b>: myVar++ is the same as myVar = myVar + 1;<br>
-      <b>Remainder operator</b>: 5%2=1<br>
-      <b>Operate and Assign</b>: +=, -=, *=, /=<br>
-      <b>Escape character</b>: \"<br>
-      <li><b>\</b>: \\</li>
-      <li><b>newline</b>: \n</li>
-      <b>Single quotes</b> are used the same way as double quotes; use one to avoid having to escape the other.<br>
-      <b>Concatenation</b> of strings also use +<br>
-      <b>Bracket notation</b>: zero-based - [0] = the first character in the string<br>
-      <b>String variable is immutable</b>: individual chars cannot be changed, can only change whole string.<br>
-      <b>Array</b>: var myArray = ["item1", "item2"];<br>
-      <b>Multi-dimensional Array</b>: var myArray = [["Monday", 1],["Tuesday", 2]];<br>
-      Array entries are <b>mutable</b>: Can be changed through index<br>
-      <b class="small-head">Array Manipulation</b>
-      <li><b>.push()</b>: Append to the end of an array.</li>
-      <li><b>.pop()</b>: Take off last element of an array.</li>
-      <li><b>.shift()</b>: Take off first element of an array.</li>
-      <li><b>.unshift()</b>: Append to the beginning of an array.</li>
-      <b>Function</b>: function functionName(parameter) {}<br>
-      <b>Parameters</b> take on the values of <b>arguments</b>.<br>
-      Variables declared without <b>var</b> automatically have <b>global</b> scope.<br>
-      <b>Local</b> variables are not visible outside of the function.
-      <li>Local variable takes precedence over global variable.</li>
-      <b>If</b> statement: if(Booleon condition) {}<br>
-      <b class="small-head">Comparison operators</b>
-      <li><b>Equality</b>: ==</li>
-      <li><b>Strict equality</b>: === (data types also have to be equal)</li>
-      <li><b>Inequality</b>: !=</li>
-      <li><b>Strict inequality</b>: !==</li>
-      <li><b>&gt;, &lt;, &gt;=, &lt;=</b>: Will convert datatypes</li>
-      <b>Logical operators</b>: &&, ||<br>
-      <b>If-else-if chain</b>: if(cond) {} else if(cond) {}<br>
-      <b>Switch statement</b>: Strict equality; default option can be put last; if no break statement is found, next case will be evaluated<br>
-      <b class="small-head">Objects</b>: Data is accessed via <b>properties</b>.<br>
-      <li>var myObj = {"name": "Bob", "function": "none"};</li>
-      <li><b>Dot operator</b>: Access property by name myObj.prop</li>
-      <li><b>Bracket notation</b>: Access property by name (may have space) myObj["obj name"]</li>
-      <li><b>Access by variable</b>: Var holds name of the property, access with myObj[myVar] <b>*properties stored within variables must be accessed though myObj[myVar]</b></li>
-      <li><b>Delete</b> property with delete myObj.prop</li>
-      <li><b>.hasOwnProperty("prop")</b>: Tests if object has prop</li>
-      <b>Flexible data structure</b>: e.g. Objects - allow combinations of strings, numbers, booleons, arrays, functions, and objects.<br>
-      <b>Loops</b><br>
-      <li><b>for</b>: for(initialization; condition; final-expression) {}<br></li>
-      <li><b>while</b>: while (cond) {}<br></li>
-      <b>Math.random()</b>: Returns a random number [0, 1)<br>
-      <b>Math.floor()</b>: Rounds down<br>
+      <div class="paragraph">
+        <b>Comments</b>: // for single line; /* */ for multi-line.<br>
+        <b>=</b>: Assignment operator<br>
+        Variable names should be in <b>camelCase</b><br>
+        <b>Increment operator</b>: myVar++ is the same as myVar = myVar + 1;<br>
+        <b>Remainder operator</b>: 5%2=1<br>
+        <b>Operate and Assign</b>: +=, -=, *=, /=<br>
+        <b>Escape character</b>: \"<br>
+        <li><b>\</b>: \\</li>
+        <li><b>newline</b>: \n</li>
+        <b>Single quotes</b> are used the same way as double quotes; use one to avoid having to escape the other.<br>
+        <b>Concatenation</b> of strings also use +<br>
+        <b>Bracket notation</b>: zero-based - [0] = the first character in the string<br>
+        <b>String variable is immutable</b>: individual chars cannot be changed, can only change whole string.<br>
+        <b>Array</b>: var myArray = ["item1", "item2"];<br>
+        <b>Multi-dimensional Array</b>: var myArray = [["Monday", 1],["Tuesday", 2]];<br>
+        Array entries are <b>mutable</b>: Can be changed through index<br>
+        <b class="small-head">Array Manipulation</b>
+        <li><b>.push()</b>: Append to the end of an array.</li>
+        <li><b>.pop()</b>: Take off last element of an array.</li>
+        <li><b>.shift()</b>: Take off first element of an array.</li>
+        <li><b>.unshift()</b>: Append to the beginning of an array.</li>
+        <b>Function</b>: function functionName(parameter) {}<br>
+        <b>Parameters</b> take on the values of <b>arguments</b>.<br>
+        Variables declared without <b>var</b> automatically have <b>global</b> scope.<br>
+        <b>Local</b> variables are not visible outside of the function.
+        <li>Local variable takes precedence over global variable.</li>
+        <b>If</b> statement: if(Booleon condition) {}<br>
+        <b class="small-head">Comparison operators</b>
+        <li><b>Equality</b>: ==</li>
+        <li><b>Strict equality</b>: === (data types also have to be equal)</li>
+        <li><b>Inequality</b>: !=</li>
+        <li><b>Strict inequality</b>: !==</li>
+        <li><b>&gt;, &lt;, &gt;=, &lt;=</b>: Will convert datatypes</li>
+        <b>Logical operators</b>: &&, ||<br>
+        <b>If-else-if chain</b>: if(cond) {} else if(cond) {}<br>
+        <b>Switch statement</b>: Strict equality; default option can be put last; if no break statement is found, next case will be evaluated<br>
+        <b class="small-head">Objects</b>: Data is accessed via <b>properties</b>.<br>
+        <li>var myObj = {"name": "Bob", "function": "none"};</li>
+        <li><b>Dot operator</b>: Access property by name myObj.prop</li>
+        <li><b>Bracket notation</b>: Access property by name (may have space) myObj["obj name"]</li>
+        <li><b>Access by variable</b>: Var holds name of the property, access with myObj[myVar] <b>*properties stored within variables must be accessed though myObj[myVar]</b></li>
+        <li><b>Delete</b> property with delete myObj.prop</li>
+        <li><b>.hasOwnProperty("prop")</b>: Tests if object has prop</li>
+        <b>Flexible data structure</b>: e.g. Objects - allow combinations of strings, numbers, booleons, arrays, functions, and objects.<br>
+        <b>Loops</b><br>
+        <li><b>for</b>: for(initialization; condition; final-expression) {}<br></li>
+        <li><b>while</b>: while (cond) {}<br></li>
+        <b>Math.random()</b>: Returns a random number [0, 1)<br>
+        <b>Math.floor()</b>: Rounds down<br>
+        <b>Regular expression</b>: /term/gi - global(find all matches), ignore case<br>
+        <li>Count number of matches: testString.match(expression).length</li>
+        <li><b>\d</b>: Digit; \d+ = more than one digit</li>
+        <li><b>\s</b>: Whitespace character; \S for not-whitespace</li>
+      </div>
   </div>
 </body>

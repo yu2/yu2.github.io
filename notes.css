@@ -25,6 +25,7 @@ body {
   text-align: left;
   padding: 0.5em 0;
   background-color: rgb(136, 204, 241);
+  margin-bottom: 0.5em;
 }
 
 .navigation a {
