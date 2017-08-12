@@ -2,25 +2,80 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	border: 1px solid black;
+	font-family: "Quicksand";
+/*	border: 1px solid black;  */
 }
 
 html {
 	width:100%;
- height: 100%;
+  height: 100%;
 }
 
 body {
 	width:100%;
- height: 100%;
+	height: 100%;
+	background-image: radial-gradient(circle farthest-corner, #FFFFFF 50%, rgb(194, 90, 97));
+	
 }
 
 .box {
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
- height:50%;
- width: 50%;
-	transform:translate(0%,50%);
-	text-align:center;
+  text-align:center;
+  width: 40%;
+  /* Center vertically */
+	position: relative;
+	top: 40%;
+	transform:translate(5%,-43%);
 }
+
+.box p {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0.05em 0.05em black;
+}
+
+img {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  left: 29%;
+  transform: translate(-50%, 0);
+  transform: rotate(-25deg);
+}
+
+.new-quote {
+  margin: 0.5em;
+  padding: 0.2em;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgb(194, 90, 97);
+  border-radius: 10% / 30%;
+}
+
+/* Colour Testing
+
+table {
+  width: 25%;
+  height: 50%;
+  background-color: green;
+  border: 1px solid black;
+}
+
+.farthest-corner {
+  background-image: radial-gradient(circle farthest-corner, #FFFFFF 50%, rgb(194, 90, 97));  
+}
+
+.farthest-side {
+  background-image: radial-gradient(circle farthest-side, #FFFFFF 50%, rgb(194, 90, 97));  
+}
+
+.closest-side {
+  background-image: radial-gradient(circle closest-side, #FFFFFF 50%, rgb(194, 90, 97));  
+}
+
+*/
