@@ -1,33 +1,33 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Quicksand";
-/*	border: 1px solid black;  */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+/* border: 1px solid black;  */
 }
 
 html {
-	width:100%;
+  width:100%;
   height: 100%;
 }
 
 body {
-	width:100%;
-	height: 100%;
-	background-image: radial-gradient(circle farthest-corner, #FFFFFF 50%, rgb(194, 90, 97));
+  width:100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner, #FFFFFF 50%, rgb(194, 90, 97));
 	
 }
 
 .box {
-	margin-left:auto;
-	margin-right:auto;
-	display:block;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
   text-align:center;
   width: 40%;
   /* Center vertically */
-	position: relative;
-	top: 40%;
-	transform:translate(5%,-43%);
+  position: relative;
+  top: 40%;
+  transform:translate(5%,-43%);
 }
 
 .box p {
@@ -37,14 +37,23 @@ body {
   text-shadow: 0.05em 0.05em black;
 }
 
-.ball {
+.ball-wrapper {
   position: fixed;
   margin-left: auto;
   margin-right: auto;
   width: 67%;
-  top: -15%;
-  left: 19%;
-  
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  left: 0;
+  right: 0;
+  transform: rotate(0deg);
 }
 
 .new-quote {

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <link href="notes.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Zilla-Slab" type="text/css" rel="stylesheet">
+  <title>notes</title>
+</head>
+<body>
+  <div class="content">
+    <div class="navigation" id="bar">
+      <a id="link1" href="notes.html">Codecademy</a>
+      <a id="link2" href="notes2.html">freeCodeCamp</a>
+      <a id="link3" href="notes3.html">freeCodeCamp2</a>
+    </div>
+    <div class="paragraph">
+      <b>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</b>: unordered list<br>
+      <b>&lt;ol&gt;</b>: ordered list<br>
+      <b>&lt;a href=""&gt;&lt;/a&gt;</b>: link<br>
+      <b>target="_blank"</b>: open link in a new tab<br>
+      <b>&lt;img src="" /&gt;</b>: image<br>
+      <li><b>alt:</b> description of image to be displayed if image fails to load and for visually-impaired users</li>
+      <b>&lt;!-- --&gt;</b>: comment<br>
+    </div>
+      
+    <h2>CSS</h2>
+      <div class="paragraph">
+        <b>&lt;style&gt;</b> element must be placed within the head<br>
+        <b>Link to css file</b>: &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;<br>
+        Property + value = <b>declaration</b><br>
+        Selector(s) + declaration(s) = <b>rule</b><br>
+        <b>Comments</b>: /* */<br>
+        <a href="http://www.colors.commutercreative.com/grid/" target="_blank">named colours</a>,
+        <a href="https://color.adobe.com/create/color-wheel/" target="_blank">RGB colours</a>
+        <li>rgb(a), hex, hsl(a)</li>
+        <b>Serifs</b> better for long paragraphs?<br>
+        Link to fonts to avoid users not having them installed<br>
+        Specify more than one font in case the first is not available. <br>
+        Increase <b>leading</b> with <b>line-height</b> to make more readable<br>
+        Pixels for precise control, ems for fluid layout<br>
+        <b>line-height</b>, word-spacing, letter-spacing, font-weight(100-900, normal, bold, italic), text-transform, text-align<br>
+        <b>Selecting elements</b>
+        <li>#(octothorpe) is used to select id</li>
+        <li>. is used to select class</li>
+        <li>div p selects all p descendants of div, whereas div > p selects only the immediate descendants</li>
+        <li>multiple classes can be assigned to one element to further categorize</li>
+        <li>element.class selector</li>
+      </div>
+      
+    <h2>Box Model</h2>
+      <div class="paragraph">
+        <b>Everything is a box</b><br>
+        <li><b>ems</b> of a box: relative to the size of the text within</li>
+        <li><b>%</b>: relative to the size of the box it is enclosed in</li>
+        <a href="https://en.wikipedia.org/wiki/Responsive_web_design" target="_blank">Responsive web design</a><br>
+        <b>min-width and max-width; min-height and max-height</b>: minimum and maximum size of elements to ensure they don't appear too small or large on screens of different sizes<br>
+        <b>overflow</b> (hidden, scroll): Controls what happens to content when it spills outside of its box<br>
+        <b>border-style</b>(solid, dashed, grooved, etc), border-width(px, clockwise from top to set each border), set individually with border-top-width, border-right-width, border-left-width, border-bottom-width<br>
+        Shorthand to reduce <b>code bloat</b>: border: width style color;<br>
+        <b>border-radius</b>: set corners to curvature equal to a circle's radius, in px or percentage<br>
+        <b>padding</b>: space between content of box and its borders (top, right, bottom, left) or (top+bottom, right+left)<br>
+        <b>margin</b>: space between border of an element and the next element<br>
+        <li>Can also set margin of individual sides with margin-top, margin-right, etc</li>
+        Set magin and padding to zero to override browser's default <b>user agent</b> stylesheet.<br>
+        <b>display</b> changes how elements are displayed - inline, block, inline-block, or none.
+        <li>Can be used to make li items into navigation bar.</li>
+        <b>visibility: hidden</b> hides the content of the element, but the space reserved for it (its box) will remain.<br>
+        <b>Actual rendered size</b>: width/height + padding + border<br>
+        <li>box-sizing: border-box (not affected by border thickness or padding</li>
+      </div>
+      
+    <h2>Positioning</h2>
+      <div class="paragraph">
+        <b>Positioning:</b>
+          <li><b>static</b>:default</li>
+          <li><b>relative</b>: relative to default position (set with top, right, bottom, left)</li>
+          <li><b>absolute</b>: other elements ignore it</li>
+          <li><b>fixed</b>: does not move with scrolling</li>
+        <b>z-index</b>: Controls how elements overlap.<br>
+        <b>float</b>: Moves elements as far left or right as possible (only works for static or relative, must have width specified)<br>
+        <b>clear</b>: Sets behaviour when elements hit each other
+      </div>
+    <h2>Images</h2>
+      <div class="paragraph">
+          Images are inline elements by default; for centering, have to be changed to block-level elements (display: block)<br>
+          <li>Center horizontally with margin: 0 auto;</li>
+          <b>background-image: url("")</b> to set background image<br>
+          <b>background-repeat (repeat-x, repeat-y, no-repeat)</b>: To change the default of repeating horizontally and vertically.<br>
+          <b>background-position</b>: position of the background image within its box, defined by a 3x3 grid
+          <li>shorthand: background: url("") no-repeat top right</li>
+          <b>background-size</b>: contain (image fills container, if spills out is not visible) or cover (fit image exactly within container)<br>
+          <b>background-attachement</b>: scroll (image moves as user scrolls) or fixed<br>
+          <b>background: linear-gradient(white, black)</b><br>
+          <b>&lt;img&gt;</b> used to communicate information, <b>background</b> property used for styling<br>
+      </div>
+    <h2>Tables</h2>
+      <div class="paragraph">
+        <b>scope</b> identifies whether heading is for row or col<br>
+        <b>rowspan, colspan</b>: span rows or columns<br>
+        <b>thead, tbody, tfoot</b>: marks sections of long tables<br>
+      </div>
+  </div>
+</body>
