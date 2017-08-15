@@ -23,6 +23,7 @@ body {
 }
 
 .item {
+  position: relative;
   width: 20%;
   height: 30%;
 }
