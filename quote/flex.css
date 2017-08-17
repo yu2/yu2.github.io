@@ -1,5 +1,5 @@
 * {
-  border: 1px solid black;
+/*  border: 1px solid black; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,6 +10,8 @@ body {
   height: 100vh;
   background-color: #333;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .container {
@@ -45,4 +47,11 @@ body {
 
 .border {
   border: 1em solid white;
+}
+
+#text {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: white;
 }
