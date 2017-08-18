@@ -25,6 +25,20 @@ body {
   animation: 1s infinite alternate grow-heading;
 }
 
+.box {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 50vh;
+  
+}
+
+.big-box {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
@@ -33,10 +47,40 @@ body {
   height: 50vh;
   width: 100vw;
   border: 1em solid #555;
+  background-color: #333;
+}
+
+.container2 {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+.hiding {
+  font-size: 4em;
+}
+
+.hiding:hover {
+  animation: 1s infinite alternate grow-hiding;
+}
+
+.container3 {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa399;
+}
+
+.container3 > p {
+  font-size: 4em;
 }
 
 .item {
-  position: relative;
   width: 25%;
   height: 30%;
 }
@@ -54,6 +98,9 @@ body {
 .a {
   flex: 0 0 auto;
   background-color: #008080;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .b {
@@ -64,6 +111,13 @@ body {
 .c {
   flex: 0 0 auto;
   background-color: orchid;
+}
+
+.tiny {
+  flex: 0 0 auto;
+  background-color: aliceblue;
+  width: 20%;
+  height: 80%;
 }
 
 .border {
@@ -91,5 +145,14 @@ body {
   }
   to {
     filter: drop-shadow(1em 1em white);
+  }
+}
+
+@keyframes grow-hiding {
+  from {
+    
+  }
+  to {
+    background-color: #ffffcc;
   }
 }
