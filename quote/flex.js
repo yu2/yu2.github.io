@@ -29,14 +29,12 @@ $(document).ready(function() {
   
   var e = document.getElementsByClassName("item");
   for (var i = 0; i < e.length; i++) {
-    e[i].addEventListener("click", modifyText, false);  
+    e[i].addEventListener("click", modifyText, false);
   }
   
-  
-
-  
-  
-  
+  $(".container").height($(".box").height());
+  $(".container2").height($(".box").height() + 10);
+  $(".container3").height($(".box").height());
   
 });
 
