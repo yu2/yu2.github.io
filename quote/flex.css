@@ -103,6 +103,10 @@ body {
   background-color: #ffa399;
 }
 
+.container3 > .more:hover {
+  animation: 1s infinite alternate button-shadow1;
+}
+
 .item {
   width: 25%;
   height: 30%;
@@ -182,3 +186,23 @@ body {
     background-color: #ffffcc;
   }
 }
+
+@keyframes button-shadow1 {
+  from {
+    
+  }
+  to {
+    filter: brightness(1.25);
+  }
+}
+
+/*
+@keyframes button-shadow2 {
+  from {
+    
+  }
+  to {
+    filter: drop-shadow(0.1em 0.1em 0.5em black);
+  }
+}
+*/
