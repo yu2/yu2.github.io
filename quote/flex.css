@@ -94,7 +94,7 @@ body {
   font-size: 1.5em;
 }
 
-.container3 > .more {
+.container3 > button {
   color: white;
   font-size: 1.5em;
   padding: 0.3em;
@@ -103,8 +103,12 @@ body {
   background-color: #ffa399;
 }
 
-.container3 > .more:hover {
+.container3 > button:hover {
   animation: 1s infinite alternate button-shadow1;
+}
+
+.container3 > button:focus {
+  outline: 0;
 }
 
 .item {
