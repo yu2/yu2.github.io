@@ -37,7 +37,7 @@
       <li><b>str.charCodeAt(index)</b>: Returns utf-16 code of unit at index.</li>
       <li><b>String.fromCharCode(charCode)</b>: Returns str corresponding to utf-16 values.</li>
       <b>.replace</b>: Replace regular expression matches with second argument.<br>
-      <b>Boolean constructor</b> creates an object with an initial value of true for "truthy" values and false for falsy values (false, null, 0, "", undefined, and NaN).
+      <b>Boolean constructor</b> creates an object with an initial value of true for "truthy" values and false for falsy values (false, null, 0, "", undefined, and NaN).<br>
       <b>Arguments Object</b>: Array-like Object that can be used to access variable arguments.
       <li>Convert arguments object to array with Array.prototype.slice.call(arguments);</li>
     </div>
@@ -48,11 +48,21 @@
       <li>Clicking links makes a <b>state transition</b> and brings about next state (Representational State Transfer).</li>
       <b>API (Application Programming Interface)</b>: Contract for how a program can interact with an application.<br>
       <b>XML Http Request</b><br>
-      <li>new XMLHttpRequest()</li>
-      <li>xhr.open("GET", "https://www.codecademy.com/", false);</li>
-      <li>GET (retrieve), POST (send), PUT (update information), DELETE</li>
+      <li>var xhr = new XMLHttpRequest(); //create new request object</li>
+      <li>xhr.open("GET", "https://www.codecademy.com/", false); //initialize request</li>
+      <li>xhr.send(); //send request</li>
+      <li>Types of request: GET (retrieve), POST (send), PUT (update information), DELETE</li>
+      <li><b>Header</b>: Additional info sent to server (e.g. who is making the request)</li>
+      <li>Body: Information to be POSTed</li>
       <b>Endpoints</b>: API-defined locations where particular data are stored.<br>
-      
+      <b>var apiKey</b>: Long alphanumeric string that identifies the client and grants access to an API<br>
+      <li>Some APIs require authentication through <b>OAuth</b></li>
+      <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank"><b>Response status codes</b></a>: 1xx-4xx, each mean something different.
+      <li>Response structure is similar to request structure: Response line, header, and body</li>
+      <b>XML (Extensible Markup Language)</b>: Structures its responses in format of user-defined tags<br>
+      <li>xmlDocument = xhr.responseXML;</li>
+      <b>JSON (Javascript Object Notation)</b>: Alternative to XML that structures its responses as Javascript objects<br>
+      Read API's documentation to find out whether it will respond in XML or JSON.<br>
     </div>
     <h2>Flexbox</h2>
     <div class="paragraph">
