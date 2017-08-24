@@ -12,7 +12,6 @@ $(document).ready(function() {
   
   function onClick() {
     if ((disk1 === "mid")&&(disk2 === "right")) {
-      console.log("here");
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(-360deg)";
       
@@ -33,16 +32,24 @@ $(document).ready(function() {
     }
   }
   
+  var loc = -95;
+  var loc2 = -160;
+  
   out_cont1.addEventListener("transitionend", function(event) {
     if(disk1 === "left") {
-      out_cont1.style.right = "-95vw";
+      out_cont1.style.right = loc + "vw";
+      loc = loc - 130;
       cont1.style.transform = "rotate(360deg)";
       disk1 = "right";
     } else if (disk2 === "left") {
-      out_cont2.style.transform += "translatex(130vw)";
+      out_cont2.style.right = loc2 + "vw";
+      loc2 = loc2 - 130;
       cont2.style.transform = "rotate(0)";
       disk2 = "right";
     }
   });
   
+  function fix() {
+    
+  }
 });

@@ -33,12 +33,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 3s;
+  transition: transform 1s;
   position: absolute;
 }
 
 .container {
-  transition: transform 3s;
+  transition: transform 1s;
 }
 
 .container:focus {
