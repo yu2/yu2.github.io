@@ -40,6 +40,8 @@ body {
   animation-timing-function: linear;
 }
 
+
+
 .textbox {
   
 }
@@ -74,11 +76,11 @@ body {
 .right {
   right: -30vw;
 }
-
+/*
 .upside-down {
   transform: rotate(-180deg);
 }
-
+*/
 @keyframes move-left {
   from {
     margin-left: 50%;
