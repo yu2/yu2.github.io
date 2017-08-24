@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Lato";
+  /*border: 1px solid black;*/
 }
 
 body {
@@ -13,10 +14,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-.container {
-  background-color: #00FFFF;
+.outside-container {
   height: 30vw;
   width: 30vw;
   border-radius: 50%;
@@ -24,6 +25,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 3s;
+  position: absolute;
+}
+
+.container {
+  transition: transform 3s;
 }
 
 .container:focus {
@@ -56,6 +63,22 @@ body {
 
 }
 
+.bg-blue {
+  background-color: #00FFFF;
+}
+
+.bg-yellow {
+  background-color: #FFFF00;
+}
+
+.right {
+  right: -30vw;
+}
+
+.upside-down {
+  transform: rotate(-180deg);
+}
+
 @keyframes move-left {
   from {
     margin-left: 50%;
@@ -67,7 +90,7 @@ body {
 
 @keyframes roll {
   from {
-    transform: rotate(0);
+    transform: rotate(-180);
   }
   to {
     transform: rotate(-360deg);
