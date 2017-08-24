@@ -35,8 +35,7 @@ $(document).ready(function() {
   
   out_cont1.addEventListener("transitionend", function(event) {
     if(disk1 === "left") {
-      console.log("doing it");
-      out_cont1.style.transform += "translateX(130vw)";
+      out_cont1.style.right = "-95vw";
       cont1.style.transform = "rotate(360deg)";
       disk1 = "right";
     } else if (disk2 === "left") {
