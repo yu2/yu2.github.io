@@ -44,7 +44,6 @@ $(document).ready(function() {
   var output = document.getElementById("text");
 
   function modifyText() {
-    
     if (output.firstChild.nodeValue == "The element has been clicked.") {
       output.firstChild.nodeValue = "This is some output.";
     } else {
