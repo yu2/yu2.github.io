@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
 }
 
 .title {
@@ -48,11 +49,20 @@ body {
   animation-timing-function: linear;
 }
 
-.textbox > p {
+.textbox {
+  padding: 1em;
+}
+
+.textbox .quote {
   color: white;
   text-shadow: 0.05em 0.05em 0.02em black;
   font-size: 1.5em;
   text-align: center;
+}
+
+.textbox .author {
+  font-style: italic;
+  padding-top: 1em;
 }
 
 #one-more {
@@ -64,7 +74,6 @@ body {
 
 #one-more:focus {
   outline: none;
-
 }
 
 .bg-blue {
@@ -78,11 +87,7 @@ body {
 .right {
   right: -30vw;
 }
-/*
-.upside-down {
-  transform: rotate(-180deg);
-}
-*/
+
 @keyframes move-left {
   from {
     margin-left: 50%;

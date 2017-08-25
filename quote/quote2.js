@@ -9,8 +9,15 @@ $(document).ready(function() {
   var cont2 = document.getElementById("cont2");
   var disk1 = "mid";
   var disk2 = "right";
+  var clickDisabled = false;
+  
   
   function onClick() {
+    
+    if(clickDisabled)
+      return;
+    var hue = Math.floor(Math.random() * 360 + 1);
+    $("body").css("filter", "hue-rotate("+hue+"deg)");
     if ((disk1 === "mid")&&(disk2 === "right")) {
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(-360deg)";
@@ -20,6 +27,7 @@ $(document).ready(function() {
       
       disk1 = "left";
       disk2 = "mid";
+      
     } else if ((disk1 === "right")&&(disk2 === "mid")) {
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(0deg)";
@@ -30,6 +38,8 @@ $(document).ready(function() {
       disk1 = "mid";
       disk2 = "left";
     }
+    clickDisabled = true;
+    setTimeout(function(){clickDisabled = false;}, 1500);
   }
   
   var loc = -95;
@@ -37,11 +47,16 @@ $(document).ready(function() {
   
   out_cont1.addEventListener("transitionend", function(event) {
     if(disk1 === "left") {
+      newQuote("#quote1", "#author1");
       out_cont1.style.right = loc + "vw";
       loc = loc - 130;
+      $(".container").css("transition", "transform 0s");
       cont1.style.transform = "rotate(360deg)";
+      $(".container").css("transition", "transform 1s");
+      
       disk1 = "right";
     } else if (disk2 === "left") {
+      newQuote("#quote2", "#author2");
       out_cont2.style.right = loc2 + "vw";
       loc2 = loc2 - 130;
       cont2.style.transform = "rotate(0)";
@@ -49,7 +64,22 @@ $(document).ready(function() {
     }
   });
   
-  function fix() {
-    
+  function newQuote(quote, author) {
+    $.ajax({
+      url: "https://andruxnet-random-famous-quotes.p.mashape.com/cat=famous",
+      type: "POST",
+      data: {},
+      dataType: "json",
+      success: function(data) {
+        $(quote).text("\"" + data.quote + "\"");
+        $(author).text("- " + data.author);
+      },
+      error: function(err) {
+        alert(err);
+      },
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader("X-Mashape-Authorization", "46tAVHfUQJmshiOEq6KtTFGdpra7p1ZHVsajsnjmXvmEha9Nbz");
+      }
+    });
   }
 });
