@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  newQuote("#quote2", "#author2");
+  
   var e = document.getElementById("one-more");
   
   e.addEventListener("click", onClick, false);
@@ -17,8 +19,8 @@ $(document).ready(function() {
     if(clickDisabled)
       return;
     var hue = Math.floor(Math.random() * 360 + 1);
-    $("body").css("filter", "hue-rotate("+hue+"deg)");
     if ((disk1 === "mid")&&(disk2 === "right")) {
+      $("#out-cont2").css("filter", "hue-rotate("+hue+"deg)");
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(-360deg)";
       
@@ -29,6 +31,7 @@ $(document).ready(function() {
       disk2 = "mid";
       
     } else if ((disk1 === "right")&&(disk2 === "mid")) {
+      $("#out-cont1").css("filter", "hue-rotate("+hue+"deg)");
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(0deg)";
       

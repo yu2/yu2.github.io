@@ -76,6 +76,30 @@ body {
   outline: none;
 }
 
+.media {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  margin-right: .5em;
+  margin-bottom: .5em;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0.05em 0.05em black;
+}
+
+.media p {
+  padding-left: 0.25em;
+}
+
+.media a:link {
+  color: white;
+}
+
+.media a:visited {
+  color: white;
+}
+
 .bg-blue {
   background-color: #00FFFF;
 }
