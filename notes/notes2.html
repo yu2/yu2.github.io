@@ -50,13 +50,18 @@
     </div>
     <h2>jQuery</h2>
     <div class="paragraph">
+      JavaScript library that makes selecting and manipulating HTML elements easier.<br>
       <b>$(document).ready(function(){});</b> Guarentees that script does not run until HTML has finished loading.<br>
+      <li>Shortcut: $(function(){});</li>
+      <li><b>$</b> is used to access jQuery</li>
       <b>$("selector").addClass("animated bounce");</b> shake fadeout<br>
       <b>.removeClass</b>: Takes away class from element.<br>
       <b>.css("attribute", "value");</b>: Change value of CSS attribute.<br>
+      <b>.attr()</b>: Get or set the value of the attribute of an HTML element.<br>
+      <b>.removeAttr()</b>: Remove an attribute.<br>
       <b>.prop()</b>: Modifies properties of elements ("disabled", true);<br>
-      <b>.html()</b>: Replaces element referred to by the selector.<br>
-      <b>.text()</b>: Same as above, but interprets tags as text.<br>
+      <b>.html()</b>: Replaces content of element referred to by the selector.<br>
+      <b>.text()</b>: Same as above, but ignores HTML markup (e.g. &lt;b&gt;).<br>
       <b>.remove()</b>: Removes element.<br>
       <b>.appendTo("target_element)</b>: Moves an element to another container element.<br>
       <b>.clone()</b>: Copies an element.<br>
