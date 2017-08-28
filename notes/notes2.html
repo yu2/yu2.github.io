@@ -55,15 +55,23 @@
       <li>Shortcut: $(function(){});</li>
       <li><b>$</b> is used to access jQuery</li>
       <b>$("selector").addClass("animated bounce");</b> shake fadeout<br>
-      <b>.removeClass</b>: Takes away class from element.<br>
-      <b>.css("attribute", "value");</b>: Change value of CSS attribute.<br>
-      <b>.attr()</b>: Get or set the value of the attribute of an HTML element.<br>
+      <b>.addClass("class class2")</b>: Add class(es) to an element.<br>
+      <li><b>.removeClass()</b></li>
+      <b>.css("property", "value");</b>: Change value of CSS attribute.<br>
+      <li>Use {"property":"value", ...} for multiple properties.
+      <b>width(), height()</b><br>
+      <li><b>innerWidth</b>: Includes padding.
+      <li><b>outerWidth</b>: Includes padding and border.
+      <b>.attr()</b>: Get or set the value of the attribute of an HTML element (e.g. href of a).<br>
       <b>.removeAttr()</b>: Remove an attribute.<br>
       <b>.prop()</b>: Modifies properties of elements ("disabled", true);<br>
       <b>.html()</b>: Replaces content of element referred to by the selector.<br>
       <b>.text()</b>: Same as above, but ignores HTML markup (e.g. &lt;b&gt;).<br>
+      <b>.val()</b>: Get or set content of form fields.<br>
       <b>.remove()</b>: Removes element.<br>
       <b>.appendTo("target_element)</b>: Moves an element to another container element.<br>
+      <b>.append(), .prepend()</b>: Add to the beginning or end of the content of an element.<br>
+      <b>.before(), .after()</b>: Add an element (with markup) before or after an element.<br>
       <b>.clone()</b>: Copies an element.<br>
       <b>.parent()</b>: Gets the parent HTML element.<br>
       <b>.children()</b>: Gets the children of an HTML element.<br>
