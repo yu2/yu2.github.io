@@ -5,14 +5,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://use.fontawesome.com/7428c78328.js"></script>
   <link href="css/weather-icons.min.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300" type="text/css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
+    <p class="title">Weather App<p>
     <div class="inner-container">
       <div class="text" id="location">Location</div>
-      <div class="text" id="icon"><i class="fa fa-cog fa-spin"></i></div>
-      <div class="text"><span id="temperature"></span>&#176;C</div>
+      <div class="temp-container">
+        <p class="text" id="icon"><i class="fa fa-cog fa-spin"></i></p>
+        <p class="text"><span id="temperature"></span>&#176;C</p>
+	<button class="toggle">C/F</button>
+      </div>
       <div class="text" id="condition">Temperature</div>
     </div>
   </div>

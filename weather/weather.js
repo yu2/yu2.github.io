@@ -20,6 +20,9 @@ $(function() {
           $(".inner-container").animate({
             opacity: 1
           }, 1000);
+          $(".container").animate({
+            transform: "rotate(180deg)"
+          });
         }
       });
     });

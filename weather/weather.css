@@ -15,12 +15,24 @@ body {
 .container {
   height: 30vw;
   width: 30vw;
-  background-color: rgb(100, 190, 160);
+  background: linear-gradient(rgb(100, 190, 160), rgb(60, 160, 120));
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 1%;
+  z-index: -2;
 }
 
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  font-family: nunito;
+  color: white;
+  z-index: -1;
+}
 .inner-container {
   border: .1em solid white;
   background-color: rgb(120, 210, 180);
@@ -30,18 +42,28 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 1em 0;
+  padding: 1.5em 0;
   opacity: 0;
+  border-radius: 1%;
 }
 
-
+.temp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .text {
   color: white;
   font-size: 2em;
-  font-family: lucida sans;
+  font-family: nunito;
+}
+
+#location {
+  font-size: 2.5em;
 }
 
 #icon {
-  font-size: 3.5em;
+  font-size: 4.5em;
 }
