@@ -12,10 +12,14 @@ $(function() {
         url: url + "lat=" + lat + "&lon=" + lon,
         success: function(result) {
           var temp = result.weather[0].main;
-          $("#temperature").html(temp);
+          $("#condition").html(temp);
           $("#location").html(result.name);
           $("#icon").html(getIcon(temp));
+          $("#temperature").html(result.main.temp);
           $("img").css("height", "5em");
+          $(".inner-container").animate({
+            opacity: 1
+          }, 1000);
         }
       });
     });
@@ -28,7 +32,7 @@ $(function() {
       case "Sunny":
         icon = "<i class=\"wi wi-day-sunny\"></i>";
         return icon;
-      case "Cloudy":
+      case "Clouds":
         icon = "<i class=\"wi wi-day-cloudy\"></i>";
         return icon;
       case "Windy":

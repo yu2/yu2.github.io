@@ -15,7 +15,7 @@ body {
 .container {
   height: 30vw;
   width: 30vw;
-  background-color: rgb(120, 210, 180);
+  background-color: rgb(100, 190, 160);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,7 @@ body {
 
 .inner-container {
   border: .1em solid white;
+  background-color: rgb(120, 210, 180);
   width: 26vw;
   height: 26vw;
   display: flex;
@@ -30,6 +31,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 1em 0;
+  opacity: 0;
 }
 
 
