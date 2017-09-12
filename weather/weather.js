@@ -3,45 +3,33 @@ var lat, lon, icon;
 var res;
 
 $(document).ready(function() {
+  $("#clickme").click(function() {
+    console.log("hi");
+    alert("hi");
+  });
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       lat = position.coords.latitude;
       lon = position.coords.longitude;
+      getWeather();
       
-      $.ajax({
-        url: url + "lat=" + lat + "&lon=" + lon,
-        success: function(result) {
-          
-          res = result;
-          var temp = result.weather[0].main;
-          $("#condition").html(temp);
-          $("#location").html(result.name);
-          $("#icon").html(getIcon(temp));
-          bind(".inner-container");
-          $("#temperature").html(result.main.temp);
-          $("img").css("height", "5em");
-          $(".inner-container").animate({
-            opacity: 1
-          }, 1000);
-          
-        }
-      });
     });
   }
   else {
     alert("Geolocation unavailable. Please refresh page and allow location sharing.");
   }
   
-  function bind(target) {
-  
-  $(document).on("click", target, function() {
-    alert("clicked");
+  $("#clickme").click(function() {
+    console.log($("#temperature").text());
+    console.log("hi");
+    alert("hi");
   });
   
-  }
-  
   $("#cel").click(function(){
-    $("#temperature").html(res.main.temp);
+    alert("hi");
+    $("#temperature").text(res.main.temp);
+    
     $("#fah").css("border", "");
     $("#cel").css("border", "0.05em solid white");
     $("#cel").css("background-color", "");
@@ -57,7 +45,40 @@ $(document).ready(function() {
     $("#cel").css("background-color", "rgb(100, 190, 160)");
   });
 
-  function getIcon(weather) {
+  
+  
+  
+});
+
+function getWeather() {
+  $.ajax({
+        url: url + "lat=" + lat + "&lon=" + lon,
+        success: function(result) {
+          
+          res = result;
+          var temp = result.weather[0].main;
+          $("#condition").html(temp);
+          $("#location").html(result.name);
+          $("#icon").html(getIcon(temp));
+          bind("#icon");
+          $(document).on("click", ".inner-container", function() {
+            alert("clicked");
+          });
+          $("#icon").on("click", function(){
+            alert("icon clicked");
+          });
+          alert("ajax running");
+          $("#temperature").html(result.main.temp);
+          $("img").css("height", "5em");
+          $(".inner-container").animate({
+            opacity: 1
+          }, 1000);
+          
+        }
+      });
+}
+
+function getIcon(weather) {
     switch(weather) {
       case "Sunny":
         icon = "<i class=\"wi wi-day-sunny\"></i>";
@@ -76,5 +97,11 @@ $(document).ready(function() {
         return icon;
     }
   }
-});
-
+  
+function bind(target) {
+  
+  $(document).on("click", target, function() {
+    alert("clicked");
+  });
+  
+}
