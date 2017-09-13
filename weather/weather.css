@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 1%;
-  z-index: -2;
+  
 }
 
 .title {
@@ -31,11 +31,12 @@ body {
   font-size: 4em;
   font-family: nunito;
   color: white;
-  z-index: -1;
+  
   opacity: 1;
 }
 .inner-container {
   border: .1em solid white;
+  
   background-color: rgb(120, 210, 180);
   width: 26vw;
   height: 26vw;
@@ -46,7 +47,7 @@ body {
   padding: 1.5em 0;
   opacity: 0;
   border-radius: 1%;
-  z-index: 2;
+  
 }
 
 .temp-container {
@@ -73,16 +74,25 @@ body {
 #cel {
   border: 0.05em solid white;
   margin-left: 0.2em;
-  padding: 0 0.1em;
+  padding: 0 0.2em;
 }
 
 #fah {
   background-color: rgb(100, 190, 160);
-  padding: 0 0.1em;
+  padding: 0 0.2em;
 }
 
 #clickme {
   height: 30px;
   width: 30px;
   background-color: #FFF;
+}
+
+.inner-shadow, #cel, #fah {
+  box-shadow: inset 0 0 0.5em rgb(80, 180, 140);
+}
+
+#cel, #fah {
+  font-size: .75em;
+  box-shadow: inset 0 0 0.2em rgb(80, 180, 140);
 }
