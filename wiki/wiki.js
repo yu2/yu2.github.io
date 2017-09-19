@@ -1,12 +1,24 @@
 $(function(){
   $(".display").text("hi");
-  $.getJSON({
-    
-    url: "https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json&callback=JSON_CALLBACK",
-    //method: 'GET',
+  $.ajax({
+    url: "http://en.wikipedia.org/w/api.php?",
+    data: {
+      action: 'query',
+      list: 'search',
+      srsearch: 'jacksonville',
+      //prop: 'images',
+      //imlimit: '20',
+      format: 'json' //changed from 'jsonfm'
+    },
+    dataType: 'jsonp',
     success: function(result) {
+      console.log("success");
       console.log(result);
-      $(".display").text(result);
+      $(".display").text(result.query.search[0].title);
     }
+  });
+  
+  $("#submit").click(function() {
+    $(".display").text($("#searchbox").val());
   });
 });
