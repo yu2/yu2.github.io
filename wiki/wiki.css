@@ -2,18 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "source sans pro";
 }
 
 body {
   height: 100vh;
   background: #EEE;
-}
-
-.search {
-  height: 5vh;
-  border: 0.1em solid #0EE;
-  display: flex;
-  align-items: center;
 }
 
 .container {
@@ -23,8 +17,21 @@ body {
   height: 100vh;
 }
 
+.search {
+  height: 5vh;
+  border: 0.1em solid #0EE;
+  display: flex;
+  align-items: center;
+}
+
 .display {
   border: 0.1em solid #E0E;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.resultsHere {
   height: 100%;
   width: 100%;
 }
