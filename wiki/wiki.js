@@ -1,25 +1,28 @@
 var query, resultsJoined;
 var results = [];
-var colors = ["snow", "honeydew", "mintcream", "aliceblue", "ghostwhite", "whitesmoke", "seashell", "beige", "azure", "ivory", "mistyrose"];
+var colors = ["snow", "honeydew", "lightcyan", "lavender", "lavenderblush", "seashell", "beige", "azure", "ivory", "linen"];
 
 $(function(){
   console.log(results);
   $(".resultsHere").text("hi");
   
   $("#submit").click(function() {
-    query = $("#searchbox").val();
     console.log("here");
-    search();
+    search($("#searchbox").val());
+  });
+  
+  $("#random").click(function() {
+    randomPage();
   });
 });
 
-function search() {
+function search(searchTerm) {
   $.ajax({
     url: "http://en.wikipedia.org/w/api.php?",
     data: {
       action: 'query',
       list: 'search',
-      srsearch: query,
+      srsearch: searchTerm,
       //prop: 'images',
       //imlimit: '20',
       format: 'json' //changed from 'jsonfm'
@@ -30,7 +33,7 @@ function search() {
       
       //set up array of results, display them
       for(var i = 0; i < response.query.search.length; i++) {
-        results[i] = "<p class=\"results\" style=\"border: 0.05em solid black; padding: 0.2em; background-color: " + colors[Math.floor(Math.random() * 12)] + ";\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p></br>";
+        results[i] = "<p class=\"results\" style=\"border: 0.05em solid black; padding: 0.2em; background-color: rgb(" + randomColor() + ");\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p></br>";
       }
       resultsJoined = results.join("");
       $(".resultsHere").html(resultsJoined).hide();
@@ -46,11 +49,31 @@ function displayResults() {
   $(resultsCol[0]).show(250, function(){
     $(this).next().show(250, arguments.callee); //arguments.callee contains the currently executing function
   });
-  
-  
-  /*
-  for(var i = 0; i<resultsCol.length; i++) {
-    $(resultsCol[i]).show(1000);
-  }
-  */
+}
+
+function randomColor() {
+  var r = Math.floor(Math.random()*56 + 200);
+  var g = Math.floor(Math.random()*56 + 200);
+  var b = Math.floor(Math.random()*56 + 200);
+  var rgb = r + ", " + g + ", " + b;
+  return rgb;
+}
+
+function randomPage() {
+  $.ajax({
+    url: "http://en.wikipedia.org/w/api.php?",
+    data: {
+      action: 'query',
+      list: 'random',
+      rnnamespace: '0',
+      format: 'json'
+    },
+    dataType: 'jsonp',
+    success: function(response) {
+      console.log(response);
+      var searchTerm = response.query.random[0].title;
+      $("#searchbox").val(searchTerm);
+      search(searchTerm);
+    }
+  });
 }
