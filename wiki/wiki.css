@@ -19,7 +19,6 @@ body {
 }
 
 .search {
-  height: 5vh;
   border: 0.1em solid #0EE;
   display: flex;
   align-items: center;

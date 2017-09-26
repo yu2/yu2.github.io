@@ -3,14 +3,24 @@ var results = [];
 var colors = ["snow", "honeydew", "lightcyan", "lavender", "lavenderblush", "seashell", "beige", "azure", "ivory", "linen"];
 
 $(function(){
-  console.log(results);
   $(".resultsHere").text("hi");
   
   $("#submit").click(function() {
-    console.log("here");
     search($("#searchbox").val());
   });
   
+  $("#searchbox").keydown(function(e) {
+    if (e.keyCode == 13) {
+      search($("#searchbox").val());
+    }
+  });
+/*
+  $(document).keydown(function(e) {
+    if (e.keyCode == 82) {
+      randomPage();
+    }
+  });
+*/
   $("#random").click(function() {
     randomPage();
   });
@@ -70,7 +80,6 @@ function randomPage() {
     },
     dataType: 'jsonp',
     success: function(response) {
-      console.log(response);
       var searchTerm = response.query.random[0].title;
       $("#searchbox").val(searchTerm);
       search(searchTerm);
