@@ -33,7 +33,7 @@ function search(searchTerm) {
       
       //set up array of results, display them
       for(var i = 0; i < response.query.search.length; i++) {
-        results[i] = "<p class=\"results\" style=\"border: 0.05em solid black; padding: 0.2em; background-color: rgb(" + randomColor() + ");\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p></br>";
+        results[i] = "<p class=\"results\" style=\"border: 0.05em solid rgb(" + randomColor(100) + "); padding: 0.2em; background-color: rgb(" + randomColor(200) + ");\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p></br>";
       }
       resultsJoined = results.join("");
       $(".resultsHere").html(resultsJoined).hide();
@@ -51,10 +51,10 @@ function displayResults() {
   });
 }
 
-function randomColor() {
-  var r = Math.floor(Math.random()*56 + 200);
-  var g = Math.floor(Math.random()*56 + 200);
-  var b = Math.floor(Math.random()*56 + 200);
+function randomColor(value) {
+  var r = Math.floor(Math.random()*56 + value);
+  var g = Math.floor(Math.random()*56 + value);
+  var b = Math.floor(Math.random()*56 + value);
   var rgb = r + ", " + g + ", " + b;
   return rgb;
 }
