@@ -15,6 +15,11 @@ $(function(){
       search($("#searchbox").val());
     }
   });
+
+  $("#searchbox").click(function() {
+    $("#searchbox").val("");
+  });
+
 /*
   $(document).keydown(function(e) {
     if (e.keyCode == 82) {
@@ -22,6 +27,7 @@ $(function(){
     }
   });
 */
+
   $("#random").click(function() {
     randomPage();
   });
