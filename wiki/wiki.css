@@ -18,14 +18,17 @@ body {
   height: 100vh;
 }
 
+
+
 .search {
-  border: 0.1em solid #0EE;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: slategray;
 }
 
 .display {
-  border: 0.1em solid #E0E;
   height: 100%;
   width: 100%;
   display: flex;
@@ -40,7 +43,40 @@ body {
   padding-top: 0.5em;
 }
 
-a:link {
-  color:black;
+#searchbox {
+  font-size: 1em;
+}
+
+button {
+  width: 2em;
+  height: 2em;
+  background-color: white;
+  border: 0.1em solid gray;
+}
+
+#name {
+  position: absolute;
+  left: 0;
+  color: white;
+  font-weight: bold;
+}
+
+#icon {
+  margin: 0 0.2em;
+}
+
+#logo {
+  position: absolute;
+  right: 0;
+  color: white;
+  margin-right: 0.2em;
+}
+
+.search a:link {
+  color: white;
   text-decoration: none;
+}
+
+.search a:visited {
+  color: white;
 }

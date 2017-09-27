@@ -1,9 +1,10 @@
 var query, resultsJoined;
 var results = [];
 var colors = ["snow", "honeydew", "lightcyan", "lavender", "lavenderblush", "seashell", "beige", "azure", "ivory", "linen"];
+var r, g, b;
 
 $(function(){
-  $(".resultsHere").text("hi");
+  $(".resultsHere").text("Results appear here");
   
   $("#submit").click(function() {
     search($("#searchbox").val());
@@ -40,10 +41,10 @@ function search(searchTerm) {
     dataType: 'jsonp',
     success: function(response) {
       console.log(response);
-      
+  
       //set up array of results, display them
       for(var i = 0; i < response.query.search.length; i++) {
-        results[i] = "<p class=\"results\" style=\"border: 0.05em solid rgb(" + randomColor(100) + "); padding: 0.2em; background-color: rgb(" + randomColor(200) + ");\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p></br>";
+        results[i] = "<div class=\"result\"><p class=\"resultTitle\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p><p class=\"resultSnippet\">" + response.query.search[i].snippet + "</p></div>";
       }
       resultsJoined = results.join("");
       $(".resultsHere").html(resultsJoined).hide();
@@ -53,20 +54,57 @@ function search(searchTerm) {
 }
 
 function displayResults() {
-  resultsCol = document.getElementsByClassName("results");
-  $(resultsCol).hide();
+  resultBoxes = document.getElementsByClassName("result");
+  resultTitles = document.getElementsByClassName("resultTitle");
+  resultSnippets = document.getElementsByClassName("resultSnippet");
+  
+  //Boxes
+  $(resultBoxes).css({
+    "display": "flex",
+    "flex-direction": "column",
+    "align-items": "center",
+    "margin-bottom": "0.5em"
+  });
+  //Titles
+  $(resultTitles).css({
+    "width": "100%",
+    "padding": "0.3em",
+    "font-weight": "bold",
+    "color": "dimgray"
+  });
+  $(".resultTitle a:link").css({
+    "color": "black",
+    "text-decoration": "none"
+  });
+  //Body(snippets)
+  $(resultSnippets).css({
+    "padding": "0.3em"
+  });
+  
+  //set colours of each resultBox
+  for (var i = 0; i < resultBoxes.length; i++) {
+    randomColor();
+    $(resultBoxes[i]).css({
+      "background-color": "rgb(" + r + ", " + g + ", " + b + ")",
+      "border": "0.05em solid rgb(" + (r-50) + ", " + (g-50) + ", " + (b-50) + ")"
+    });
+    
+    $(resultTitles[i]).css("background-color", "rgb(" + (r-20) + ", " + (g-20) + ", " + (b-20) + ")");
+  }
+  
+  $(resultBoxes).hide();
   $(".resultsHere").css("text-align", "center").show();
-  $(resultsCol[0]).show(250, function(){
+  
+  //show results one by one
+  $(resultBoxes[0]).show(250, function(){
     $(this).next().show(250, arguments.callee); //arguments.callee contains the currently executing function
   });
 }
 
-function randomColor(value) {
-  var r = Math.floor(Math.random()*56 + value);
-  var g = Math.floor(Math.random()*56 + value);
-  var b = Math.floor(Math.random()*56 + value);
-  var rgb = r + ", " + g + ", " + b;
-  return rgb;
+function randomColor() {
+  r = Math.floor(Math.random()*26 + 230);
+  g = Math.floor(Math.random()*26 + 230);
+  b = Math.floor(Math.random()*26 + 230);
 }
 
 function randomPage() {
