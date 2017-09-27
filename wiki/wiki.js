@@ -63,8 +63,7 @@ function displayResults() {
   resultBoxes = document.getElementsByClassName("result");
   resultTitles = document.getElementsByClassName("resultTitle");
   resultSnippets = document.getElementsByClassName("resultSnippet");
-  searchMatch = document.getElementsByClassName("searchmatch");
-  
+
   //Boxes
   $(resultBoxes).css({
     "display": "flex",
@@ -87,17 +86,17 @@ function displayResults() {
   $(resultSnippets).css({
     "padding": "0.3em"
   });
-  $(searchMatch).css("font-weight", "500");
+  $(".searchmatch").css("font-weight", "bold");
   
   //set colours of each resultBox
   for (var i = 0; i < resultBoxes.length; i++) {
     randomColor();
     $(resultBoxes[i]).css({
       "background-color": "rgb(" + r + ", " + g + ", " + b + ")",
-      "border": "0.05em solid rgb(" + (r-50) + ", " + (g-50) + ", " + (b-50) + ")"
+      "border": "0.05em solid rgb(" + (r-60) + ", " + (g-60) + ", " + (b-60) + ")"
     });
     
-    $(resultTitles[i]).css("background-color", "rgb(" + (r-20) + ", " + (g-20) + ", " + (b-20) + ")");
+    $(resultTitles[i]).css("background-color", "rgb(" + (r-30) + ", " + (g-30) + ", " + (b-30) + ")");
   }
   
   $(resultBoxes).hide();
