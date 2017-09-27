@@ -63,6 +63,7 @@ function displayResults() {
   resultBoxes = document.getElementsByClassName("result");
   resultTitles = document.getElementsByClassName("resultTitle");
   resultSnippets = document.getElementsByClassName("resultSnippet");
+  searchMatch = document.getElementsByClassName("searchmatch");
   
   //Boxes
   $(resultBoxes).css({
@@ -86,6 +87,7 @@ function displayResults() {
   $(resultSnippets).css({
     "padding": "0.3em"
   });
+  $(searchMatch).css("font-weight", "500");
   
   //set colours of each resultBox
   for (var i = 0; i < resultBoxes.length; i++) {
