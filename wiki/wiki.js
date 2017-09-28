@@ -50,7 +50,7 @@ function search(searchTerm) {
   
       //set up array of results, display them
       for(var i = 0; i < response.query.search.length; i++) {
-        results[i] = "<div class=\"result\"><p class=\"resultTitle\">" + "<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p><p class=\"resultSnippet\">" + response.query.search[i].snippet + "</p></div>";
+        results[i] = "<div class=\"result\"><p class=\"resultTitle\">" + "<a id=\"link\" target=\"_blank\" href=\"https://en.wikipedia.org/wiki/" + response.query.search[i].title.replace(" ", "_") + "\">" + response.query.search[i].title + "</a></p><p class=\"resultSnippet\">" + response.query.search[i].snippet + "</p></div>";
       }
       resultsJoined = results.join("");
       $(".resultsHere").html(resultsJoined).hide();
@@ -76,9 +76,14 @@ function displayResults() {
     "width": "100%",
     "padding": "0.3em",
     "font-weight": "bold",
-    "color": "dimgray"
+    "color": "dimgray",
+    "text-align": "center"
   });
-  $(".resultTitle a:link").css({
+  //not working
+  $("#link:hover").css({
+    "text-decoration": "underline"
+  });
+  $("#link:link").css({
     "color": "black",
     "text-decoration": "none"
   });
@@ -100,7 +105,7 @@ function displayResults() {
   }
   
   $(resultBoxes).hide();
-  $(".resultsHere").css("text-align", "center").show();
+  $(".resultsHere").show();
   
   //show results one by one
   $(resultBoxes[0]).show(250, function(){

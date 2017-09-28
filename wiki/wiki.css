@@ -18,14 +18,17 @@ body {
   height: 100vh;
 }
 
-
-
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   background-color: slategray;
+}
+
+.search-area {
+  display: flex;
+  justify-content: center;
 }
 
 .display {
@@ -57,9 +60,18 @@ button {
 
 #name {
   position: absolute;
+  top: 0.2em;
   left: 0;
   color: white;
   font-weight: bold;
+}
+
+#name a:link {
+  text-decoration: none;
+}
+
+#name a:visited {
+  color: white;
 }
 
 #icon {
@@ -69,15 +81,17 @@ button {
 #logo {
   position: absolute;
   right: 0;
+  top: 0.2em;
   color: white;
   margin-right: 0.2em;
+  
 }
 
-.search a:link {
+#git-link:link {
   color: white;
   text-decoration: none;
 }
 
-.search a:visited {
+#git-link:visited {
   color: white;
 }
