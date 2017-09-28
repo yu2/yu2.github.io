@@ -46,7 +46,6 @@ function search(searchTerm) {
     },
     dataType: 'jsonp',
     success: function(response) {
-      console.log(response);
   
       //set up array of results, display them
       for(var i = 0; i < response.query.search.length; i++) {
@@ -69,7 +68,8 @@ function displayResults() {
     "display": "flex",
     "flex-direction": "column",
     "align-items": "center",
-    "margin-bottom": "0.5em"
+    "margin-bottom": "0.5em",
+    "flex-shrink": "0"
   });
   //Titles
   $(resultTitles).css({
