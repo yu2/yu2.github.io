@@ -3,15 +3,26 @@
 <head>
   <title>twitch</title>
   <link href="twitch.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="heading">Twitch Status</div>
     <div class="channel-box">
-      <div class="channel" id="channel1"></div>
-      <div class="channel" id="channel2"></div>
-      <div class="channel" id="channel3"></div>
+      <div class="channel channel-bg" id="channel1-bg">
+        <div class="channel channel-fg" id="channel1">
+          <p><span id="channel1-name">Player</span> is playing <span id="channel1-game">game</span></p>
+        </div>
+      </div>
+      <div class="channel channel-bg" id="channel2-bg">
+        <div class="channel channel-fg" id="channel2"></div>
+      </div>
+      <div class="channel channel-bg" id="channel3-bg">
+        <div class="channel channel-fg" id="channel3"></div>
+      </div>
     </div>
   </div>
+
+  <script src="twitch.js"></script>
 </body>
 </html>
