@@ -16,25 +16,35 @@ body {
 .container {
   height: 30vw;
   width: 30vw;
-  background-color: #e55;
+  background-color: #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-h1 {
+.heading {
   font-family: "lucida sans";
-  height: 3vw;
+  font-size: 2em;
   font-weight: 400;
   text-align: center;
   color: white;
+  padding: 0.5em;
 }
 
 .channel-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 27vw;
+  height: 100%;
+  background-color: #bbb;
+  padding: 0.5em;
 }
 
 .channel {
-  height: 9vw;
-  border: 0.05em inset white;
+  width: 100%;
+  height: 33.3%;
+  border: 0.25em solid #aaa;
+  margin: 0.5em 0;
 }
