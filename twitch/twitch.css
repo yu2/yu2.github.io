@@ -64,10 +64,10 @@ body {
   border: 0.25em solid #aaa;
   margin: 1% 0;
   display: flex;
+  background-color: #c77;
 }
 
 .channel-fg {
-  background-color: #c77;
   height: 100%;
   width: 100%;
 }
