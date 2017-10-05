@@ -63,13 +63,15 @@ body {
   height: 33.3%;
   border: 0.25em solid #aaa;
   margin: 1% 0;
-  display: flex;
+  
   background-color: #c77;
 }
 
 .channel-fg {
   height: 100%;
   width: 100%;
+  opacity: 0;
+  z-index: 2;
 }
 
 #searchbox {

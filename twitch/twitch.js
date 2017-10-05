@@ -23,13 +23,12 @@ function channelInfo(channelName) {
       if (response.stream !== null) {
         $("#channel1").css("background-color", "#7c7");
         $("#channel1").html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
+        $("#channel1").animate({"opacity": "1"}, 250);
         //$("#channel1-name").html(response.stream.channel.display_name);
         //$("#channel1-game").html(response.stream.channel.game);
       } else {
-        $("#channel1").css("background-color", "#c77");
-        $("#channel1").html("<p><span id=\"channel1-name\">" + channelName + "</span>" + " is offline" + "</p>");
+        $("#channel1").animate({"opacity": "0"}, 250);
       }
-      
     }
   });
 }
