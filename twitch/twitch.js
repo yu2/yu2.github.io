@@ -26,16 +26,20 @@ function channelInfo(channelName, boxNumber) {
     headers: {"Client-ID": "fcc-yu2"},
     success: function(response){
       console.log(response);
-      var currentBox = "#channel" + boxNumber;
+      var currentDesc = "#channel-desc" + boxNumber;
+      var currentArt = "#channel-art" + boxNumber;
       console.log(boxNumber);
       if (response.stream !== null) {
-        $(currentBox).css("background-color", "#7c7");
-        $(currentBox).html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
-        $(currentBox).animate({"opacity": "1"}, 250);
-        //$("#channel1-name").html(response.stream.channel.display_name);
-        //$("#channel1-game").html(response.stream.channel.game);
+        $(currentDesc).css("background-color", "#7c7");
+        $(currentArt).css({
+          "background-image": "url(\"" + response.stream.channel.logo + "\")",
+          "background-size": "contain",
+          "background-repeat": "no-repeat"
+        });
+        $(currentDesc).html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
+        $("#channel" + boxNumber).animate({"opacity": "1"}, 250);
       } else {
-        $(currentBox).animate({"opacity": "0"}, 250);
+        $("#channel" + boxNumber).animate({"opacity": "0"}, 250);
       }
     }
   });
