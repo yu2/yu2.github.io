@@ -7,17 +7,18 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #eee;
 }
 
 .container {
-  height: 35vw;
-  width: 30vw;
+  min-height: 40%;
+  min-width: 25%;
   background-color: #aaa;
   display: flex;
   flex-direction: column;
@@ -64,12 +65,12 @@ body {
   width: 90%;
   background-color: #aaa;
   border: none;
-  font-size: 90%;
+  font-size: 1em;
   padding: 1%;
 }
 
 .go {
-  font-size: 100%;
+  font-size: 1em;
   background-color: #bbb;
   border: none;
   margin: 0;
@@ -84,7 +85,7 @@ body {
 
 .channel-bg {
   width: 100%;
-  height: 100%;
+  height: 5em;
   background-color: #c77;
   display: flex;
   flex-direction: column;
@@ -97,21 +98,26 @@ body {
   opacity: 0;
   position: absolute;
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .channel-art {
-  height: 100%;
-  width: 27.5%;
+  height: 5em;
+  width: 5em;
+  display: flex;
+  flex: none;
   background-color: white;
   filter: brightness(120%);
 }
 
 .channel-desc {
   height: 100%;
-  width: 72.5%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: auto;
   padding: 0.25em;
 }
 

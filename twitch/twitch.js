@@ -37,11 +37,10 @@ function channelInfo(channelName, boxNumber) {
           "background-repeat": "no-repeat"
         });
         $("#channel-name" + boxNumber).html(response.stream.channel.display_name);
-        $("#channel-name" + boxNumber + " a").attr({
+        $(currentDesc + " a").attr({
           "href": response.stream.channel.url,
           "target": "_blank"
         });
-        console.log($("#channel-name" + boxNumber + " a").text);
         $("#channel-game" + boxNumber).html(response.stream.game);
         //$(currentDesc).html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
         $("#channel" + boxNumber).animate({"opacity": "1"}, 250);
