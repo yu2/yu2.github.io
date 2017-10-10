@@ -1,4 +1,4 @@
-<a href="http://yu2.github.io/twitch/twitch.html" target="_blank"># yu2.github.io</a><br>
+<a href="https://github.com/yu2" target="_blank">profile</a><br>
 # yu2.github.io
 learning web development
 
