@@ -18,6 +18,7 @@ $(function() {
       channelInfo($("#" + target).val(), index);
     }
   });
+  channelInfo("FreeCodeCamp", 1);
 });
 
 function channelInfo(channelName, boxNumber) {
@@ -37,9 +38,14 @@ function channelInfo(channelName, boxNumber) {
       console.log(response);
       var currentDesc = "#channel-desc" + boxNumber;
       var currentArt = "#channel-art" + boxNumber;
-      console.log(boxNumber);
       if (response.stream !== null) {
-        $(currentDesc).css("background-color", "#7c7");
+        $("#channel-preview" + boxNumber).css({
+          "background-image": "url(\"" + response.stream.preview.large + "\")",
+          "background-size": "cover",
+          "filter": "opacity(80%)"
+          //"background-color": "#7c7"
+        });
+        $(currentDesc).css("background-color", "#000");
         $(currentArt).css({
           "background-image": "url(\"" + response.stream.channel.logo + "\")",
           "background-size": "contain",
@@ -54,6 +60,7 @@ function channelInfo(channelName, boxNumber) {
         //$(currentDesc).html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
         $("#channel" + boxNumber).animate({"opacity": "1"}, 250);
       } else {
+        $("#offline" + boxNumber).html(channelName + " is offline.");
         $("#channel" + boxNumber).animate({"opacity": "0"}, 250);
       }
     }
