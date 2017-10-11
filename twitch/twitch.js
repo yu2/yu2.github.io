@@ -22,8 +22,17 @@ $(function() {
 
 function channelInfo(channelName, boxNumber) {
   $.ajax({
+    //url: 'https://wind-bow.gomix.me/twitch-api/users/freecodecamp',
     url: 'https://api.twitch.tv/kraken/streams/' + channelName,
-    headers: {"Client-ID": "fcc-yu2"},
+    /*
+    xhrFields: {
+      withCredentials: "include"
+    },
+    */
+    headers: {
+      "Client-ID": "jrkdkjsfjthn2oc2flhfw3c3zlwzyt",
+      //"Accept": "application/vnd.twitchtv.v5+json",
+    },
     success: function(response){
       console.log(response);
       var currentDesc = "#channel-desc" + boxNumber;
