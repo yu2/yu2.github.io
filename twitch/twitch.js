@@ -18,7 +18,7 @@ $(function() {
       channelInfo($("#" + target).val(), index);
     }
   });
-  channelInfo("FreeCodeCamp", 1);
+  channelInfo("freeCodeCamp", 1);
 });
 
 function channelInfo(channelName, boxNumber) {
