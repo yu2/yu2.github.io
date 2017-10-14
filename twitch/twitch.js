@@ -53,8 +53,7 @@ function channelInfo(channelName, boxNumber) {
         });
         $("#channel-name" + boxNumber).html(response.stream.channel.display_name);
         $(currentDesc + " a").attr({
-          "href": response.stream.channel.url,
-          "target": "_blank"
+          "href": response.stream.channel.url
         });
         $("#channel-game" + boxNumber).html(response.stream.game);
         //$(currentDesc).html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
