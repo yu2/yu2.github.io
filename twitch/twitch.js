@@ -52,9 +52,8 @@ function channelInfo(channelName, boxNumber) {
           "background-repeat": "no-repeat"
         });
         $("#channel-name" + boxNumber).html(response.stream.channel.display_name);
-        $(currentDesc + " a").attr({
-          "href": response.stream.channel.url
-        });
+        $(currentDesc + " .streamer-name").attr("href", response.stream.channel.url);
+        $(currentDesc + " .game-name").attr("href", "https://www.twitch.tv/directory/game/" + response.stream.game.replace(" ", "%20"));
         $("#channel-game" + boxNumber).html(response.stream.game);
         //$(currentDesc).html("<p><span id=\"channel1-name\">" + response.stream.channel.display_name + "</span> is playing <span id=\"channel1-game\">" + response.stream.channel.game +"</span></p>");
         $("#channel" + boxNumber).animate({"opacity": "1"}, 250);
