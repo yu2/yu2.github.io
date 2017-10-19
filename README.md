@@ -1,5 +1,5 @@
 # yu2.github.io
-web development<br>
+learning web development<br>
 <a href="https://github.com/yu2" target="_blank">profile</a><br>
 
 ### Projects
