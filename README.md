@@ -1,6 +1,3 @@
-# yu2.github.io
-learning web development
-
 ## Projects
 <a href="http://yu2.github.io/parser/parser.html" target="_blank">Parser</a><br>
 <a href="http://yu2.github.io/twitch/twitch.html" target="_blank">Twitch Channel Status</a><br>
