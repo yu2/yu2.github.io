@@ -46,7 +46,6 @@ body {
 }
 
 .big-box {
-  
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -82,19 +81,62 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #F6F;
+}
+
+.input {
+  width: 25%;
+  display: flex;
+  align-items: stretch;
+}
+
+.input input {
+  flex-grow: 2;
+  font-size: 100%;
+}
+
+.input button {
+  flex-grow: 0;
+  padding: 1%;
+  font-weight: bold;
+  background-color: #F9F;
+  color: white;
+  font-size: 100%;
+}
+
+.input-content {
+  border: 3px solid white;
+}
+
+.display-roman {
+  height: 5em;
+  width: 25%;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9F;
+  color: white;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffa399;
 }
 
-.container3 > .fa {
+.container4 > .fa {
   font-size: 4em;
 }
 
-.container3 > .joke {
+.container4 > .joke {
   text-align: center;
   font-size: 1.5em;
 }
 
-.container3 > button {
+.container4 > button {
   color: white;
   font-size: 1.5em;
   padding: 0.3em;
@@ -103,11 +145,11 @@ body {
   background-color: #ffa399;
 }
 
-.container3 > button:hover {
+.container4 > button:hover {
   animation: 1s infinite alternate button-shadow1;
 }
 
-.container3 > button:focus {
+.container4 > button:focus {
   outline: 0;
 }
 
