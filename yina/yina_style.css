@@ -6,40 +6,21 @@
   /*border: 1px solid black*/
 }
 
-.banner {
-  position: absolute;
-}
-
-img {
-  width: 100%;
-}
-
-/*
-.banner {
-  width: 100%;
-  height: 175px;
-  background-image: url("http://i.imgur.com/MRD3cIw.jpg");
-  background-size: cover;
-  position: absolute;
-  z-index: -1;
-}
-*/
-
 body {
   background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.navigation {
+.header {
   width: 100%;
-  position: fixed;
-  background-color: rgba(215, 224, 142, 0.9);
-}
-
-.photo {
-  height: 160px;
-  width: 160px;
-  border: 3px solid white;
-  background-color: #eee;
+  background-color: rgba(208, 231, 247, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 h1 {
@@ -47,9 +28,20 @@ h1 {
   text-align: center;
   font-size: 300%;
   color: white;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  background-color: rgba(208, 231, 247, 0.9);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.photo {
+  height: 160px;
+  width: 160px;
+  border: 3px solid white;
+  margin-bottom: 1%;
+}
+
+.navigation {
+  width: 100%;
+  background-color: rgb(215, 224, 142);
 }
 
 a {
@@ -78,9 +70,30 @@ li {
 }
 
 .content {
-  position: relative;
-  top: 66px;
+  margin: 1%;
   background-color: aliceblue;
-  height: 800px;
-  z-index: -2;
+  width: 75%;
+  flex-basis: content;
+  padding: 2%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.banner {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#cons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: #48a;
+  padding: 1%;
 }
