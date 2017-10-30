@@ -35,6 +35,13 @@ body {
   background-color: rgba(215, 224, 142, 0.9);
 }
 
+.photo {
+  height: 160px;
+  width: 160px;
+  border: 3px solid white;
+  background-color: #eee;
+}
+
 h1 {
   width: 100%;
   text-align: center;
