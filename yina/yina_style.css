@@ -60,7 +60,7 @@ h1, .navigation {
 }
 
 li {
-    display: inline-block;
+  display: inline-block;
   width: 19.5%;
   height: 2em;
   font-size: 1.5em;
@@ -70,7 +70,7 @@ li {
 }
 
 .content {
-  margin-top: 2%;
+  margin-top: 15px;
   background-color: aliceblue;
   width: 75%;
   flex-basis: content;
