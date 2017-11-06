@@ -9,6 +9,18 @@ var realConsoleLog = console.log;
         var message = [].join.call(arguments, " ");
         // Display message
         $(".console-area").append("<p>" + message + "</p>");
-        $(".console-area p:last-child").animate({opacity: "1"}, 500);
-        realConsoleLog.apply(console, arguments);
+        //$(".console-area p:last-child").animate({opacity: "1"}, 500);
+        $.when(test()).done(function() {
+          realConsoleLog.apply(console, arguments);
+        });
+        //realConsoleLog.apply(console, arguments);
     };
+    
+    
+function test() {
+  setTimeout (function() {
+    $(".console-area p:last-child").animate({opacity: "1"}, 500);
+  }, 500);
+  
+  
+}
