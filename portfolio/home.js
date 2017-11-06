@@ -20,7 +20,7 @@ $(function() {
     } else {
       $(".shelf").animate({
         //left: "+=" + menuWidth
-        width: "100%"
+        width: "20%"
       });
       shelfHidden = false;
     }
