@@ -15,10 +15,9 @@ body {
 .shelf {
   color: white;
   display: flex;
-  flex-shrink: 1;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 20%;
   background-color: black;
   position: relative;
   left: 0;
@@ -48,10 +47,16 @@ body {
   border: 2px solid white;
 }
 
-.text-area {
+.console-bg {
   margin: 4% 2%;
   background-color: white;
   padding: 2%;
+  opacity: 1;
+}
+
+.console-area {
+  background-color: white;
+  opacity: 1;
 }
 
 .toggle-display {
