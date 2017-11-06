@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "lucida sans";
+  font-family: "open sans";
 }
 
 body {
@@ -57,6 +57,10 @@ body {
 .console-area {
   background-color: white;
   opacity: 1;
+}
+
+.console-area p:last-child {
+  opacity: 0;
 }
 
 .toggle-display {
