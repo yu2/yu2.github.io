@@ -51,16 +51,24 @@ body {
   margin: 4% 2%;
   background-color: white;
   padding: 2%;
-  opacity: 1;
 }
 
 .console-area {
   background-color: white;
-  opacity: 1;
 }
 
-.console-area p:last-child {
-  opacity: 0;
+.console-area p {
+  opacity: 1;
+  animation: appear 0.2s linear 1;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .toggle-display {
