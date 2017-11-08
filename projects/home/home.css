@@ -45,6 +45,7 @@ body {
   background-color: #eee;
   border: 2px solid white;
   padding: 0 2%;
+  overflow: scroll;
 }
 
 .toggle-display {
