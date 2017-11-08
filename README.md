@@ -14,5 +14,8 @@ API test. Not working right now.
 <a href="http://yu2.github.io/quote/quote2.html" target="_blank">Random Quote Machine</a><br>
 Uses Andruxnet API
 
+<a href="http://yu2.github.io/projects/home/home.html" target="_blank">Mock Console</a><br>
+Overrides default console.log to print onto page; for testing purposes.
+
 <a href="http://yu2.github.io/quote/flex.html" target="_blank">Flexbox layout test</a><br>
 Trying out flexbox for the first time
