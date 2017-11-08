@@ -9,7 +9,7 @@ body {
   display: flex;
   height: 100vh;
   background-color: #aaa;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .shelf {
@@ -45,7 +45,6 @@ body {
   background-color: #eee;
   border: 2px solid white;
   padding: 0 2%;
-  overflow: scroll;
 }
 
 .toggle-display {
