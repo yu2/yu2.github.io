@@ -1,9 +1,22 @@
+var reader = new FileReader();
+
 $(function() {
-  var fileCtrl = $('input[multiple]')[0];
-  $(fileCtrl).change(function() {
-    myFiles = fileCtrl.files;
-    for (var i = 0; i < myFiles.length; i++) {
-      $('.output').append(myFiles[i].name + "<br>" + myFiles[i].type + "<br>" + myFiles[i].size + " bytes<br><br>");
-    }
-  });
+  $('input[multiple]').change(handleFiles);
+  
+  
+
 });
+
+function handleFiles() {
+  var fileList = this.files;
+  for (var i = 0; i < fileList.length; i++) {
+    $('.output').append(fileList[i].name + "<br>" + fileList[i].type + "<br>" + fileList[i].size + " bytes<br><br>");
+    reader.readAsText(fileList[i]);
+  }
+}
+  
+
+reader.onload = function(e) {
+  var contents = e.target.result;
+  $('.output').append(contents);
+};
