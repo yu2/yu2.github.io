@@ -9,7 +9,7 @@ body {
   display: flex;
   height: 100vh;
   background-color: #aaa;
-  overflow: scroll;
+
 }
 
 .shelf {
@@ -82,10 +82,13 @@ body {
   margin: 1% 0;
   background-color: white;
   padding: 2%;
+  max-height: 75vh;
+  overflow: auto;
 }
 
 .console-area {
   background-color: white;
+  max-height: 75vh;
 }
 
 .console-area p {
