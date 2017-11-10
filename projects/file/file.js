@@ -1,10 +1,6 @@
-var reader = new FileReader();
-
 $(function() {
   $('input[multiple]').change(handleFiles);
-  
-  
-
+  alert("hi");
 });
 
 function handleFiles() {
@@ -15,8 +11,13 @@ function handleFiles() {
   }
 }
   
-
+var reader = new FileReader();
 reader.onload = function(e) {
   var contents = e.target.result;
-  $('.output').append(contents);
+  var lines = contents.split('\n');
+  for (var i = 0; i < lines.length; i++) {
+    $('.output').append(lines[i] + "<br>");
+    console.log(i);
+  }
+  
 };
