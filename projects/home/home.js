@@ -24,7 +24,5 @@ $(function() {
       });
       shelfHidden = false;
     }
-    
-    
   });
 });

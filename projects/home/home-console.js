@@ -3,8 +3,8 @@ $(function() {
   
   //***Testing Area***//
   console.log("input text between the brackets");
- 
- 
+  
+  
   //***//
   
   $('#console-input').keydown(function(key) {
@@ -34,6 +34,5 @@ function displayMessages() {
   $(msgs[0]).show(100, function() {
     $('.console-bg').scrollTop($('.console-bg')[0].scrollHeight);
     $(this).next().show(100, arguments.callee); //show is in the events cue
-    
   });
 }

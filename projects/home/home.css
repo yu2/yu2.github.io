@@ -9,7 +9,6 @@ body {
   display: flex;
   height: 100vh;
   background-color: #aaa;
-
 }
 
 .shelf {
@@ -95,8 +94,6 @@ body {
   display: none;
   opacity: 1;
 }
-
-
 
 a:link {
   color: white;
