@@ -19,5 +19,10 @@ reader.onload = function(e) {
     $('.output').append(lines[i] + "<br>");
     console.log(i);
   }
-  
 };
+
+function Affix(token, tag, gloss) {
+  this.token = token;
+  this.tag = tag;
+  this.gloss = gloss;
+}
