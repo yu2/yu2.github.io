@@ -1,6 +1,5 @@
 $(function() {
   $('input[multiple]').change(handleFiles);
-  alert("hi");
 });
 
 function handleFiles() {
@@ -16,8 +15,10 @@ reader.onload = function(e) {
   var contents = e.target.result;
   var lines = contents.split('\n');
   for (var i = 0; i < lines.length; i++) {
-    $('.output').append(lines[i] + "<br>");
-    console.log(i);
+    var tabs = lines[i].split('\t');
+    for (var j = 0; j < tabs.length; j++) {
+      $('.output').append(tabs[j] + "<br>");
+    }
   }
 };
 
