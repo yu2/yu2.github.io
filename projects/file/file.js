@@ -5,6 +5,7 @@ $(function() {
 
 function handleFiles() {
   var fileList = this.files;
+  console.log(fileList.length);
   for (var i = 0; i < fileList.length; i++) {
     $('.output').append(fileList[i].name + "<br>" + fileList[i].type + "<br>" + fileList[i].size + " bytes<br><br>");
     reader.readAsText(fileList[i]);
