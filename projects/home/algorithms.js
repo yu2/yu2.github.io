@@ -30,3 +30,26 @@ function convertHTML(str) {
   
   return str;
 }
+
+// Spinal Tap Case
+// Convert a string to spinal case (all-lowercase-words-joined-by-dashes).
+function spinalCase(str) {
+  
+  var re = /[^a-zA-Z]/g;
+  var re_cap = /[a-z][A-Z]/;
+  var re_cap_g = /[a-z](?=[A-Z])/g;
+  
+  var new_str = str;
+  
+  if (re_cap_g.test(new_str) === true) {
+    for (var i = 0; i < str.match(re_cap_g).length; i++) {
+      var cap_match = new_str.match(re_cap);
+      new_str = new_str.replace(cap_match[0], cap_match[0].charAt(0) + " " + cap_match[0].charAt(1));
+    }
+  }
+  
+  new_str = new_str.toLowerCase();
+  new_str = new_str.replace(re, "-");
+  
+  return new_str;
+}
