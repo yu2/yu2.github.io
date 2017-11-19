@@ -53,3 +53,39 @@ function spinalCase(str) {
   
   return new_str;
 }
+
+// Sum All Odd Fibonacci Numbers
+// Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+function sumFibs(num) {
+  var fib_nums = [1, 1];
+  var fib = 1;
+  var fib2 = 1;
+  
+  loop: while (fib2 <= num) {
+    fib = fib + fib2;
+    if (fib > num) {
+      break loop;
+    } else if (fib == num) {
+      fib_nums.push(fib);
+      break loop;
+    }
+    fib_nums.push(fib);
+    
+    fib2 = fib2 + fib;
+    if (fib2 > num) {
+      break loop;
+    } else if (fib2 == num) {
+      fib_nums.push(fib2);
+      break loop;
+    }
+    fib_nums.push(fib2);
+  }
+  
+  var result = fib_nums.reduce(function(accumulator, currentValue) {
+    if (currentValue % 2 === 0) {
+      currentValue = 0;
+    }
+    return accumulator + currentValue;
+  });
+  return result;
+}
