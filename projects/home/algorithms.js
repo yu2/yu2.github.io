@@ -107,3 +107,30 @@ function sumPrimes(num) {
   });
   return num;
 }
+
+// Smallest Common Multiple
+// Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+function smallestCommons(arr) {
+  arr = arr.sort(function(a, b) {
+    return a-b;
+  });
+  var max = arr[1];
+  var range = [];
+  for (var i = arr[0]; i <= arr[1]; i++) {
+    range.push(i);
+  }
+  
+  var cont = true;
+  var multiplier = 1;
+  
+  loop: while (cont) {
+    for (var j = range.length - 1; j >= 0; j--) {
+      if (max * multiplier % range[j] !== 0) {
+        multiplier++;
+        continue loop;
+      }
+    }
+    break loop;
+  }
+  return max * multiplier;
+}
