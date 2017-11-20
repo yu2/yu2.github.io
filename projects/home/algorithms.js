@@ -89,3 +89,21 @@ function sumFibs(num) {
   });
   return result;
 }
+
+// Sum All Primes
+// Sum all the prime numbers up to and including the provided number.
+function sumPrimes(num) {
+  var primes = [];
+  loop: for (var i = 2; i <= num; i++) { // 1 is not a prime
+    loop2: for (var j = 2; j <= i / 2; j++) {
+      if (i % j == 0) {
+      continue loop;
+      }
+    }
+    primes.push(i);
+  }
+  num = primes.reduce(function(sum, val) {
+    return sum + val;
+  });
+  return num;
+}
