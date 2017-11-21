@@ -96,7 +96,7 @@ function sumPrimes(num) {
   var primes = [];
   loop: for (var i = 2; i <= num; i++) { // 1 is not a prime
     loop2: for (var j = 2; j <= i / 2; j++) {
-      if (i % j == 0) {
+      if (i % j === 0) {
       continue loop;
       }
     }
@@ -135,7 +135,7 @@ function smallestCommons(arr) {
   return max * multiplier;
 }
 
-// Finders Keepers 
+// Finders Keepers
 // Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument).
 function findElement(arr, func) {
   var num = 0;
@@ -144,8 +144,16 @@ function findElement(arr, func) {
     if (func(arr[i]) === true) {
       num = arr[i];
       return num;
-    }  
+    }
   }
-  
   return undefined;
+}
+
+// Drop It
+// Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true.
+function dropElements(arr, func) {
+  while (func(arr[0]) === false) {
+    arr.shift();
+  }
+  return arr;
 }
