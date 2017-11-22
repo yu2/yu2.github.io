@@ -161,39 +161,44 @@ function dropElements(arr, func) {
 // Binary Addition
 // Adds two numbers together and returns their sum in binary.
 function addBinary(a,b) {
-  var sum = a + b;
+var sum = a + b;
   var exp = 0;
-  var binary = "";
+  var binary = "1";
   
-  while (exp >= 0) {
-    // A. If exp is smaller than sum, try a larger exponent.
-    if (Math.pow(2, exp) < sum) {
-      tt("At A");
-      exp++;
+  // Find place of leftmost digit.
+  while (Math.pow(2, exp) < sum) {
+    if (Math.pow(2, exp + 1) > sum) {
+      break;
+    }
+    exp++;
+  }
+  
+  sum = sum - Math.pow(2, exp);
+  exp--;
+  
+  while (exp >= -1) {
+    // If sum has already been reached, fill remaining digits with 0.
+    if (sum === 0) {
+      return zero_rest(binary, exp + 1);
     }
     
-    // B. If sum is filled, fill rest of digits with 0.
+    // Fill remaining digits with 0s if sum has been reached.
     if (Math.pow(2, exp) == sum) {
-      tt("At B");
       binary += "1";
       return zero_rest(binary, exp);
     }
     
-    // C. If , add 0 for the place
-    if (Math.pow(2, exp) - sum >= Math.pow(2, exp - 1)) {
-      tt("At C");
-      binary += "0";
+    // If result of exponent is less than sum, fill 1 and subtract number from sum.
+    else if (Math.pow(2, exp) < sum) {
+      binary += "1";
+      sum = sum - Math.pow(2, exp);
       exp--;
     }
     
-    // D. If , add 1 for the place
-    if (Math.pow(2, exp) >= sum) {
-      tt("At D");
-      binary += "1";
-      exp = exp - 2;
-      sum = sum - Math.pow(2, exp + 1);
-      tt("sum = " + sum);
-      tt("exp = " + exp);
+    // If result of exponent is greater than sum, fill 0.
+    else if (Math.pow(2, exp) > sum) {
+      binary += "0";
+      exp--;
     }
   }
   return binary;
@@ -206,6 +211,3 @@ function zero_rest(binary, index) {
   }
   return binary;
 }
-
-//tt(zero_rest("111", 3));
-tt(addBinary(2, 8));
