@@ -1,3 +1,5 @@
+//*** CODE REPOSITORY FOR ALGORITHMS ***//
+
 // Sorted Union
 // Takes two or more arrays and returns new array with unique values in the order of the original provided arrays.
 function uniteUnique(arr) {
@@ -210,4 +212,22 @@ function zero_rest(binary, index) {
     binary = binary + "0";
   }
   return binary;
+}
+
+// Find Balance (7th kyu)
+// Return index of array, where members to the left of the index are equal to the average of the right members when rounded to the nearest integer.
+function findBalance(arr){
+  var res = [];
+  for (var center = 1; center < arr.length - 1; center++) {
+    var left = arr.slice(0, center);
+    tt("left " + left);
+    var right = arr.slice(center + 1, arr.length);
+    tt("right " + right);
+    var left_avg = Math.round(left.reduce((sum, val) => sum + val) / left.length);
+    var right_avg = Math.round(right.reduce((sum, val) => sum + val) / right.length);
+    if (left_avg == right_avg) {
+      res.push(center);
+    }
+  }
+  return res;
 }
