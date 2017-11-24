@@ -3,38 +3,32 @@ $(function() {
   
   //***Testing Area***//
   //console.log("input text between the brackets");
-  
-function steamrollArray(arr) {
-  var res = [];
-  
-  while (arr.length > 0) {
-    if (Array.isArray(arr)) {
-      if (arr[0].length == 1) {
-        res.push(goDeeper(arr[0]));
-      }
+
+function binaryAgent(str) {
+  str = str.split(" ");
+  var sums = [];
+  for (var a in str) {
+    var sum = 0;
+    var length = str[a].length;
+    var exp = length - 1;
+    for (var i = 0; i < length; i++) {
+      sum += parseInt(str[a].charAt(i)) * Math.pow(2, exp);
+      exp--;
     }
+    sums.push(sum);
+    
+  
   }
-  
-  
-  
-  arr.forEach(goDeeper);
+  return str;
 }
 
-function goDeeper(arr) {
-  if (Array.isArray(arr)) {
-    return goDeeper(arr[0]); // Return from point of entering recursion.
-  } else {
-    var target = arr;
-    return arr;
-  }
-}
-
-
-//tt(steamrollArray([[[[4]]]]));
-tt(steamrollArray([[[1, [2], [3, [[4]]]]]]));
-//tt(steamrollArray([[2], [3, [[4]]]]));
-//tt(steamrollArray([[3, [[4]]]]));
-  
+tt(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+ 
+//tt(parseInt("1"));
+ 
+//tt(String.fromCharCode(64));
+ 
+ 
   //***//
   
   $('#console-input').keydown(function(key) {

@@ -88,6 +88,8 @@ body {
 .console-area {
   background-color: white;
   max-height: 75vh;
+  word-break: break-all;
+  
 }
 
 .console-area p {

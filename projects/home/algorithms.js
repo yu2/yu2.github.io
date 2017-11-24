@@ -231,3 +231,22 @@ function findBalance(arr){
   }
   return res;
 }
+
+// Steamroller
+// Flatten a nested array.
+function steamrollArray(arr) {
+  var res = [];
+  goDeeper(arr);
+    
+  function goDeeper(arr) {
+    for (var a in arr) {
+      if (Array.isArray(arr[a])) {
+        goDeeper(arr[a]);
+      } else {
+      res.push(arr[a]);
+      }
+    }
+  }
+  return res;
+}
+
