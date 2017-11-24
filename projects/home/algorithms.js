@@ -250,3 +250,25 @@ function steamrollArray(arr) {
   return res;
 }
 
+// Binary Agents
+// Return an English translated sentence of the passed binary string.
+function binaryAgent(str) {
+  str = str.split(" ");
+  var sums = [];
+  for (var a in str) {
+    var sum = 0;
+    var length = str[a].length;
+    var exp = length - 1;
+    for (var i = 0; i < length; i++) {
+      sum += parseInt(str[a].charAt(i)) * Math.pow(2, exp);
+      exp--;
+    }
+    sums.push(sum);
+  }
+  
+  var decode = "";
+  for (var b in sums) {
+    decode += String.fromCharCode(sums[b]);
+  }
+  return decode;
+}
