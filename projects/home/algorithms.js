@@ -285,3 +285,21 @@ function truthCheck(collection, pre) {
   }
   return true;
 }
+
+// Arguments Optional
+// Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+function addTogether() {
+  for (var i = 0; i < arguments.length; i++) {
+    if (!Number.isInteger(arguments[i])) {
+      return undefined;
+    }
+  }
+  if (arguments.length == 2) {
+    return arguments[0] + arguments[1];
+  } else if (arguments.length == 1) {
+    var num = arguments[0];
+    return function(addend) {
+      return Number.isInteger(addend) ? num + addend : undefined;
+    };
+  }
+}
