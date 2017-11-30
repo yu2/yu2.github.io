@@ -303,3 +303,10 @@ function addTogether() {
     };
   }
 }
+
+// Validate US Telephone Numbers
+// Return true if the passed string is a valid US phone number.
+function telephoneCheck(str) {
+  var re = /(1\s?)?((\(\d{3}\))|\s?\d{3}-?)\s?\d{3}[-\s]?\d{4}/g;
+  return str.match(re) == str;
+}
