@@ -310,3 +310,48 @@ function telephoneCheck(str) {
   var re = /(1\s?)?((\(\d{3}\))|\s?\d{3}-?)\s?\d{3}[-\s]?\d{4}/g;
   return str.match(re) == str;
 }
+
+// Record Collection
+// Given a JSON object representing a musical album collection, create a function that manipulates its properties.
+var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [
+        "Let It Rock",
+        "You Give Love a Bad Name"
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [
+        "1999",
+        "Little Red Corvette"
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "album": "ABBA Gold"
+    }
+};
+function updateRecords(id, prop, value) {
+  var currentRecord = collection[id];
+  if (value === "") {
+    delete currentRecord[prop];
+  }
+  else if (prop == "tracks") {
+    if (currentRecord[prop] === undefined) {
+      currentRecord.tracks = [];
+      currentRecord.tracks.push(value);
+    } else {
+      currentRecord.tracks.push(value);
+    }
+  } else {
+    currentRecord[prop] = value;
+  }
+  return collection;
+}
