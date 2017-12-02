@@ -355,3 +355,25 @@ function updateRecords(id, prop, value) {
   }
   return collection;
 }
+
+//
+//
+function sym(args) {
+  var arg = [...arguments];
+  var red = [];
+  for (var i = 0; i < arg.length; i++) {
+    var current_arg = arg[i];
+    var leftover = arg.slice(i, i+1);
+    check_others: for (var j = 0; j < leftover.length; j++) {
+      for (var k = 0; k < current_arg.length; k++) {
+        if (leftover[j].includes(current_arg(k))) {
+          break check_others;
+        }
+      }
+    }
+    red.push();
+  }
+  return args;
+}
+
+sym([1, 2, 3], [5, 2, 1, 4]);
