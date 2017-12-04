@@ -363,17 +363,21 @@ function sym(args) {
   var red = [];
   for (var i = 0; i < arg.length; i++) {
     var current_arg = arg[i];
-    var leftover = arg.slice(i, i+1);
-    check_others: for (var j = 0; j < leftover.length; j++) {
-      for (var k = 0; k < current_arg.length; k++) {
-        if (leftover[j].includes(current_arg(k))) {
-          break check_others;
-        } // wrong order?
+    var leftover = arg.filter(takeOut);
+    check_current: for (var j = 0; j < current_arg.length; j++) {
+      for (var k = 0; k < leftover.length; k++) {
+        if (leftover[k].includes(current_arg[j])) {
+          break check_current;
+        }
       }
+      red.push(current_arg[j]);
     }
-    red.push();
   }
   return args;
+}
+
+function takeOut(val, index, arr) {
+  return index !== v;
 }
 
 sym([1, 2, 3], [5, 2, 1, 4]);
