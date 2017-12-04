@@ -368,7 +368,7 @@ function sym(args) {
       for (var k = 0; k < current_arg.length; k++) {
         if (leftover[j].includes(current_arg(k))) {
           break check_others;
-        }
+        } // wrong order?
       }
     }
     red.push();
