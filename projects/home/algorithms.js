@@ -359,25 +359,29 @@ function updateRecords(id, prop, value) {
 //
 //
 function sym(args) {
+  function takeOut(val, index, arr) {
+    return index !== i;
+  }
+  
   var arg = [...arguments];
   var red = [];
   for (var i = 0; i < arg.length; i++) {
     var current_arg = arg[i];
+    tt("current_arg = " + current_arg);
     var leftover = arg.filter(takeOut);
+    tt("leftover = " + leftover);
     check_current: for (var j = 0; j < current_arg.length; j++) {
-      for (var k = 0; k < leftover.length; k++) {
+      check_leftover: for (var k = 0; k < leftover.length; k++) {
         if (leftover[k].includes(current_arg[j])) {
-          break check_current;
+          tt(current_arg[j]);
+          continue check_current;
         }
       }
       red.push(current_arg[j]);
     }
   }
-  return args;
+  return red;
 }
 
-function takeOut(val, index, arr) {
-  return index !== v;
-}
-
-sym([1, 2, 3], [5, 2, 1, 4]);
+//tt(sym([1, 2, 3], [5, 2, 1, 4]));
+tt(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]));
