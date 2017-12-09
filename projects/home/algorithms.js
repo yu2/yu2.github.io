@@ -365,6 +365,21 @@ function sym(args) {
   
   var arg = [...arguments];
   var red = [];
+  
+  function goDeeper(array) {
+    if (array.length > 2) {
+      goDeeper(array.filter(function(val, index, arr) {
+        return index != arr.length - 1;
+      }));
+    } else {
+      return symDiff(array);
+    }
+  }
+  
+  function symDiff(array) {
+    
+  }
+  
   for (var i = 0; i < arg.length; i++) {
     var current_arg = arg[i];
     tt("current_arg = " + current_arg);
