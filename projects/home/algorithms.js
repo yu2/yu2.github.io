@@ -372,13 +372,10 @@ function sym(args) {
         return index != arr.length - 1;
       }));
     } else {
-      return symDiff(array);
+      return red.concat(symDiff(array));
     }
   }
-  
-  function symDiff(array) {
-    
-  }
+
   
   for (var i = 0; i < arg.length; i++) {
     var current_arg = arg[i];
@@ -396,6 +393,16 @@ function sym(args) {
     }
   }
   return red;
+}
+
+function symDiff(array) {
+  var result = [];
+  for (var i = 0; i < array[0].length; i++) {
+    if(array[1].includes(array[0][i]) == false) {
+      result.push(array[0][i]);
+    }
+  }
+  return result;
 }
 
 //tt(sym([1, 2, 3], [5, 2, 1, 4]));
