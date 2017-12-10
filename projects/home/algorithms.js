@@ -359,23 +359,47 @@ function updateRecords(id, prop, value) {
 //
 //
 function sym(args) {
-  function takeOut(val, index, arr) {
-    return index !== i;
-  }
-  
   var arg = [...arguments];
   var red = [];
   
-  function goDeeper(array) {
-    if (array.length > 2) {
-      goDeeper(array.filter(function(val, index, arr) {
-        return index != arr.length - 1;
-      }));
+}
+  /*
+  function goDeeper(arr1, arr2) {
+    return red.concat(goDeeper(arr1.filter(function(val, index, array) {
+        return index != array.length - 1;
+      }), arr1[arr1.length - 1]));
+  }
+  return red;
+}
+
+    if (arr1.length !== 1) {
+      symDiff(arr1.filter(function(val, index, array) {
+        return index != array.length - 1;
+      }), arr1[arr1.length - 1]);
     } else {
-      return red.concat(symDiff(array));
+      for (var i = 0; i < arg.length; i++) {
+        if(arr2.includes(arr1[i]) === false) {
+          red.push(arr1[i]);
+        }
+      }
+      
+      symDiff(arr1, last);
     }
+    
   }
 
+  function goDeeper(array) {
+    if (array.length == 1) {
+      return array;
+    }
+    return red.concat(symDiff(array.pop(), goDeeper(array)));
+  }
+
+  return red;
+  
+  function takeOut(val, index, arr) {
+    return index !== i;
+  }
   
   for (var i = 0; i < arg.length; i++) {
     var current_arg = arg[i];
@@ -392,18 +416,7 @@ function sym(args) {
       red.push(current_arg[j]);
     }
   }
-  return red;
-}
-
-function symDiff(array) {
-  var result = [];
-  for (var i = 0; i < array[0].length; i++) {
-    if(array[1].includes(array[0][i]) == false) {
-      result.push(array[0][i]);
-    }
-  }
-  return result;
-}
+  */
 
 //tt(sym([1, 2, 3], [5, 2, 1, 4]));
 tt(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]));
