@@ -362,6 +362,14 @@ function sym(args) {
   var arg = [...arguments];
   var red = [];
   
+  for (var i = 0; i < arg.length; i++) {
+    
+  }
+}
+
+function symDiff(arr1, arr2) {
+  var combined = arr1.concat(arr2);
+  combined.filter(e => e)
 }
   /*
   function goDeeper(arr1, arr2) {
