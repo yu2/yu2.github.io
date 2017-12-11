@@ -369,7 +369,7 @@ function sym(args) {
 
 function symDiff(arr1, arr2) {
   var combined = arr1.concat(arr2);
-  combined.filter(e => e)
+  combined.filter(e => !(arr1.includes(e) && arr2.includes(e)));
 }
   /*
   function goDeeper(arr1, arr2) {
