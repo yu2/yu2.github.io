@@ -360,71 +360,24 @@ function updateRecords(id, prop, value) {
 //
 function sym(args) {
   var arg = [...arguments];
-  var red = [];
+  var red = symDiff(arg[0], arg[1]);
   
-  for (var i = 0; i < arg.length; i++) {
-    
+  if (arg.length > 2) {
+    for (var i = 2; i < arg.length; i++) {
+      red = symDiff(red, arg[i]);
+    }
   }
+  
+  return red;
 }
 
 function symDiff(arr1, arr2) {
   var combined = arr1.concat(arr2);
-  combined.filter(e => !(arr1.includes(e) && arr2.includes(e)));
-}
-  /*
-  function goDeeper(arr1, arr2) {
-    return red.concat(goDeeper(arr1.filter(function(val, index, array) {
-        return index != array.length - 1;
-      }), arr1[arr1.length - 1]));
-  }
-  return red;
-}
-
-    if (arr1.length !== 1) {
-      symDiff(arr1.filter(function(val, index, array) {
-        return index != array.length - 1;
-      }), arr1[arr1.length - 1]);
-    } else {
-      for (var i = 0; i < arg.length; i++) {
-        if(arr2.includes(arr1[i]) === false) {
-          red.push(arr1[i]);
-        }
-      }
-      
-      symDiff(arr1, last);
-    }
-    
-  }
-
-  function goDeeper(array) {
-    if (array.length == 1) {
-      return array;
-    }
-    return red.concat(symDiff(array.pop(), goDeeper(array)));
-  }
-
-  return red;
+  var filtered = combined.filter(e => !(arr1.includes(e) && arr2.includes(e)));
   
-  function takeOut(val, index, arr) {
-    return index !== i;
-  }
-  
-  for (var i = 0; i < arg.length; i++) {
-    var current_arg = arg[i];
-    tt("current_arg = " + current_arg);
-    var leftover = arg.filter(takeOut);
-    tt("leftover = " + leftover);
-    check_current: for (var j = 0; j < current_arg.length; j++) {
-      check_leftover: for (var k = 0; k < leftover.length; k++) {
-        if (leftover[k].includes(current_arg[j])) {
-          tt(current_arg[j]);
-          continue check_current;
-        }
-      }
-      red.push(current_arg[j]);
-    }
-  }
-  */
+  return remove_dup;
+}
 
 //tt(sym([1, 2, 3], [5, 2, 1, 4]));
-tt(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]));
+//tt(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]));
+tt(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]));
