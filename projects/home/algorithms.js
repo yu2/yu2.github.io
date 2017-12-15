@@ -356,8 +356,8 @@ function updateRecords(id, prop, value) {
   return collection;
 }
 
-//
-//
+// Symmetric Difference
+// Takes two or more arrays and returns an array of the symmetric difference of the provided arrays.
 function sym(args) {
   var arg = [...arguments];
   var red = symDiff(arg[0], arg[1]);
@@ -367,17 +367,17 @@ function sym(args) {
       red = symDiff(red, arg[i]);
     }
   }
-  
   return red;
 }
 
 function symDiff(arr1, arr2) {
   var combined = arr1.concat(arr2);
   var filtered = combined.filter(e => !(arr1.includes(e) && arr2.includes(e)));
-  
-  return remove_dup;
+  var result = [];
+  for (var i = 0; i < filtered.length; i++) {
+    if (!result.includes(filtered[i])) {
+      result.push(filtered[i]);
+    }
+  }
+  return result;
 }
-
-//tt(sym([1, 2, 3], [5, 2, 1, 4]));
-//tt(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]));
-tt(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]));
