@@ -382,14 +382,13 @@ function symDiff(arr1, arr2) {
   return result;
 }
 
-//
-//
+// Exact Change
+// Cash register drawer function that accepts purchase price as the first argument, payment as the second argument, and cash-in-drawer as the third argument.
 function checkCashRegister(price, cash, cid) {
   var roundNum = longFloat => parseFloat(longFloat.toFixed(2));
   var cid_total = roundNum(cid.reduce((accum, current, index) => accum + parseFloat(current[1]), 0));
-  
   var change = cash - price;
-  tt("change: " + change);
+  
   if (change >= cid_total) {
     if (change == cid_total) {
       return "Closed";
@@ -404,44 +403,20 @@ function checkCashRegister(price, cash, cid) {
   
   for (var i = 8; i >= 0; i--) {
     if (change >= amounts[i]) {
-      tt(amounts[i]);
       var units = 0;
       
       while (change >= amounts[i] && cid[i][1] >= amounts[i]) {
-        tt("inside while loop");
-        change -= amounts[i];
-        cid[i][1] -= amounts[i];
+        change = roundNum(change - amounts[i]);
+        cid[i][1] = roundNum(cid[i][1] - amounts[i]);
         units++;
       }
       paid.push([cid[i][0], amounts[i]*units]);
     }
   }
-  tt("final change: " + change);
   
   if (change !== 0) {
     return "Insufficient Funds";
   }
-  tt(paid);
-  // Here is your change, ma'am.
+  
   return paid;
 }
-
-// Example cash-in-drawer array:
-// [["PENNY", 1.01],
-// ["NICKEL", 2.05],
-// ["DIME", 3.10],
-// ["QUARTER", 4.25],
-// ["ONE", 90.00],
-// ["FIVE", 55.00],
-// ["TEN", 20.00],
-// ["TWENTY", 60.00],
-// ["ONE HUNDRED", 100.00]]
-
-//tt(checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]));
-tt(checkCashRegister(3.26, 100.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]));
-
-
-tst = [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]];
-
-var parse = int => parseFloat(int.toFixed(2), 10);
-//tt(0 + parse(1.01) + parse(100.00) + parse(4.25));
