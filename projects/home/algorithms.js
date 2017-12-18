@@ -424,8 +424,43 @@ function checkCashRegister(price, cash, cid) {
 //
 //
 function updateInventory(arr1, arr2) {
-    // All inventory must be accounted for or you're fired!
-    return arr1;
+  var curInv = toJSON(arr1);
+  var newInv = toJSON(arr2);
+  
+  for (var i = 0; i < arr2.length; i++) {
+    var curItem = arr2[i][1];
+    var curQuantity = arr2[i][0];
+    if (curInv[curItem] !== undefined) {
+      curInv[curItem] += curQuantity;
+    } else {
+      curInv[curItem] = curQuantity;
+    }
+  }
+  
+  tt(curInv);
+  var curArray = toArray(curInv);
+  
+  
+  tt(curArray);
+  return arr1;
+}
+
+function toJSON(arr) {
+  var obj = {};
+  for (var i = 0; i < arr.length; i++) {
+      obj[arr[i][1]] = arr[i][0];
+  }
+  return obj;
+}
+
+function toArray(json) {
+  var arr = [];
+  for (var i in json) {
+    if (json.hasOwnProperty(i)) {
+      arr.push([json[i], i]);
+    }
+  }
+  return arr;
 }
 
 // Example inventory lists
@@ -443,6 +478,12 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-var obj =
+/*
+var obj = {};
+for (var i = 0; i < curInv.length; i++) {
+    obj[curInv[i][1]] = curInv[i][0];
+}
 
-//updateInventory(curInv, newInv);
+tt(obj["Toothpaste"]);
+*/
+updateInventory(curInv, newInv);
