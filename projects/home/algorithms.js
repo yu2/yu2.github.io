@@ -421,8 +421,8 @@ function checkCashRegister(price, cash, cid) {
   return paid;
 }
 
-//
-//
+// Inventory Update
+// Compare and update the inventory stored in a 2D array against a second 2D array of a fresh delivery.
 function updateInventory(arr1, arr2) {
   var curInv = toJSON(arr1);
   var newInv = toJSON(arr2);
@@ -437,12 +437,19 @@ function updateInventory(arr1, arr2) {
     }
   }
   
-  tt(curInv);
   var curArray = toArray(curInv);
   
+  curArray = curArray.sort(function(a, b) {
+    if (a[1] < b[1]) {
+      return -1;
+    }
+    if (a[1] > b[1]) {
+      return 1;
+    }
+  });
   
-  tt(curArray);
-  return arr1;
+  //tt(curArray);
+  return curArray;
 }
 
 function toJSON(arr) {
@@ -462,28 +469,3 @@ function toArray(json) {
   }
   return arr;
 }
-
-// Example inventory lists
-var curInv = [
-    [21, "Bowling Ball"],
-    [2, "Dirty Sock"],
-    [1, "Hair Pin"],
-    [5, "Microphone"]
-];
-
-var newInv = [
-    [2, "Hair Pin"],
-    [3, "Half-Eaten Apple"],
-    [67, "Bowling Ball"],
-    [7, "Toothpaste"]
-];
-
-/*
-var obj = {};
-for (var i = 0; i < curInv.length; i++) {
-    obj[curInv[i][1]] = curInv[i][0];
-}
-
-tt(obj["Toothpaste"]);
-*/
-updateInventory(curInv, newInv);
