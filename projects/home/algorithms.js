@@ -469,3 +469,28 @@ function toArray(json) {
   }
   return arr;
 }
+
+// No Repeats Please
+// Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.
+function permAlone(str) {
+  // 012, 021, 102, 120, 201, 210
+  // total permutations = n * (n-1) * (n-2) * ... 1
+  // subtract permutations with consecutive repeating characters - how many?
+  // given 012, 021, 102, 120, 201, 210
+  // get rid of all containing 01 and 10
+  // given 0123456
+  // if 0 and 1 refer to the same chars; 2 and 3 refer to the same chars
+  // get rid of all 01, 10, 23, 32
+  // number to remove for character that occurs more than once:
+  // (number of times it occurs)!
+  // (number of chars in string)! - (number of repetitions of a repeating char)! - ...
+  //var pTot =
+  return str;
+}
+
+permAlone('aab');
+permAlone("abfdefa");
+// + 2*2
+permAlone("zzzzzzzz");
+permAlone("aaab");
+permAlone("aaabb");
