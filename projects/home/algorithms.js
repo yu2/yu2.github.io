@@ -484,7 +484,7 @@ function permAlone(str) {
   // number to remove for character that occurs more than once:
   // (number of times it occurs)!
   // (number of chars in string)! - (number of repetitions of a repeating char)! - ...
-  //var pTot =
+  // var pTot =
   return str;
 }
 
