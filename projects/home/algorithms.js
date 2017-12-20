@@ -484,13 +484,23 @@ function permAlone(str) {
   // number to remove for character that occurs more than once:
   // (number of times it occurs)!
   // (number of chars in string)! - (number of repetitions of a repeating char)! - ...
-  // var pTot =
+  var f = [];
+  var pTot = function(n) {
+    if (n === 1 || n === 0)
+      return 1;
+    if (f[n] > 0)
+      return f[n];
+    return f[n] = n * pTot(n - 1);
+  };
+  
+  // find repeating characters
+  
   return str;
 }
 
 permAlone('aab');
-permAlone("abfdefa");
+//permAlone("abfdefa");
 // + 2*2
-permAlone("zzzzzzzz");
-permAlone("aaab");
-permAlone("aaabb");
+//permAlone("zzzzzzzz");
+//permAlone("aaab");
+//permAlone("aaabb");
