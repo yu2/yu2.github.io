@@ -477,13 +477,18 @@ function permAlone(str) {
   // total permutations = n * (n-1) * (n-2) * ... 1
   // subtract permutations with consecutive repeating characters - how many?
   // given 012, 021, 102, 120, 201, 210
-  // get rid of all containing 01 and 10
+  // get rid of all containing 01 or 10
+  // 021, 120
   // given 0123456
+  // total permutations = 5040
   // if 0 and 1 refer to the same chars; 2 and 3 refer to the same chars
-  // get rid of all 01, 10, 23, 32
+  // get rid of all permutations containing 01, 10, 23, 32
   // number to remove for character that occurs more than once:
   // (number of times it occurs)!
   // (number of chars in string)! - (number of repetitions of a repeating char)! - ...
+  
+  // use recursion and momoization to find the factorial
+
   var f = [];
   var pTot = function(n) {
     if (n === 1 || n === 0)
@@ -492,15 +497,40 @@ function permAlone(str) {
       return f[n];
     return f[n] = n * pTot(n - 1);
   };
-  
+  var permTot = pTot(str.length);
+  tt(permTot);
   // find repeating characters
+  //var res = str.split("").reduce((accum, curr, index, array) => array.splice(index, 1).includes(curr));
   
+  strArray = str.split("").sort();
+  str = strArray.join("");
+  tt(strArray);
+  var reps = [];
+
+  var reduceArray = function(arr) {
+    if (arr[0] === undefined)
+      return "";
+    var current = arr[0];
+    var found = str.match(new RegExp(current, "g"));
+    if (found.length > 1)
+      reps.push(found.length);
+    return reduceArray(arr.filter(a => a !== arr[0]));
+  };
+  
+  reduceArray(strArray);
+  
+  var sum = 0;
+  for (let a of reps) {
+    sum += pTot(a);
+  }
+  tt(sum);
+  
+  tt(reps);
   return str;
 }
 
-permAlone('aab');
-//permAlone("abfdefa");
-// + 2*2
+//permAlone('aab');
+permAlone("abfdefa");
 //permAlone("zzzzzzzz");
 //permAlone("aaab");
 //permAlone("aaabb");
