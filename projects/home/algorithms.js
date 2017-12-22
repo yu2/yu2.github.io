@@ -487,6 +487,8 @@ function permAlone(str) {
   // (number of times it occurs)!
   // (number of chars in string)! - (number of repetitions of a repeating char)! - ...
   
+  // treat repeating sequence as one unit
+  
   // use recursion and momoization to find the factorial
 
   var f = [];
