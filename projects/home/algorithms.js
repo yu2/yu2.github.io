@@ -492,23 +492,21 @@ function permAlone(str) {
   // use recursion and momoization to find the factorial
 
   var f = [];
-  var pTot = function(n) {
+  var factorial = function(n) {
     if (n === 1 || n === 0)
       return 1;
     if (f[n] > 0)
       return f[n];
-    return f[n] = n * pTot(n - 1);
+    return f[n] = n * factorial(n - 1);
   };
-  var permTot = pTot(str.length);
-  tt(permTot);
-  // find repeating characters
-  //var res = str.split("").reduce((accum, curr, index, array) => array.splice(index, 1).includes(curr));
+  var permTot = factorial(str.length);
+  //tt(permTot);
   
-  strArray = str.split("").sort();
-  str = strArray.join("");
-  tt(strArray);
+  strArray = str.split("");
+  //tt(strArray);
+  
+  // find repeating characters
   var reps = [];
-
   var reduceArray = function(arr) {
     if (arr[0] === undefined)
       return "";
@@ -520,19 +518,26 @@ function permAlone(str) {
   };
   
   reduceArray(strArray);
+  //tt(reps);
   
+  var perms = 2 * (factorial(str.length - reps[0]) * (str.length - reps[0] + 1));
+  
+  
+  /*
   var sum = 0;
   for (let a of reps) {
     sum += pTot(a);
   }
   tt(sum);
+  */
   
-  tt(reps);
-  return str;
+  //tt(perms);
+  return permTot - perms;
 }
 
 //permAlone('aab');
-permAlone("abfdefa");
+permAlone("abcdefa");
+//permAlone("abfdefa");
 //permAlone("zzzzzzzz");
 //permAlone("aaab");
 //permAlone("aaabb");
