@@ -541,3 +541,19 @@ permAlone("abcdefa");
 //permAlone("zzzzzzzz");
 //permAlone("aaab");
 //permAlone("aaabb");
+
+//
+//
+function permAlone(str) {
+  var perms = [];
+  for (let i = str.length; i > 0; i--) {
+    
+  }
+}
+
+//permAlone('aab');
+permAlone("abcdefa");
+//permAlone("abfdefa");
+//permAlone("zzzzzzzz");
+//permAlone("aaab");
+//permAlone("aaabb");
