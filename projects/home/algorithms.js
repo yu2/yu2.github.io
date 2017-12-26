@@ -546,9 +546,13 @@ permAlone("abcdefa");
 //
 function permAlone(str) {
   var perms = [];
-  for (let i = str.length; i > 0; i--) {
-    
+  var it = "";
+  for (let j = 0; j < str.length; j++) {
+    for (let i = str.length; i > 0; i--) {
+      perms[j] += str.charAt(j);
+    }
   }
+  
 }
 
 //permAlone('aab');
