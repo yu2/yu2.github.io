@@ -545,6 +545,7 @@ permAlone("abcdefa");
 //
 //
 function permAlone(str) {
+  str = str.split().sort.join("");
   var perms = [];
   
   for (let j = 0; j < str.length; j++) {
