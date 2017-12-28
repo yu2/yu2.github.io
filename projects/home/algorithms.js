@@ -545,19 +545,34 @@ permAlone("abcdefa");
 //
 //
 function permAlone(str) {
-  str = str.split().sort.join("");
-  var perms = [];
+  var f = [];
+  var factorial = function(n) {
+    if (n === 1 || n === 0)
+      return 1;
+    if (f[n] > 0)
+      return f[n];
+    return f[n] = n * factorial(n - 1);
+  };
   
-  for (let j = 0; j < str.length; j++) {
-    perms[j] = str.charAt(j);
+  var perms = [];
+  var addRemaining = x => x + remaining.charAt(j);
+  
+  for (let i = 0; i < str.length; i++) {
+    var remaining = generatePerms(str, perms[i]);
+    for (let j = 0; j < remaining.length; j++) {
+      perms = perms.map(addRemaining);
+    }
   }
   
   tt(perms);
 }
 
 function generatePerms(str, used) {
-  var re = new RegExp(used, "g");
-  var remaining = str.replace(re, "");
+  var remaining = str;
+  for (let i = 0; i < used.length; i++) {
+    var re = new RegExp(used.charAt(i));
+    remaining = remaining.replace(re, "");
+  }
   return remaining;
 }
 
