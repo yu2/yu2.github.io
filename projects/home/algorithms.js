@@ -554,7 +554,9 @@ function permAlone(str) {
     return f[n] = n * factorial(n - 1);
   };
   
-  var perms = [];
+  
+  
+  var perms = Array(factorial(str.length)).fill("");
   var addRemaining = x => x + remaining.charAt(j);
   
   for (let i = 0; i < str.length; i++) {
