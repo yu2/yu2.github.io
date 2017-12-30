@@ -554,18 +554,18 @@ function permAlone(str) {
     return f[n] = n * factorial(n - 1);
   };
   
+  var perm_total = factorial(str.length);
   
-  
-  var perms = Array(factorial(str.length)).fill("");
-  var addRemaining = x => x + remaining.charAt(j);
-  
+  var perms = Array(perm_total).fill("");
+  /*
   for (let i = 0; i < str.length; i++) {
     var remaining = generatePerms(str, perms[i]);
     for (let j = 0; j < remaining.length; j++) {
       perms = perms.map(addRemaining);
     }
   }
-  
+  var addRemaining = x => x + remaining.charAt(j);
+  */
   tt(perms);
 }
 
