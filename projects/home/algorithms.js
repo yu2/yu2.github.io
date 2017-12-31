@@ -470,7 +470,7 @@ function toArray(json) {
   return arr;
 }
 
-// No Repeats Please
+// No Repeats Please (Attempt 1)
 // Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.
 function permAlone(str) {
   // 012, 021, 102, 120, 201, 210
@@ -542,8 +542,8 @@ permAlone("abcdefa");
 //permAlone("aaab");
 //permAlone("aaabb");
 
-//
-//
+// No Repeats Please (Attempt 2)
+// Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.
 function permAlone(str) {
   var f = [];
   var factorial = function(n) {
@@ -571,7 +571,7 @@ function permAlone(str) {
       for(let k = 0; k < perms[i].length; k++) {
         remaining = remainingChars(str, perms[i][k]);
         perms[i][k] += remaining.charAt(l);
-        if (remaining.charAt(l) !== "") {
+        if (remaining.charAt(l+1) !== "") {
           l++;
         }
       }
