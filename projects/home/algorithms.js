@@ -566,6 +566,16 @@ function permAlone(str) {
       perms[i].push(str.charAt(i));
     }
     // fill in remaining characters
+    while (remaining.length > 2) {
+      for (let m = 0; m < perms[i].length; m++) {
+        remaining = remainingChars(str, perms[i][m]);
+        if (remaining.length == 2) {
+          perms[i][n] += remaining.charAt(0) + remaining.charAt(1);
+        }
+      }
+    }
+    
+    /*
     while (remaining.length > 0) {
       var l = 0;
       for(let k = 0; k < perms[i].length; k++) {
@@ -576,6 +586,7 @@ function permAlone(str) {
         }
       }
     }
+    */
   }
   
   tt(perms);
@@ -593,7 +604,7 @@ function remainingChars(str, used) {
 
 //permAlone('aab');
 //permAlone('abc');
-permAlone('abcd');
+//permAlone('abcd');
 //permAlone("abcdefa");
 //permAlone("abfdefa");
 //permAlone("zzzzzzzz");
