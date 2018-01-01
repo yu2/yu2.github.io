@@ -19,3 +19,5 @@ Overrides default console.log to print onto page; for testing purposes.
 
 <a href="http://yu2.github.io/quote/flex.html" target="_blank">Flexbox layout test</a><br>
 Trying out flexbox for the first time
+
+last updated Nov 8, 2017
