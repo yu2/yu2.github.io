@@ -570,7 +570,8 @@ function permAlone(str) {
       for (let m = 0; m < perms[i].length; m++) {
         remaining = remainingChars(str, perms[i][m]);
         if (remaining.length == 2) {
-          perms[i][n] += remaining.charAt(0) + remaining.charAt(1);
+          perms[i][m] += remaining.charAt(0) + remaining.charAt(1);
+          perms[i][m+1] += remaining.charAt(1) + remaining.charAt(0);
         }
       }
     }
