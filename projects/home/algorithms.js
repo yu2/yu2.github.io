@@ -572,6 +572,8 @@ function permAlone(str) {
         if (remaining.length == 2) {
           perms[i][m] += remaining.charAt(0) + remaining.charAt(1);
           perms[i][m+1] += remaining.charAt(1) + remaining.charAt(0);
+        } else {
+          perms[i][m] += remaining.charAt();
         }
       }
     }
