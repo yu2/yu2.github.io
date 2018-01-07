@@ -569,10 +569,17 @@ function permAlone(str) {
     while (remaining.length > 2) {
       for (let m = 0; m < perms[i].length; m++) {
         remaining = remainingChars(str, perms[i][m]);
+        var base = perms[i][m];
+        var index = 0;
         if (remaining.length == 2) {
           perms[i][m] += remaining.charAt(0) + remaining.charAt(1);
           perms[i][m+1] += remaining.charAt(1) + remaining.charAt(0);
         } else {
+          if (base == perms[i][m]) {
+            
+          }
+          
+          var end = factorial(remaining.length - 1);
           perms[i][m] += remaining.charAt();
         }
       }
