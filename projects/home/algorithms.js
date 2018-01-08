@@ -560,27 +560,62 @@ function permAlone(str) {
   for (let i = 0; i < str.length; i++) {
     var remaining = remainingChars(str, str.charAt(i));
     var remainingFac = factorial(remaining.length);
+    tt(remaining.length);
     perms.push([]);
     // how many need to be generated for each letter
     for (let j = 0; j < remainingFac; j++) {
       perms[i].push(str.charAt(i));
     }
     // fill in remaining characters
+    // special case for three character strings
+    if (remaining.length == 2) {
+      perms[i][0] += remaining.charAt(0) + remaining.charAt(1);
+      perms[i][1] += remaining.charAt(1) + remaining.charAt(0);
+    }
+    var skip = false;
     while (remaining.length > 2) {
+      var index = 0;
+      var base = perms[i][0];
+      remaining = remainingChars(str, base);
+      
+      var rep = factorial(remaining.length-1);
+      var rep_count = 1;
+      
       for (let m = 0; m < perms[i].length; m++) {
-        remaining = remainingChars(str, perms[i][m]);
-        var base = perms[i][m];
-        var index = 0;
+        if (skip === true) {
+          skip = false;
+          continue;
+        }
         if (remaining.length == 2) {
+          remaining = remainingChars(str, perms[i][m]);
           perms[i][m] += remaining.charAt(0) + remaining.charAt(1);
           perms[i][m+1] += remaining.charAt(1) + remaining.charAt(0);
+          skip = true;
         } else {
+          // same base
           if (base == perms[i][m]) {
-            
+            perms[i][m] += remaining.charAt(index);
+            //tt(remaining.charAt(index));
+            if (rep_count < rep) {
+              rep_count++;
+            } else {
+              index++;
+              rep_count = 1;
+            }
+          // different base
+          } else {
+            base = perms[i][m];
+            remaining = remainingChars(str, base);
+            index = 0;
+            rep = factorial(remaining.length - 1);
+            perms[i][m] += remaining.charAt(index);
+            if (rep_count < rep) {
+              rep_count++;
+            } else {
+              index++;
+              rep_count = 1;
+            }
           }
-          
-          var end = factorial(remaining.length - 1);
-          perms[i][m] += remaining.charAt();
         }
       }
     }
@@ -599,7 +634,27 @@ function permAlone(str) {
     */
   }
   
+  var re = /([a-z])\1/;
+  var no_repeat = [];
+  var count = 0;
+  goDeeper(perms);
+  
+  function goDeeper(arr) {
+    for (var a in arr) {
+      if (Array.isArray(arr[a])) {
+        goDeeper(arr[a]);
+      } else {
+      if (!re.test(arr[a]))
+        count++;
+        //no_repeat.push(arr[a]);
+      }
+    }
+  }
+
   tt(perms);
+  //tt(no_repeat);
+  //return no_repeat;
+  //return count;
 }
 
 // returns the letters that are left
@@ -615,8 +670,10 @@ function remainingChars(str, used) {
 //permAlone('aab');
 //permAlone('abc');
 //permAlone('abcd');
+//permAlone('abcde');
+//permAlone("abcdefg");
 //permAlone("abcdefa");
 //permAlone("abfdefa");
 //permAlone("zzzzzzzz");
-//permAlone("aaab");
+permAlone("aaab");
 //permAlone("aaabb");
