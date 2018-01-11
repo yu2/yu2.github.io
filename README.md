@@ -1,3 +1,6 @@
+## Currently working on
+<a href="https://github.com/yu2/yu2.github.io/blob/master/projects/home/algorithms.js" target="_blank">Algorithms</a><br>
+
 ## Projects
 <a href="http://yu2.github.io/parser/parser.html" target="_blank">Parser</a><br>
 Morphological parser prototype
