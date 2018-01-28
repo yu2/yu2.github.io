@@ -1,10 +1,10 @@
 ## Currently working on
-<a href="https://github.com/yu2/yu2.github.io/blob/master/alg/algorithms.js" target="_blank">Algorithms</a><br>
-
-## Projects
 <a href="http://yu2.github.io/parser/parser.html" target="_blank">Parser</a><br>
 Morphological parser prototype
 
+<a href="https://github.com/yu2/yu2.github.io/blob/master/alg/algorithms.js" target="_blank">Algorithms</a><br>
+
+## Past Projects
 <a href="http://yu2.github.io/prj/twitch/twitch.html" target="_blank">Twitch Channel Status</a><br>
 Checks stream status using the Twitch API
 
