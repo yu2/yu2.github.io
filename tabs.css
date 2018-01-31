@@ -1,0 +1,11 @@
+input {
+  display: none;
+}
+
+input[type=radio]:checked + div {
+  background-color: #222;
+}
+
+input[type=radio]:checked + div {
+  display: block;
+}
