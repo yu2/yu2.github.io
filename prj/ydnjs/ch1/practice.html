@@ -1,1 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>chapter 1 practice</title>
+  </head>
+  <body>
+  <form>
+    <input id="balanceInput" type="text">
+    <input type="submit" onclick="getBalance()">
+  </form>
+  <div class="display" style="border: 1px solid black">
+    <p id="welcome">Welcome to the Phone Store!</p>
+  </div>
+  
+  <script>
+    const TAX_RATE = .15;
+    const PHONE_PRICE = 700;
+    const ACCESSORY_PRICE = 150;
+    const SPENDING_THRESHOLD = 2000;
+    var accountBalance;
+    var textBox = document.getElementsByClassName("display");
+    var phonePrice = calculatePrice();
+    
+    function calculatePrice() {
+      var price = PHONE_PRICE + PHONE_PRICE * TAX_RATE;
+      return price.toFixed(2);
+    }
+    
+    function pfy(str) {
+      return "<p>" + str + "</p>";
+    }
+    
+    function getBalance() {
+      accountBalance = document.getElementById("balanceInput").value;
+      var numPhones = 0;
+      while (Number(accountBalance) > phonePrice) {
+        numPhones++;
+        accountBalance = accountBalance - phonePrice;
+        console.log("here");
+        if (accountBalance > ACCESSORY_PRICE) {
+          textBox[0].insertAdjacentHTML("beforeend", pfy("You have bought a phone and accessories." + "You have " + numPhones + " phones."));
+          if (accountBalance < phonePrice) {
+            textBox[0].insertAdjacentHTML("beforeend", pfy("You can't afford any more phones :("));
+          }
+        } else {
+          textBox[0].insertAdjacentHTML("beforeend", pfy("You have bought a phone." + "You have " + numPhones + " phones."));
+          textBox.insertAdjacentHTML("beforeend", pfy("You can't afford any more phones :("));
+        }
+      }
+    }
 
+  </script>
+  </body>
+</html>
