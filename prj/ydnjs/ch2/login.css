@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-display {
+  background-color: #cec;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.box-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.box {
+  padding: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#signup-box {
+  background-color: #ecc;
+}
+
+#login-box {
+  background-color: #cee;
+}

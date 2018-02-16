@@ -1,1 +1,31 @@
-
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>welcome</title>
+    <link href="login.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="message-display">
+      <p id="message">Please sign up below</p>
+    </div>
+    <div class="box-container">
+      <div class="box" id="signup-box">
+        <form>
+          <input type="text">
+          <input type="text">
+          <input class="submit-button" id="signup-submit" type="submit" onclick="return false">
+        </form>
+      </div>
+      
+      <div class="box" id="login-box">
+        <form>
+          <input type="text">
+          <input type="text">
+          <input class="submit-button" id="login-submit" type="submit" onclick="return false">
+        </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
