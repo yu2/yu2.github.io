@@ -2,25 +2,54 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var submitButtons = document.getElementsByClassName("submit-button");
 
   for (let i = 0; i <submitButtons.length; i++) {
-    submitButtons[i].addEventListener("click", changeMessage);
+    submitButtons[i].addEventListener("click", submit);
   }
   
   var textFields = document.querySelectorAll("input[type='text']");
-  console.log(textFields);
-  console.log(textFields[0]);
   for (let i = 0; i < textFields.length; i++) {
-    textFields[i].addEventListener("click", function(e) {
-      console.log(textFields[i].innerHTML);
-      textFields[i].setAttribute("value", "");
-    });
+    textFields[i].addEventListener("click", resetField);
   }
   
-  function changeMessage(e) {
+  function resetField(e) {
+    e.target.setAttribute("value", "");
+  }
+  
+  var signupInfo = [];
+  var loginInfo = [];
+  var newUser;
+  function submit(e) {
     var statusMessage = document.getElementsByClassName("message-display")[0];
     if(e.target.id == "signup-submit") {
+      newUser = User();
+      signupInfo[0] = document.getElementById("signup-username").value;
+      signupInfo[1] = document.getElementById("signup-password").value;
+      newUser.login(signupInfo[0], signupInfo[1]);
       statusMessage.innerHTML = "Please log in";
     } else if (e.target.id == "login-submit") {
-      statusMessage.innerHTML = "Login successful!";
+      loginInfo[0] = document.getElementById("login-username").value;
+      loginInfo[1] = document.getElementById("login-password").value;
+      statusMessage.innerHTML = (newUser.check(loginInfo[0], loginInfo[1])) ? "Login successful! Welcome, " + loginInfo[0] + "." : "Incorrect username or password";
     }
+  }
+  
+  function User() {
+    var username;
+    var password;
+    
+    function doLogin(user, pw) {
+      username = user;
+      password = pw;
+    }
+    
+    function doCheck(user, pw) {
+      return (user == username && pw == password) ? true : false;
+    }
+    
+    var publicAPI = {
+      login: doLogin,
+      check: doCheck
+    };
+    
+    return publicAPI;
   }
 });
