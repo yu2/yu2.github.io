@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "lucida sans";
 }
 
 body {
@@ -16,7 +17,7 @@ body {
   background-color: #cec;
   border: 2px solid #9b9;
   padding: 0.5em;
-  margin: 0.5em;
+  margin: 2em 0.5em;
 }
 
 .box-container {
@@ -24,8 +25,44 @@ body {
   flex-flow: row wrap;
 }
 
-.box {
+.box-border {
+  display: flex;
   padding: 1em;
+  position: relative;
+}
+
+#box-border-signup {
+  background-color: #caa;
+}
+
+#box-border-login {
+  background-color: #acc;
+}
+
+.number-icon {
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 2em;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #aaa;
+}
+
+.box {
+  position: relative;
+}
+
+.box p {
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-bottom: 0.1em;
 }
 
 form {
@@ -34,13 +71,9 @@ form {
 }
 
 #signup-box {
-  background-color: #ecc;
-  border: 2px solid #b99;
   margin-right: 0.1em;
 }
 
 #login-box {
-  background-color: #cee;
-  border: 2px solid #9bb;
   margin-left: 0.1em;
 }

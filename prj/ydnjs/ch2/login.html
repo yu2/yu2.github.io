@@ -10,20 +10,32 @@
       <p id="message">Please sign up below</p>
     </div>
     <div class="box-container">
-      <div class="box" id="signup-box">
-        <form>
-          <input type="text">
-          <input type="text">
-          <input class="submit-button" id="signup-submit" type="submit" onclick="return false">
-        </form>
+      <div class="box-border" id="box-border-signup">
+        <div class="number-icon" id="number-icon-signup">
+          <p>1</p>
+        </div>
+        <div class="box" id="signup-box">
+          <p>Sign Up</p>
+          <form>
+            <input type="text" value="Username">
+            <input type="text" value="Password">
+            <input class="submit-button" id="signup-submit" type="submit" onclick="return false">
+          </form>
+        </div>
       </div>
       
-      <div class="box" id="login-box">
-        <form>
-          <input type="text">
-          <input type="text">
-          <input class="submit-button" id="login-submit" type="submit" onclick="return false">
-        </form>
+      <div class="box-border" id="box-border-login">
+        <div class="number-icon" id="number-icon-login">
+          <p>2</p>
+        </div>
+        <div class="box" id="login-box">
+          <p>Log In</p>
+          <form>
+            <input type="text">
+            <input type="text">
+            <input class="submit-button" id="login-submit" type="submit" onclick="return false">
+          </form>
+        </div>
       </div>
     </div>
     <script src="login.js"></script>
