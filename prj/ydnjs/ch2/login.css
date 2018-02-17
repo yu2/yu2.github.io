@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "lucida sans";
+  font-family: "open sans";
 }
 
 body {
@@ -35,13 +35,11 @@ body {
 #box-border-signup {
   background-color: #daa;
   box-shadow: 0.5px 0.5px 2.5px 0px black;
-  margin-right: 0.75em;
 }
 
 #box-border-login {
   background-color: #acc;
   box-shadow: 0.5px 0.5px 2.5px 0px black;
-  margin-left: 0.75em;
 }
 
 .number-icon {
@@ -57,7 +55,7 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #aaa;
-  box-shadow: 1px 1px 2.5px 0px black;
+  
 }
 
 .box {
@@ -80,10 +78,6 @@ input[type="text"] {
   color: gray;
 }
 
-#signup-box {
-  margin-right: 0.1em;
-}
-
-#login-box {
-  margin-left: 0.1em;
+.divider {
+  margin: 1em;
 }
