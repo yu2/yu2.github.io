@@ -19,17 +19,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var newUser;
   function submit(e) {
     var statusMessage = document.getElementsByClassName("message-display")[0];
+    statusMessage.classList.remove("opaque");
     if(e.target.id == "signup-submit") {
       newUser = User();
       signupInfo[0] = document.getElementById("signup-username").value;
       signupInfo[1] = document.getElementById("signup-password").value;
       newUser.login(signupInfo[0], signupInfo[1]);
+      //statusMessage.classList.add("transparent");
       statusMessage.innerHTML = "Please log in";
     } else if (e.target.id == "login-submit") {
       loginInfo[0] = document.getElementById("login-username").value;
       loginInfo[1] = document.getElementById("login-password").value;
-      console.log(statusMessage.classList);
-      statusMessage.classList.add("opaque");
+      //statusMessage.classList.add("transparent");
       statusMessage.innerHTML = (newUser.check(loginInfo[0], loginInfo[1])) ? "Login successful! Welcome, " + loginInfo[0] + "." : "Incorrect username or password";
     }
   }
