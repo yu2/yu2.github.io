@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     } else if (e.target.id == "login-submit") {
       loginInfo[0] = document.getElementById("login-username").value;
       loginInfo[1] = document.getElementById("login-password").value;
+      console.log(statusMessage.classList);
+      statusMessage.classList.add("opaque");
       statusMessage.innerHTML = (newUser.check(loginInfo[0], loginInfo[1])) ? "Login successful! Welcome, " + loginInfo[0] + "." : "Incorrect username or password";
     }
   }
