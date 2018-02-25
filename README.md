@@ -1,5 +1,5 @@
 ## Currently working on
-<a href="http://yu2.github.io/prj/ydnjs/ch1.2/login.html" target="_blank">Sign up/Log in</a><br>
+<a href="http://yu2.github.io/prj/ydkjs/ch1.2/login.html" target="_blank">Sign up/Log in</a><br>
 Modularization practice
 
 <a href="http://yu2.github.io/parser/parser.html" target="_blank">Parser</a><br>
