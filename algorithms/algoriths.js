@@ -1,7 +1,7 @@
 //*** CODE REPOSITORY FOR ALGORITHMS ***//
 //*** (most recent first) ***//
 
-// No Repeats Please (Attempt 2) *Last updated 2018/1/10
+// No Repeats Please (Attempt 2)
 // Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.
 function permAlone(str) {
   var f = [];
