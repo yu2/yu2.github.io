@@ -1,5 +1,45 @@
-//*** CODE REPOSITORY FOR ALGORITHMS ***//
+//*** CODE REPOSITORY FOR FREECODECAMP ALGORITHMS ***//
 //*** (most recent first) ***//
+
+// Make a Person
+var Person = function(firstAndLast) {
+  // Complete the method below and implement the others similarly
+  var fullName = firstAndLast.split(" ");
+  var firstName = fullName[0];
+  var lastName = fullName[1];
+
+  this.getFullName = function() {
+    return firstName + " " + lastName;
+  };
+  
+  this.setFullName = function(newFullName) {
+    fullName = newFullName;
+    var tempArray = fullName.split(" ");
+    firstName = tempArray[0];
+    lastName = tempArray[1];
+  };
+
+  this.getFirstName = function() {
+    return firstName;
+  };
+  
+  this.getLastName = function() {
+    return lastName;
+  };
+  
+  this.setFirstName = function(newFirstName) {
+    firstName = newFirstName;
+  };
+  
+  this.setLastName = function(newLastName) {
+    lastName = newLastName;
+  };
+
+  return firstAndLast;
+};
+
+var bob = new Person('Bob Ross');
+bob.getFullName();
 
 // No Repeats Please (Attempt 2)
 // Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.
