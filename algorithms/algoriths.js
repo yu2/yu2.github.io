@@ -1,6 +1,27 @@
 //*** CODE REPOSITORY FOR FREECODECAMP ALGORITHMS ***//
 //*** (most recent first) ***//
 
+// Map the Debris
+// Return a new array that transforms the element's average altitude into their orbital periods.
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  var result = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    result[i] = {name: arr[i].name, orbitalPeriod: calcOP(arr[i].avgAlt)};
+  }
+  
+  function calcOP(alt) {
+    var unrounded = Math.pow(Math.pow(earthRadius + alt, 3) / GM, 0.5) * 2 * Math.PI;
+    return Math.round(unrounded);
+  }
+  
+  return result;
+}
+
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+
 // Make a Person
 var Person = function(firstAndLast) {
   // Complete the method below and implement the others similarly
