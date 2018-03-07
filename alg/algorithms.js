@@ -1,6 +1,24 @@
 //*** CODE REPOSITORY FOR FREECODECAMP ALGORITHMS ***//
 //*** (most recent first) ***//
 
+// Pairwise
+// Given an array arr, find element pairs whose sum equal the second argument arg and return the sum of their indices.
+function pairwise(arr, arg) {
+  var result = 0;
+  for (var i = 0; i < arr.length; i++) {
+    var leftover = arg - arr[i];
+    for (var j = i + 1; j < arr.length; j++) {
+      if (leftover === arr[j]) {
+        arr[i] = NaN;
+        arr[j] = NaN;
+        result += i + j;
+        break;
+      }
+    }
+  }
+  return result;
+}
+
 // Map the Debris
 // Return a new array that transforms the element's average altitude into their orbital periods.
 function orbitalPeriod(arr) {
