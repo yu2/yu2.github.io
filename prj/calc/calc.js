@@ -1,7 +1,6 @@
 $(function() {
   var displayHeight = $(".calc-display").height();
-  console.log(displayHeight);
-  $("#num-display").css("font-size", displayHeight);
+  $("#num-display").css("font-size", displayHeight / 1.5);
   $(".btn").click(function(e) {
     let currentBtn = e.target.id;
     if ($("#" + currentBtn).text() == "C") {

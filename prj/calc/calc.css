@@ -23,16 +23,23 @@ body {
 .calc-display {
   height: 5em;
   border: 1px solid #111;
+  position: relative;
   margin-bottom: 0.5em;
+  padding: 0 0.25em;
   box-shadow: -1px -1px #bbb;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
 }
 
 #num-display {
-  max-width: 100%;
   font-weight: 100;
   text-align: right;
   flex-grow: 0;
-  overflow: hidden;
+  /* use absolute positioning (relative to closest positioned ancestor) to avoid overflowing causing unexpected growth */
+  position: absolute;
+  
 }
 
 .calc-pad {
