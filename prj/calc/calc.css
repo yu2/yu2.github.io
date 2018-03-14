@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   padding: 0.5em;
   border: 1px solid black;
+  box-shadow: 1px 1px #bbb;
 }
 
 .calc-display {
@@ -24,15 +25,14 @@ body {
   border: 1px solid #111;
   margin-bottom: 0.5em;
   box-shadow: -1px -1px #bbb;
-  display: flex;
 }
 
-input[type="text"] {
-  border: none;
-}
-
-input[type="text"]:focus {
-  outline: none;
+#num-display {
+  max-width: 100%;
+  font-weight: 100;
+  text-align: right;
+  flex-grow: 0;
+  overflow: hidden;
 }
 
 .calc-pad {
