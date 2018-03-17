@@ -37,6 +37,7 @@ body {
 #op-display {
   text-align: right;
   height: 1em;
+  margin: 0.1em;
 }
 
 #num-box {
