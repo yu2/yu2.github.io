@@ -28,18 +28,30 @@ body {
   padding: 0 0.25em;
   box-shadow: -1px -1px #bbb;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
   overflow: hidden;
 }
 
-#num-display {
-  font-weight: 100;
+#op-display {
   text-align: right;
-  flex-grow: 0;
+  height: 1em;
+}
+
+#num-box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#num-display {
+  text-align: right;
   /* use absolute positioning (relative to closest positioned ancestor) to avoid overflowing causing unexpected growth */
   position: absolute;
-  
 }
 
 .calc-pad {

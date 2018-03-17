@@ -7,7 +7,9 @@ $(function() {
       case "C":
         $("#num-display").text("");
         break;
-      
+      case "+":
+        $("#op-display").text("+");
+        break;
       default:
         $("#num-display").append($("#" + currentBtn).text());
     }
