@@ -1,35 +1,59 @@
 var mode;
 var mem = 0;
+var opPressed = false;
+var currentBtnText = function(event) {
+  return $("#" + event.target.id).text();
+};
+
+function clearNum() {
+  $("#num-display").text("");
+}
 
 $(function() {
   var displayHeight = $(".calc-display").height();
   $("#num-display").css("font-size", displayHeight / 1.5);
-  $(".btn").click(function(e) {
-    let currentBtn = e.target.id;
-    let btnText = $("#" + currentBtn).text();
-    
-    switch (btnText) {
-      case "C":
-        $("#num-display").text("");
-        break;
-      case "+":
-      case "\u2212":
-      case "\u00D7":
-      case "\u00F7":
-        $("#op-display").text(btnText);
-        mem += $("#num-display").text();
-        console.log(mem);
-        break;
-      default:
-        $("#num-display").append(btnText);
+  
+  // Number buttons
+  $(".num-btn").click(function(e) {
+    if (opPressed) {
+      clearNum();
+      opPressed = false;
     }
-    /*
-    if ($("#" + currentBtn).text() == "C") {
-      $("#num-display").text("");
-    }
-    else {
-      $("#num-display").append($("#" + currentBtn).text());
-    }
-    */
+    $("#num-display").append(currentBtnText(e));
   });
+    
+  // Clear button
+  $("#btn-clear").click(function(e) {
+    clearNum();
+  });
+  
+  // Operation buttons
+  $(".op-btn").click(function(e) {
+    mode = currentBtnText(e);
+    $("#op-display").text(mode);
+    mem += parseInt($("#num-display").text(), 10);
+    opPressed = true;
+    
+  });
+  
+  // Equals button
+  $("#btn-equal").click(function(e) {
+    let currentNum = parseInt($("#num-display").text(), 10);
+    switch (mode) {
+      case "+":
+        $("#num-display").text(mem + currentNum);
+        break;
+      case "\u2212":
+        $("#num-display").text(mem - currentNum);
+        break;
+      case "\u00D7":
+        $("#num-display").text(mem * currentNum);
+        break;
+      case "\u00F7":
+        $("#num-display").text(mem / currentNum);
+    }
+    mem = 0;
+    opPressed = true;
+  });
+  
 });
