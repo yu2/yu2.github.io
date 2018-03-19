@@ -31,14 +31,14 @@ $(function() {
   $(".op-btn").click(function(e) {
     mode = currentBtnText(e);
     $("#op-display").text(mode);
-    mem += parseInt($("#num-display").text(), 10);
+    mem += parseFloat($("#num-display").text(), 10);
     opPressed = true;
     
   });
   
   // Equals button
   $("#btn-equal").click(function(e) {
-    let currentNum = parseInt($("#num-display").text(), 10);
+    let currentNum = parseFloat($("#num-display").text(), 10);
     switch (mode) {
       case "+":
         $("#num-display").text(mem + currentNum);

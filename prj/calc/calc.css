@@ -10,23 +10,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 
 .calc-body {
   display: flex;
   flex-direction: column;
   padding: 0.5em;
-  border: 1px solid black;
-  box-shadow: 1px 1px #bbb;
+  box-shadow: 1px 1px #fff;
+  background-color: #aaf;
 }
 
 .calc-display {
+  color: #111;
   height: 5em;
-  border: 1px solid #111;
+  background-color: #ddf;
   position: relative;
   margin-bottom: 0.5em;
   padding: 0 0.25em;
-  box-shadow: -1px -1px #bbb;
+  box-shadow: -1px -1px #fff;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -77,6 +79,10 @@ button {
   height: 4em;
   font-size: 1em;
   margin: 0.1em;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 1px 1px #99a;
 }
 
 .btn-row {
@@ -86,6 +92,7 @@ button {
 
 #btn-0 {
   width: 8.2em;
+  border-radius: 1.5em;
 }
 
 .btn-col {
@@ -96,4 +103,9 @@ button {
 
 #btn-equal {
   height: 8.2em;
+  border-radius: 1.5em;
+}
+
+#btn-clear {
+  background-color: #fa5;
 }
