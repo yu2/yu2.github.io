@@ -85,6 +85,10 @@ button {
   box-shadow: 1px 1px #99a;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn-row {
   flex-basis: auto;
   display: flex;
@@ -108,4 +112,8 @@ button {
 
 #btn-clear {
   background-color: #fa5;
+}
+
+#btn-dec {
+  font-weight: bold;
 }
