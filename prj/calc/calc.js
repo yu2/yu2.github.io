@@ -9,6 +9,11 @@ function clearNum() {
   $("#num-display").text("");
 }
 
+function changeMode(md) {
+  mode = md;
+  $("#op-display").text(md);
+}
+
 $(function() {
   var displayHeight = $(".calc-display").height();
   $("#num-display").css("font-size", displayHeight / 1.5);
@@ -25,6 +30,7 @@ $(function() {
   // Clear button
   $("#btn-clear").click(function(e) {
     clearNum();
+    changeMode("");
   });
   
   // Operation buttons
