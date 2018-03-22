@@ -62,4 +62,18 @@ $(function() {
     opPressed = true;
   });
   
+  // Backspace button
+  $("#btn-del").click(function(e) {
+    let currentText = $("#num-display").text();
+    $("#num-display").text(currentText.slice(0, -1));
+  });
+  
+  $(".btn").mousedown(function(e) {
+    $(this).toggleClass("mouse-down");
+  });
+  
+  $(".btn").mouseup(function(e) {
+    $(this).toggleClass("mouse-down");
+  });
+  
 });
