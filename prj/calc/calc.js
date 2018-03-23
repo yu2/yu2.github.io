@@ -90,6 +90,8 @@ function changeMode(md) {
 function checkLength() {
   let currentNum = getDisplayNum();
   if (currentNum.length > 9) {
-    setDisplayNum(currentNum.slice(0, 9));
+    let expo = Number.parseFloat(currentNum).toExponential(2);
+    setDisplayNum(expo);
+    //setDisplayNum(currentNum.slice(0, 9));
   }
 }
