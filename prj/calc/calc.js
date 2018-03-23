@@ -1,18 +1,6 @@
 var mode;
 var mem = 0;
 var opPressed = false;
-var currentBtnText = function(event) {
-  return $("#" + event.target.id).text();
-};
-
-function clearNum() {
-  $("#num-display").text("");
-}
-
-function changeMode(md) {
-  mode = md;
-  $("#op-display").text(md);
-}
 
 $(function() {
   var displayHeight = $(".calc-display").height();
@@ -58,6 +46,7 @@ $(function() {
       case "\u00F7":
         $("#num-display").text(mem / currentNum);
     }
+    checkLength();
     mem = 0;
     opPressed = true;
   });
@@ -75,5 +64,32 @@ $(function() {
   $(".btn").mouseup(function(e) {
     $(this).toggleClass("mouse-down");
   });
-  
 });
+
+var currentBtnText = function(event) {
+  return $("#" + event.target.id).text();
+};
+
+function clearNum() {
+  $("#num-display").text("");
+}
+
+function getDisplayNum() {
+  return $("#num-display").text();
+}
+
+function setDisplayNum(num) {
+  $("#num-display").text(num);
+}
+
+function changeMode(md) {
+  mode = md;
+  $("#op-display").text(md);
+}
+
+function checkLength() {
+  let currentNum = getDisplayNum();
+  if (currentNum.length > 9) {
+    setDisplayNum(currentNum.slice(0, 9));
+  }
+}
