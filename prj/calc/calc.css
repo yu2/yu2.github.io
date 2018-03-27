@@ -145,3 +145,19 @@ button {
   font-weight: bold;
 }
 
+#logo {
+  position: absolute;
+  right: 0.2em;
+  top: 0.2em;
+  color: white;
+  font-size: 1.5em;
+}
+
+#git-link:link {
+  color: white;
+  text-decoration: none;
+}
+
+#git-link:visited {
+  color: white;
+}
