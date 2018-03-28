@@ -78,7 +78,7 @@ $(document).ready(function() {
         $(author).text("- " + data.author);
       },
       error: function(err) {
-        alert(err);
+        //alert(err);
       },
       beforeSend: function(xhr) {
         xhr.setRequestHeader("X-Mashape-Authorization", "46tAVHfUQJmshiOEq6KtTFGdpra7p1ZHVsajsnjmXvmEha9Nbz");

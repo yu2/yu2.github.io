@@ -9,7 +9,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #4CA;
+  background-color: #666;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@ body {
 }
 
 .title {
-  color: white;
+  color: #fb3;
   position: absolute;
   top: 10vh;
   font-size: 2.5em;
@@ -69,7 +69,11 @@ body {
   padding: 1em;
   position: absolute;
   bottom: 10vh;
-  border: 0.25em inset white;
+  border: 0.25em solid #;
+  background-color: #fb3;
+  color: white;
+  text-shadow: 0.05em 0.05em 0.02em black;
+  font-weight: bold;
 }
 
 #one-more:focus {
