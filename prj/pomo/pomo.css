@@ -23,26 +23,38 @@ body {
 
 .timer {
   font-size: 2em;
-  width: 100%;
   text-align: center;
+  margin: 0.1em;
+  display: flex;
+}
+
+.timer p {
+  font-size: 1.5em;
+}
+
+#minute, #second {
+  font-size: 1.5em;
+  flex-basis: content;
 }
 
 .control {
   display: flex;
   justify-content: center;
-  font-size: 2em;
 }
 
 .control button {
-  font-size: 1em;
+  font-size: 2em;
   font-weight: bold;
   border: none;
   background-color: #fff;
-  padding: 0.2em 0.25em;
+  padding: 0.05em 0.15em;
   margin: 0.1em;
+  outline: solid #fff;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .control button:focus {
   outline: solid #ddd;
-  box-shadow: 1px 1px black;
+  background-color: #eee;
 }

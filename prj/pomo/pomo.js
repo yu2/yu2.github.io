@@ -1,16 +1,27 @@
+var currentCount;
+var timer;
+
 $(function() {
-  var currentCount;
-  var timer;
-  
   $("#start").click(function() {
     startTimer();
   });
   
   function startTimer() {
+    currentCount = parseInt($("#second").text(), 10);
+    let currentMin = parseInt($("#minute").text(), 10);
     timer = setInterval(function() {
-      currentCount = parseInt($(".timer p").text(), 10);
-      currentCount++;
-      $(".timer p").text(currentCount);
+      if (currentCount === 0) {
+        if (currentMin === 0) {
+          clearInterval(timer);
+        } else {
+          decMin(currentMin);
+          currentCount = 59;
+          setSec(59);
+        }
+      } else {
+        currentCount--;
+        setSec(currentCount);
+      }
       console.log("tick");
     }, 1000);
   }
@@ -20,3 +31,16 @@ $(function() {
   });
   
 });
+
+function decMin(min) {
+  min--;
+  $("#minute").text(min);
+}
+
+function setSec(val) {
+  $("#second").text((val < 10) ? "0" + val : val);
+}
+
+function getSec(val) {
+  return $("#second").text();
+}
