@@ -11,7 +11,8 @@ body {
   padding: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
 }
 
 .title {
@@ -42,5 +43,6 @@ body {
 }
 
 .control button:focus {
-  outline:none;
+  outline: solid #ddd;
+  box-shadow: 1px 1px black;
 }
