@@ -1,4 +1,4 @@
-var currentCount;
+var currentSec, currentMin;
 var timer;
 
 $(function() {
@@ -7,20 +7,21 @@ $(function() {
   });
   
   function startTimer() {
-    currentCount = parseInt($("#second").text(), 10);
-    let currentMin = parseInt($("#minute").text(), 10);
+    currentSec = parseInt($("#second").text(), 10);
+    currentMin = parseInt($("#minute").text(), 10);
     timer = setInterval(function() {
-      if (currentCount === 0) {
+      if (currentSec === 0) {
         if (currentMin === 0) {
           clearInterval(timer);
         } else {
-          decMin(currentMin);
-          currentCount = 59;
+          currentMin--;
+          setMin(currentMin);
+          currentSec = 59;
           setSec(59);
         }
       } else {
-        currentCount--;
-        setSec(currentCount);
+        currentSec--;
+        setSec(currentSec);
       }
       console.log("tick");
     }, 1000);
@@ -32,9 +33,8 @@ $(function() {
   
 });
 
-function decMin(min) {
-  min--;
-  $("#minute").text(min);
+function setMin(val) {
+  $("#minute").text(val);
 }
 
 function setSec(val) {
