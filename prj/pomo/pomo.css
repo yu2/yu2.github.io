@@ -2,39 +2,55 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "open sans";
+  font-family: "quicksand";
 }
 
 body {
   width: 100vw;
   height: 100vh;
+  background-color: #ddd;
   padding: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  height: 30em;
+  width: 30em;
+  flex-direction: column;
+  border: 1em solid #5b5;
+  border-radius: 50%;
+  background-color: #f55;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
+  font-weight: bold;
 }
 
 .title {
   width: 100%;
   text-align: center;
   font-size: 2em;
+  color: #fc0;
 }
 
 .timer {
   font-size: 2em;
   text-align: center;
-  margin: 0.1em;
+  margin: 0.3em;
   display: flex;
+  color: white;
 }
 
-.timer p {
+.timer div, .timer p {
   font-size: 1.5em;
-}
-
-#minute, #second {
-  font-size: 1.5em;
-  flex-basis: content;
+  display: flex;
+  font-family: "roboto";
+  justify-content: center;
+  align-items: center;
 }
 
 .control {
@@ -44,17 +60,18 @@ body {
 
 .control button {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
-  background-color: #fff;
+  background-color: inherit;
+  color: #fc0;
   padding: 0.05em 0.15em;
   margin: 0.1em;
-  outline: solid #fff;
+  outline: solid #f55;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .control button:focus {
-  outline: solid #ddd;
-  background-color: #eee;
+  outline: solid #f99;
+  background-color: #f77;
 }
