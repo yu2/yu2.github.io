@@ -9,7 +9,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #666;
+  background-color: #777;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@ body {
 }
 
 .title {
-  color: #fb3;
+  color: #0aa;
   position: absolute;
   top: 10vh;
   font-size: 2.5em;
@@ -70,7 +70,7 @@ body {
   position: absolute;
   bottom: 10vh;
   border: 0.25em solid #;
-  background-color: #fb3;
+  background: #0aa;
   color: white;
   text-shadow: 0.05em 0.05em 0.02em black;
   font-weight: bold;
@@ -105,11 +105,11 @@ body {
 }
 
 .bg-blue {
-  background-color: #00FFFF;
+  background-color: #0aa;
 }
 
 .bg-yellow {
-  background-color: #FFFF00;
+  background-color: #aa0;
 }
 
 .right {
