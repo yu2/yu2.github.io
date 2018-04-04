@@ -24,6 +24,7 @@ body {
   top: 10vh;
   font-size: 2.5em;
   text-shadow: 0.05em 0.05em black;
+  transition: color 1s;
 }
 
 .outside-container {
@@ -74,6 +75,7 @@ body {
   color: white;
   text-shadow: 0.05em 0.05em 0.02em black;
   font-weight: bold;
+  transition: background 1s;
 }
 
 #one-more:focus {
