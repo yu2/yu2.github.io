@@ -12,6 +12,9 @@ Morphological parser prototype
 From FreeCodeCamp and Codewars
 
 ## Past Projects
+<a href="http://yu2.github.io/prj/quote/quote2.html" target="_blank">Random Quote Machine</a><br>
+Uses Andruxnet API
+
 <a href="http://yu2.github.io/prj/ydkjs/ch1.2/login.html" target="_blank">Sign up/Log in</a><br>
 Modularization practice
 
@@ -23,9 +26,6 @@ Returns Wikipedia search results using the MediaWiki API
 
 <a href="http://yu2.github.io/prj/weather/weather.html" target="_blank">Weather App</a><br>
 API test. Not working right now.
-
-<a href="http://yu2.github.io/prj/quote/quote2.html" target="_blank">Random Quote Machine</a><br>
-Uses Andruxnet API
 
 <a href="http://yu2.github.io/prj/home/home.html" target="_blank">Mock Console</a><br>
 Overrides default console.log to print onto page; for testing purposes.
