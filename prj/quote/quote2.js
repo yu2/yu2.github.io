@@ -15,7 +15,6 @@ $(document).ready(function() {
   
   
   function onClick() {
-    
     if(clickDisabled)
       return;
     var hue = Math.floor(Math.random() * 360 + 1);
