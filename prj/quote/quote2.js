@@ -13,16 +13,21 @@ $(document).ready(function() {
   var disk2 = "right";
   var clickDisabled = false;
   
+  var hue = Math.floor(Math.random() * 60 + 1);
+  function bodyHue(color) {
+    return color/3;
+  }
+  $(".wrapper").css("filter", "hue-rotate("+bodyHue(hue)+"deg)");
   
   function onClick() {
     if(clickDisabled)
       return;
-    var hue = Math.floor(Math.random() * 360 + 1);
+    //hue = Math.floor(Math.random() * 60 + 1);
+    hue = hue + 60;
+    $(".wrapper").css("filter", "hue-rotate("+bodyHue(hue)+"deg)");
     if ((disk1 === "mid")&&(disk2 === "right")) {
       $("#out-cont2").css("filter", "hue-rotate("+hue+"deg)");
-      $(".title").css("color", "#aa0");
       $(".title").css("filter", "hue-rotate("+hue+"deg)");
-      $("#one-more").css("background", "#aa0");
       $("#one-more").css("filter", "hue-rotate("+hue+"deg)");
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(-360deg)";
@@ -35,9 +40,7 @@ $(document).ready(function() {
       
     } else if ((disk1 === "right")&&(disk2 === "mid")) {
       $("#out-cont1").css("filter", "hue-rotate("+hue+"deg)");
-      $(".title").css("color", "#0aa");
       $(".title").css("filter", "hue-rotate("+hue+"deg)");
-      $("#one-more").css("background", "#0aa");
       $("#one-more").css("filter", "hue-rotate("+hue+"deg)");
       out_cont1.style.transform += "translateX(-65vw)";
       cont1.style.transform = "rotate(0deg)";
