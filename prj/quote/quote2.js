@@ -15,7 +15,7 @@ $(document).ready(function() {
   
   var hue = Math.floor(Math.random() * 60 + 1);
   function bodyHue(color) {
-    return color/1.5;
+    return color-30;
   }
   $(".wrapper").css("filter", "hue-rotate("+bodyHue(hue)+"deg)");
   
