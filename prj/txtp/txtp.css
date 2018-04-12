@@ -16,15 +16,7 @@ body {
   
 }
 
-#input {
-  border: 1px solid #777;
-}
-
 button {
   display: block;
   margin-bottom: 1em;
-}
-
-#output {
-  border: 1px solid #777;
 }
