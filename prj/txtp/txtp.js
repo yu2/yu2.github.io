@@ -37,7 +37,7 @@ function populatePronouns(gender, actions) {
     he = indexActions(he, actions);
   }
   
-  // Count the number of times an action with a pronoun
+  // Count the number of times an action occurs with a pronoun
   function indexActions(obj, actions) {
     for (let i = 0; i < actions.length; i++) {
       let currentAction = actions[i];
@@ -52,7 +52,7 @@ function populatePronouns(gender, actions) {
 }
 
 function displayCounts() {
-  var finalCount = she;
+  var finalCount = Object.assign({}, she);
   
   for (let prop in finalCount) {
     if (finalCount[prop] >= 5) {
@@ -62,6 +62,20 @@ function displayCounts() {
     }
     delete finalCount[prop];
   }
+  
+  // Count totals
+  var sheTotal = 0;
+  var heTotal = 0;
+  for (let prop in she) {
+    sheTotal += she[prop];
+  }
+  for (let prop in he) {
+    heTotal += he[prop];
+  }
+  console.log(she);
+  console.log(sheTotal);
+  console.log(he);
+  console.log(heTotal);
   
   // Move to array for sorting
   let sortable = [];
