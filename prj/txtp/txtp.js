@@ -2,10 +2,8 @@ var input;
 var output = [];
 var she = {};
 var he = {};
-
-$(function() {
-
-});
+var sheTotal = 0;
+var heTotal = 0;
 
 function readInput() {
   input = $("#input").val().split("\n");
@@ -20,13 +18,11 @@ function readInput() {
     }
   }
   
-  console.log(she);
-  console.log(he);
-  
   for (let i = 0; i < output.length; i++) {
-    $("#output").append(output[i]);
+    printResults("#output", output[i]);
   }
   
+  displayCounts();
 }
 
 // Populate a pronoun object with the actions and their count
@@ -51,6 +47,7 @@ function populatePronouns(gender, actions) {
   }
 }
 
+// Displays the number of times each action occurs
 function displayCounts() {
   var finalCount = Object.assign({}, she);
   
@@ -64,18 +61,12 @@ function displayCounts() {
   }
   
   // Count totals
-  var sheTotal = 0;
-  var heTotal = 0;
   for (let prop in she) {
     sheTotal += she[prop];
   }
   for (let prop in he) {
     heTotal += he[prop];
   }
-  console.log(she);
-  console.log(sheTotal);
-  console.log(he);
-  console.log(heTotal);
   
   // Move to array for sorting
   let sortable = [];
@@ -87,6 +78,32 @@ function displayCounts() {
   });
   
   for (let i = 0; i < sortable.length; i++) {
-    $("#counts").append(sortable[i][0] + " " + sortable[i][1] + "\n");
+    printResults("#counts", sortable[i][0] + " " + sortable[i][1] + "\n");
   }
+  
+  compareObj(sortable, she, he);
+  console.log(sortable);
+}
+
+function compareObj(arr, obj1, obj2) {
+  for (let i = 0; i < arr.length; i++) {
+    let currentVerb = arr[i][0];
+    let sheCount = obj1[currentVerb];
+    let heCount = obj2[currentVerb];
+    printResults("#statistics", currentVerb + ": " + tpz(sheCount, sheTotal, heCount, heTotal) + "\n");
+  }
+}
+
+function printResults(target, content) {
+  $(target).append(content);
+}
+
+// Two Proportion Z-Test
+function tpz(s1, n1, s2, n2) {
+  let p1 = s1 / n1;
+  let p2 = s2 / n2;
+  let p = (s1 + s2)/(n1 + n2); // pooled sample proportion
+  let se = Math.sqrt(p * (1 - p) * (1/n1 + 1/n2)); // standard error
+  let z = (p1 - p2) / se; // z test statistic
+  return z;
 }
