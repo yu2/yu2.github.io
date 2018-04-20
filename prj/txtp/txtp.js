@@ -4,6 +4,7 @@ var she = {};
 var he = {};
 var sheTotal = 0;
 var heTotal = 0;
+var totalVerbCount = 0;
 
 function readInput() {
   input = $("#input").val().split("\n");
@@ -50,7 +51,7 @@ function populatePronouns(gender, actions) {
 // Displays the number of times each action occurs
 function displayCounts() {
   var finalCount = Object.assign({}, she);
-  
+  // Find verbs that occur in both she and he more than five times
   for (let prop in finalCount) {
     if (finalCount[prop] >= 5) {
       if (he[prop] >= 5) {
@@ -82,7 +83,7 @@ function displayCounts() {
   }
   
   compareObj(sortable, she, he);
-  console.log(sortable);
+  countVerbTotal();
 }
 
 function compareObj(arr, obj1, obj2) {
@@ -106,4 +107,19 @@ function tpz(s1, n1, s2, n2) {
   let se = Math.sqrt(p * (1 - p) * (1/n1 + 1/n2)); // standard error
   let z = (p1 - p2) / se; // z test statistic
   return z;
+}
+
+function countVerbTotal() {
+  var heCopy = Object.assign({}, he);
+  for (let prop in she) {
+    totalVerbCount++;
+    if (heCopy.hasOwnProperty(prop)) {
+      delete heCopy[prop];
+    }
+  }
+
+  for (let prop in heCopy) {
+    totalVerbCount++;
+  }
+  console.log(totalVerbCount);
 }
