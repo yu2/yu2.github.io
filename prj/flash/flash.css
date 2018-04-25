@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: "courier";
 }
 
 body {
@@ -10,6 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .card {
@@ -20,17 +23,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-	transition: opacity 1s, transform 1s;
+  position: absolute;
+	transition: opacity 1s, top 1s;
+}
+
+#card1 {
+  top: 25vh;
+}
+
+#card2 {
+  position: absolute;
+  top: 75vh;
+  opacity: 0;
+}
+
+#logo {
+  position: absolute;
+  top: .75em;
+  font-size: 2.5vh;
+  color: gray;
 }
 
 .next {
   position: absolute;
   border: 1px solid black;
-  bottom: 1em;
+  bottom: .75em;
+  font-size: 2.5vh;
   background: none;
   box-shadow: 1px 1px black;
-  padding: 0.5em;
+  padding: 0.3em;
 }
 
 .next:focus {
@@ -41,10 +62,22 @@ body {
   box-shadow: none;
 }
 
-.rise {
+.middle-rise {
 	transform: translate(0, -25em);
+}
+
+.bottom-rise {
+  transform: translate(0, -50em);
 }
 
 .disappear {
 	opacity: 0;
+}
+
+.appear {
+  opacity: 100;
+}
+
+.no-transition {
+  transition: none;
 }
