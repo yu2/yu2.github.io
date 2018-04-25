@@ -1,11 +1,18 @@
 $(function() {
   $(".next").mousedown(function(e) {
     $(this).toggleClass("mouse-down");
-    console.log("down");
   });
 
   $(".next").mouseup(function(e) {
     $(this).toggleClass("mouse-down");
-    console.log("up");
   });
+
+	$(".next").click(function() {
+		$(".card").toggleClass("rise");		
+	});	
+
+	$(".next").click(function() {
+		$(".card").toggleClass("disappear");		
+	});	
+
 });
