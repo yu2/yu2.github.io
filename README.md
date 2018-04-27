@@ -1,8 +1,8 @@
 ## Currently working on
-<a href="http://yu2.github.io/prj/pomo/pomo.html" target="_blank">Pomodoro Timer</a><br>
-Front End project for FreeCodeCamp
+<a href="http://yu2.github.io/prj/flash/flash.html" target="_blank">Flashcards</a><br>
+WIP
 
-<a href="http://yu2.github.io/prj/calc/calc.html" target="_blank">Calculator</a><br>
+<a href="http://yu2.github.io/prj/pomo/pomo.html" target="_blank">Pomodoro Timer</a><br>
 Front End project for FreeCodeCamp
 
 <a href="http://yu2.github.io/parser/parser.html" target="_blank">Parser</a><br>
@@ -12,6 +12,9 @@ Morphological parser prototype
 From FreeCodeCamp and Codewars
 
 ## Past Projects
+<a href="http://yu2.github.io/prj/calc/calc.html" target="_blank">Calculator</a><br>
+Front End project for FreeCodeCamp
+
 <a href="http://yu2.github.io/prj/quote/quote2.html" target="_blank">Random Quote Machine</a><br>
 Uses Andruxnet API
 
