@@ -43,6 +43,10 @@ body {
   opacity: 0;
 }
 
+#card2b {
+	transform: rotate3d(0, 1, 0, 90deg);
+}
+
 #logo {
   position: absolute;
   top: .75em;
