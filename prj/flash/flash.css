@@ -24,12 +24,17 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-	transition: opacity 1s, top 1s;
+	transition: opacity 1s, top 1s, transform 0.5s ease;
 	background: #ff8;
+	transform-origin: center;
 }
 
 #card1 {
   top: 25vh;
+}
+
+#card1b {
+	transform: rotate3d(0, 1, 0, 90deg);
 }
 
 #card2 {
@@ -53,6 +58,7 @@ body {
   background: none;
   box-shadow: 1px 1px black;
   padding: 0.3em;
+	background: #ffa;
 }
 
 .next:focus {
@@ -79,6 +85,11 @@ body {
   opacity: 100;
 }
 
-.no-transition {
-  transition: none;
+.rotate {
+	transform: rotate3d(0, 1, 0, 90deg);
 }
+
+.rotateb {
+	transform: rotate3d(0, 1, 0, -90deg);
+}
+
