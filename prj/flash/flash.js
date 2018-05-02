@@ -8,7 +8,8 @@ $(function() {
   });
   
   var order = 12;
-	$(".next").click(function() {
+	$(".next").click(function(e) {
+		e.stopPropagation();
 	  resumeAnim();
 	  if (order === 12) {
 	    $("#card1").css("opacity", 0);
