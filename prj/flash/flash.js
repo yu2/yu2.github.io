@@ -36,7 +36,6 @@ $(function() {
   		$("#card1").css("top", "25vh");
   		order = 12;
 	  }
-		
 	});
 
 	$(".card").click(function() {
@@ -44,12 +43,12 @@ $(function() {
 		let backID = (id.length === 5) ? id + "b" : id.substring(0, id.length - 1); 
 		$(this).css("transform", "rotate3d(0, 1, 0, 90deg)");
 		$(this).on("transitionend", function() {
+			$(this).off("transitionend");
 			$(this).css("display", "none");
 			$("#" + backID).css("transform", "rotate3d(0, 1, 0, 0deg)");
-			$(this).off("transitionend");
 			$("#" + backID).on("transitionend", function() {
-				$("#" + id).css("display", "flex");
 				$("#" + id).off("transitionend");
+				$("#" + id).css("display", "flex");
 			});
 		});
 	});
