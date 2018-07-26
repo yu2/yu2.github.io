@@ -2,8 +2,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "lucida console";
+	font-size: 1em;
 }
 
 body {
 	background-color: #ffffff;	
+	padding: 0.5em;
+}
+
+#performance {
+	padding: 0.5em 0 0 0;
 }
