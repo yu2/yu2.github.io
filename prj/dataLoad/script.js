@@ -1,6 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {	
 	timer = document.querySelector('#timeDisplay');
+	const promise = promise1();
+	//promise.then(promise2());
+	promise1().then(promise2());
+	promise1();
 });
+
+function promise1() {
+	console.log('promise 1');
+}
+
+function promise2() {
+	console.log('promise 2');
+}
+
+function failMessage() {
+	console.log('promise failed');
+}
 
 var content = [];
 function handleFiles(files) {
@@ -30,6 +46,8 @@ function downloadBlob(data) {
 	let elem = window.document.createElement('a');
 	elem.href = url;
 	elem.download = 'lemma.txt';
+	elem.innerHTML = "Download";
 	document.body.appendChild(elem);
+	console.log(content);
 	alert('here');
 }
