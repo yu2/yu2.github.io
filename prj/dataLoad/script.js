@@ -20,7 +20,12 @@ function failMessage() {
 
 var content = [];
 function handleFiles(files) {
-	const t1 = performance.now();
+	t1 = performance.now();
+	doWork(files);
+	//return new Promise(function (resolve) {});
+}
+
+function doWork(files) {
 	for (let i = 0; i < files.length; i++) {
 		(function(file) {
 			var reader = new FileReader();
@@ -31,14 +36,33 @@ function handleFiles(files) {
 			reader.readAsText(file);
 		 })(files[i]);
 	}
+	var a = true;
+	const timer1 = performance.now();
+	while(a) {
+		if (content.length > 2000) {
+			a = false;
+			return new Promise(function(success) {});
+		}	
+		else if (performance.now() - timer1 > 1000) {
+			console.log("timeout");
+			break;
+		}
+	}
+}
+
+var handler = doWork();
+handler.then(moreWork());
+function moreWork() {
 	const t2 = performance.now();
+	console.log(content);
 	updatePerformance(t1, t2);
-	downloadBlob(content);
 }
 
 function updatePerformance(t1, t2) {
 	timer.innerHTML = t2 - t1;
 }
+
+//handler.then(downloadBlob(content));
 
 function downloadBlob(data) {
 	let blob = new Blob([data], {type: 'text/csv'});
