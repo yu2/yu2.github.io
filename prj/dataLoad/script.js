@@ -17,41 +17,30 @@ document.addEventListener("DOMContentLoaded", function() {
 var content = [];
 function handleFiles(files) {
 	t1 = performance.now();
-	doWork(files);
-	//return new Promise(function (resolve) {});
-}
-
-function doWork(files) {
 	for (let i = 0; i < files.length; i++) {
 		(function(file) {
-			var reader = new FileReader();
+			let reader = new FileReader();
+
+			//set up handler for reading completion
 			reader.onload = function(e) {
 				let piece = e.target.result;
 				content = content.concat(piece.split('\n'));
-			}
+				if (i == files.length - 1) {
+					moreWork();
+				}
+			};
+
 			reader.readAsText(file);
 		 })(files[i]);
 	}
-	var a = true;
-	const timer1 = performance.now();
-	while(a) {
-		if (content.length > 2000) {
-			a = false;
-			return new Promise(function(success) {});
-		}	
-		else if (performance.now() - timer1 > 1000) {
-			console.log("timeout");
-			break;
-		}
-	}
 }
 
-var handler = doWork();
-handler.then(moreWork());
+//var handler = doWork();
+//handler.then(moreWork());
 function moreWork() {
 	const t2 = performance.now();
-	console.log(content);
 	updatePerformance(t1, t2);
+	downloadBlob(content);
 }
 
 function updatePerformance(t1, t2) {
@@ -69,5 +58,4 @@ function downloadBlob(data) {
 	elem.innerHTML = "Download";
 	document.body.appendChild(elem);
 	console.log(content);
-	alert('here');
 }
