@@ -1,22 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {	
 	timer = document.querySelector('#timeDisplay');
-	const promise = promise1();
-	//promise.then(promise2());
-	promise1().then(promise2());
-	promise1();
+	//tLoop();
+	function tLoop() {
+		for (let i = 0; i < 1000000; i++) {
+			if (i == 999999) {
+				console.log("loop finished");
+			}
+		}
+		cont();
+	}
+	function cont() {
+		console.log("cont");
+	}
 });
-
-function promise1() {
-	console.log('promise 1');
-}
-
-function promise2() {
-	console.log('promise 2');
-}
-
-function failMessage() {
-	console.log('promise failed');
-}
 
 var content = [];
 function handleFiles(files) {
