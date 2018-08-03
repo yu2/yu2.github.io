@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 var content = [];
+/*
 function handleFiles(files) {
 	t1 = performance.now();
 	for (let i = 0; i < files.length; i++) {
@@ -34,6 +35,31 @@ function handleFiles(files) {
 		 })(files[i]);
 	}
 }
+*/
+
+function handleFiles(files) {
+	t1 = performance.now();
+	var i = 0;
+	var target = files.length;
+	doFile(files[i]);
+	function doFile(file) {
+		let reader = new FileReader();
+		reader.onload = function(e) {
+			let piece = e.target.result;
+			pieceArray = piece.split('\n');
+			content = content.concat(pieceArray);
+			if (i < target - 1) {
+				i++;
+				doFile(files[i]);
+			}
+			else if (i == target - 1) {
+				updatePerformance(t1)
+				downloadBlob(content);
+			}
+		};
+		reader.readAsText(file);
+	}
+}
 
 //var handler = doWork();
 //handler.then(moreWork());
@@ -43,7 +69,8 @@ function moreWork() {
 	downloadBlob(content);
 }
 
-function updatePerformance(t1, t2) {
+function updatePerformance(t1) {
+	const t2 = performance.now();
 	timer.innerHTML = t2 - t1;
 }
 
