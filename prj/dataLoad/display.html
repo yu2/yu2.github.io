@@ -5,7 +5,12 @@
 		<link href="display.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <input type="file" id="input" multiple onchange="handleFiles(this.files)">
+		<div id="uploadArea">
+			<label for="lemmaInput">Lemma file(s)</label>
+			<input type="file" class="input" id="lemmaInput" multiple onchange="handleLemma(this.files)">
+			<label for="morphemeInput">Morpheme file(s)</label>
+			<input type="file" class="input" id="morphemeInput" multiple onchange="handleMorpheme(this.files)">
+		</div> 
 		<div id="performance">
 			<p>Performance: <span id="timeDisplay">0</span>ms</p> 
 		</div>
