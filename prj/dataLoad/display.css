@@ -13,15 +13,20 @@ body {
 
 #uploadArea {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	flex-grow: 1;
+	align-items: start;
 }
 
+.uploadButton {
+	text-decoration: underline;
+	background: none;
+	padding: 0.1em;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 0.25em;
+}
 .input {
 	display: none;
 }
 
-#performance {
-	padding: 0.5em 0 0 0;
-}
