@@ -5,7 +5,7 @@ WIP
 <a href="http://yu2.github.io/prj/pomo/pomo.html" target="_blank">Pomodoro Timer</a><br>
 Front End project for FreeCodeCamp
 
-<a href="http://yu2.github.io/parser/parser.html" target="_blank">Parser</a><br>
+<a href="http://yu2.github.io/parser/old/parser.html" target="_blank">Parser</a><br>
 Morphological parser prototype
 
 <a href="https://github.com/yu2/yu2.github.io/blob/master/alg/algorithms.js" target="_blank">Algorithms</a><br>
