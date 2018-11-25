@@ -6,7 +6,7 @@
 }
 
 body {
-	background-color: #fff;
+	background-color: #efefef;
 	color: black;
 }
 
@@ -30,6 +30,7 @@ body {
 	height: 250px;
 	border-radius: 100%;
 	padding-bottom: .5em;
+	border: .1em solid white;
 }
 
 .roles {
