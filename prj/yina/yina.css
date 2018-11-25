@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: roboto;
+}
+
+body {
+	background-color: #fff;
+	color: black;
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.intro-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1em;
+	font-size: 1.5em;
+}
+
+.photo {
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	padding-bottom: .5em;
+}
+
+.roles {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	font-size: 1em;
+}
+
+.intro-message {
+	padding-top: 1em;
+	padding-bottom: 1em; 
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 1em;
+}
+
+.contact-heading {
+	padding-top: 0.5em;
+	padding-bottom: 0.25em;
+}
+
+.contact-line {
+	padding-bottom: 0.25em;
+}
+
+.linkedin-link {
+	font-size: 1.25em;
+}
+
+.heading1 {
+	font-size: 1.5em;
+}
+
+.heading2 {
+	font-size: 1.25em;
+}
+
+.bold {
+	font-weight: bold;
+}
