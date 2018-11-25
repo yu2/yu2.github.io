@@ -40,6 +40,10 @@ body {
 	font-size: 1em;
 }
 
+.role-line {
+	padding-bottom: .25em;
+}
+
 .intro-message {
 	padding-top: 1em;
 	padding-bottom: 1em; 
@@ -76,3 +80,12 @@ body {
 .bold {
 	font-weight: bold;
 }
+
+.role-line a:link {
+	color: black
+}
+
+.role-line a:visited {
+  color: black
+}
+ 
