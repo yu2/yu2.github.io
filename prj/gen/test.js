@@ -10,8 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
   it2();
   console.log(it2());
   
-  gimmeSomething();
-  console.log(gimmeSomething());
+  gimmeSomething(); //this returns an unexecuted function
+  console.log(gimmeSomething()); //this returns and executes the function, but only if the function assigned to it is IIFE
+  
+  var ar = [1, 2, 3, 4, 5];
+  var arIt = ar[Symbol.iterator]();
+  console.log(arIt.next().value);
+  console.log(arIt.next().value);
 });
 
 // GENERATOR
