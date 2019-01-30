@@ -38,6 +38,7 @@ function step(gen) {
   };
 }
 
+// CLOSURE ITERATOR
 var gimmeSomething = (function() {
   var nextVal;
   
@@ -49,5 +50,23 @@ var gimmeSomething = (function() {
       nextVal = (3 * nextVal) + 6;
     }
     return nextVal;
+  };
+})();
+
+// STANDARD ITERATOR INTERFACE
+var gimmeNext = (function() {
+  var nextVal;
+  
+  return {
+    [Symbol.iterator]: function() {return this}, //computed property name
+    next: function() {
+      if (nextVal === undefined) {
+        nextVal = 1;
+      }
+      else {
+        nextVal = nextVal * 3 + 6;
+      }
+      return {done: false, value: nextVal};
+    }
   };
 })();
