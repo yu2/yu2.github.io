@@ -5,7 +5,13 @@
 }
 
 .port {
+	width: max-content;
 	display: grid;
-	grid-template-columns: fit-content fit-content;
+	grid-template-columns: max-content auto;
 	padding: 1em;
+}
+
+.cell {
+	border-bottom: 1px solid lightgray;
+	padding: 0.5em;
 }
