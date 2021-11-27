@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="crystalball.css" rel="stylesheet" type="text/css">
+  <link href="ball.css" rel="stylesheet" type="text/css">
   <title>I see your future</title>
 </head>
-<body>
-  <img class='crystalball' src="https://raw.githubusercontent.com/yu2/yu2.github.io/master/ball/ball.gif" alt="awesome image"><br>
-  <script src="crystalball.js"></script>
+<body onload="goodMorning()">
+<!--
+  <img id='crystalball' src="ball_noloop.gif"
+  onerror="this.src='https://raw.githubusercontent.com/yu2/yu2.github.io/master/ball/ball.gif'"><br>
+-->
+  <div class="image"></div>
+  <div class="button">
+    <button onclick="buttonClick()">Again</button>
+  </div>
+  <script src="ball.js"></script>
 </body>
