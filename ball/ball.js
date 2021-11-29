@@ -1,7 +1,7 @@
 var img;
 function goodMorning() {
   img = new Image();
-  img.src = "ball_noloop.gif";
+  img.src = "ball_intro.gif";
   var imageHolder = document.getElementsByClassName("image")[0];
   imageHolder.appendChild(img);
 }
