@@ -16,8 +16,10 @@ function goodMorning() {
 function onClick() {
   img.src = "";
   img.src = "ball_noloop.gif";
-  let i = randomNum(5);
-  clips[i].play();
+  var sounds = document.getElementsByTagName('audio');
+  for(i=0; i < clips.length; i++) clips[i].pause();
+  let j = randomNum(5);
+  clips[j].play();
 }
 
 function randomNum(i) {
