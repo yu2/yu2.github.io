@@ -24,5 +24,6 @@ function onClick() {
 
 function randomNum(i) {
   let result = Math.floor(Math.random() * i) + 1;
+  console.log(result);
   return result;
 }
