@@ -13,7 +13,7 @@ function goodMorning() {
   imageHolder.appendChild(img);
 }
 
-function buttonClick() {
+function onClick() {
   img.src = "";
   img.src = "ball_noloop.gif";
   let i = randomNum(5);
