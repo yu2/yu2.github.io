@@ -21,6 +21,6 @@ function buttonClick() {
 }
 
 function randomNum(i) {
-  console.log (Math.random() * 5 + 1);
-  return Math.floor(Math.random() * 5) + 1;
+  let result = Math.floor(Math.random() * 5) + 1);
+  return result;
 }
