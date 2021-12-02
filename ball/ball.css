@@ -14,6 +14,55 @@ body {
   align-items: center;
 }
 
-#crystalball {
+.image_holder {
+  cursor: pointer;
+  transition: opacity 2s;
+  opacity: 0;
+}
 
+.tooltip {
+  position: absolute;
+  color: #fff;
+  background-color: black;
+  width: 5em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: .25em;
+  padding: .25em 0;
+  z-index: 1;
+  left: 50%;
+  margin-top: -1em;
+  margin-left: -2.5em;
+  opacity: 1;
+  transition: opacity 2s;
+
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.appear {
+  opacity: 1;
+}
+
+.disappear {
+  opacity: 0;
+}
+
+.alt_switch {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  margin: 0.2em;
+  background: #ddd;
+  padding: 0 0.2em;
 }
