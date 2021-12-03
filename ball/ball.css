@@ -63,7 +63,7 @@ body {
 .alt_switch {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
   cursor: pointer;
   text-decoration: underline;
   padding: 0 0.2em;
