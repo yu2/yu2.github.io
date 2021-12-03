@@ -35,4 +35,4 @@ rick10, rick11, rick12, rick13, rick14, rick15];
 var anime = [anime1, anime2, anime3, anime4, anime5, anime6, anime7, anime8,
 anime9, anime10];
 var sig = [sig1, sig2, sig3, sig4, sig4, sig5, sig6];
-var clips = [sig, rick, anime];
+var playlist = [sig, rick, anime];

@@ -1,7 +1,8 @@
 var img = new Image();
 img.src = "ball_noloop.gif";
 
-var currentClip = 0;
+var currentPlaylist = 0;
+var lastPlaylist = currentPlaylist;
 var currentTrack = 1;
 
 var tooltip = document.createElement("div");
@@ -21,18 +22,22 @@ function goodMorning() {
   tooltip.classList.add("appear");
 }
 
+var currentlyPlaying;
+var lastPlayed = playlist[0][0];
 function onClick() {
   img.src = "";
   img.src = "ball_noloop.gif";
   //var sounds = document.getElementsByTagName('audio');
-  //for(i=0; i < clips.length; i++) clips[i].pause();
-  if (!clips[currentClip][currentTrack].paused) {
-    clips[currentClip][currentTrack].pause();
-    clips[currentClip][currentTrack].currentTime = 0;
+  //for(i=0; i < playlist.length; i++) playlist[i].pause();
+  if (!lastPlayed.paused) {
+    lastPlayed.pause();
+    lastPlayed.currentTime = 0;
   }
 
-  currentTrack = randomNum(clips[currentClip].length);
-  clips[currentClip][currentTrack].play();
+  currentTrack = randomNum(playlist[currentPlaylist].length);
+  currentlyPlaying = playlist[currentPlaylist][currentTrack];
+  currentlyPlaying.play();
+  lastPlayed = currentlyPlaying;
 
   tooltip.classList.add("disappear");
 }
@@ -44,10 +49,10 @@ function randomNum(i) {
 }
 
 function switchAudio() {
-  if (currentClip < clips.length - 1) {
-    currentClip++;
-    console.log("currentClip is now " + currentClip);
+  if (currentPlaylist < playlist.length - 1) {
+    currentPlaylist++;
+    console.log("currentPlaylist is now " + currentPlaylist);
   } else {
-    currentClip = 0;
+    currentPlaylist = 0;
   }
 }
