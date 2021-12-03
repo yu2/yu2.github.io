@@ -27,7 +27,7 @@ body {
   position: absolute;
   color: #fff;
   background-color: black;
-  width: 5em;
+  width: 6em;
   text-align: center;
   cursor: pointer;
   border-radius: .25em;
@@ -35,7 +35,7 @@ body {
   z-index: 1;
   left: 50%;
   margin-top: -1em;
-  margin-left: -2.5em;
+  margin-left: -3em;
   opacity: 0;
   transition: opacity 1.5s;
 
