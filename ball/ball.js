@@ -3,11 +3,13 @@ img.src = "ball_noloop.gif";
 
 var currentPlaylist = 0;
 var lastPlaylist = currentPlaylist;
-var currentTrack = 1;
+var currentTrack = 0;
 
 var tooltip = document.createElement("div");
 
 function goodMorning() {
+  playlist[currentPlaylist] = shuffle(playlist[currentPlaylist]);
+
   var imageHolder = document.getElementsByClassName("image_holder")[0];
   var tooltipHolder = document.getElementsByClassName("tooltip_holder")[0];
   var contentContainer =
@@ -34,25 +36,43 @@ function onClick() {
     lastPlayed.currentTime = 0;
   }
 
-  currentTrack = randomNum(playlist[currentPlaylist].length);
   currentlyPlaying = playlist[currentPlaylist][currentTrack];
   currentlyPlaying.play();
+  console.log("now playing playlist " + currentPlaylist +
+  " track " + currentTrack);
   lastPlayed = currentlyPlaying;
 
-  tooltip.classList.add("disappear");
-}
+  currentTrack++;
+  if (currentTrack == playlist[currentPlaylist].length) {
+    currentTrack = 0;
+    playlist[currentPlaylist] = shuffle(playlist[currentPlaylist]);
+  }
 
-function randomNum(i) {
-  let result = Math.floor(Math.random() * i);
-  console.log("playing track " + (result + 1));
-  return result;
+  tooltip.classList.add("disappear");
 }
 
 function switchAudio() {
   if (currentPlaylist < playlist.length - 1) {
     currentPlaylist++;
+    playlist[currentPlaylist] = shuffle(playlist[currentPlaylist]);
     console.log("currentPlaylist is now " + currentPlaylist);
   } else {
     currentPlaylist = 0;
+    playlist[currentPlaylist] = shuffle(playlist[currentPlaylist]);
   }
+}
+
+function shuffle(playlist) {
+  let t, i, l = playlist.length;
+
+  while (l) {
+    i = Math.floor(Math.random() * l--);
+
+    t = playlist[l];
+    playlist[l] = playlist[i];
+    playlist[i] = t;
+  }
+
+  currentTrack = 0;
+  return playlist;
 }
