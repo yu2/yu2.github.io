@@ -59,18 +59,26 @@ body {
   opacity: 0;
 }
 
-.button_container {
+.alt_switch {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   cursor: pointer;
-  text-decoration: underline;
-  padding: 0 0.2em;
+  padding: 0.2em 0.2em;
 }
 
 .alt_switch:active {
   color: red;
   user-select: none;
+}
+
+.git-link {
+  font-size: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  padding: 0.2em 0.2em;
 }
 
 .git-link:active {
