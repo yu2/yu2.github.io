@@ -38,7 +38,6 @@ body {
   margin-left: -3em;
   opacity: 0;
   transition: opacity 1.5s;
-
 }
 
 .tooltip::after {
@@ -60,7 +59,7 @@ body {
   opacity: 0;
 }
 
-.alt_switch {
+.button_container {
   position: absolute;
   right: 0;
   top: 0;
@@ -72,4 +71,13 @@ body {
 .alt_switch:active {
   color: red;
   user-select: none;
+}
+
+.git-link:active {
+  color: red;
+  user-select: none;
+}
+
+.git-link:visited {
+  color: black;
 }
