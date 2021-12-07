@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="./css/all.css" rel="stylesheet">
   <link href="ball.css" rel="stylesheet" type="text/css">
   <title>I see your future</title>
@@ -15,8 +15,11 @@
     <div class="image_holder" onclick="onClick()"></div>
   </div>
 
+  <div class="tracks_container"></div>
+
   <div class="alt_switch" onclick="switchAudio()"><i class="fas fa-random"></i></div>
   <a class="git-link" href="https://github.com/yu2/yu2.github.io/tree/master/ball" target="_blank"><i class="fab fa-github"></i></a>
+  <div class="list_tracks" onclick="listTracks(playlist[currentPlaylist])"><i class="fas fa-music"></i></div>
 
   <script src="sounds.js"></script>
   <script src="ball.js"></script>

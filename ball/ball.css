@@ -89,3 +89,26 @@ body {
 .git-link:visited {
   color: black;
 }
+
+.list_tracks {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  padding: 0.2em 0.2em;
+}
+
+.list_tracks:active {
+  color: red;
+  user-select: none;
+}
+
+.tracks_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  left: 0;
+  top: 1.5em;
+  border: solid blue;
+}

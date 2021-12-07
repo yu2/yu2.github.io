@@ -76,3 +76,34 @@ function shuffle(playlist) {
   currentTrack = 0;
   return playlist;
 }
+
+var trackContainer = document.getElementsByClassName("tracks_container")[0];
+var re = /[a-zA-Z_]+(?:\.mp4|\.m4a|\.mp3)$/;
+var trackName = [];
+function listTracks(p) {
+
+  let linkText;
+  for (let i = 0; i < p.length; i++) {
+    let a = document.createElement("a");
+    trackName.push(p[i].src.match(re)[0]);
+    console.log(trackName[i]);
+    linkText = document.createTextNode(trackName[i]);
+    a.append(linkText);
+    a.setAttribute("id", i);
+    a.addEventListener("click", retrieveAudio);
+    trackContainer.appendChild(a);
+    //trackBox.innerText += p[i].src + "\n";
+  }
+}
+
+function retrieveAudio() {
+  let id = event.target.id;
+  let num = String(id);
+  console.log(id);
+  for (let i = 0; i < playlist[currentPlaylist].length; i++) {
+    if (playlist[currentPlaylist][i].src.includes(trackName[num])) {
+      playlist[currentPlaylist][i].play();
+      break;
+    }
+  }
+}
