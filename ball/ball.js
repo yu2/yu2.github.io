@@ -23,6 +23,10 @@ function goodMorning() {
   contentContainer.classList.add("appear");
   tooltip.classList.add("appear");
   listTracks(playlist[currentPlaylist]);
+
+  setTimeout(() => {
+    tooltip.classList.add("disappear");
+  }, 15000);
 }
 
 var currentlyPlaying;
