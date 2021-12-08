@@ -22,6 +22,7 @@ function goodMorning() {
 
   contentContainer.classList.add("appear");
   tooltip.classList.add("appear");
+  listTracks(playlist[currentPlaylist]);
 }
 
 var currentlyPlaying;
@@ -60,6 +61,7 @@ function switchAudio() {
     currentPlaylist = 0;
     playlist[currentPlaylist] = shuffle(playlist[currentPlaylist]);
   }
+  listTracks(playlist[currentPlaylist]);
 }
 
 function shuffle(playlist) {
@@ -79,10 +81,10 @@ function shuffle(playlist) {
 
 var trackContainer = document.getElementsByClassName("tracks_container")[0];
 var re = /[a-zA-Z_]+(?:\.mp4|\.m4a|\.mp3)$/;
-var trackName = [];
 function listTracks(p) {
-
   let linkText;
+  let trackName = [];
+  trackContainer.innerHTML = "";
   for (let i = 0; i < p.length; i++) {
     let a = document.createElement("a");
     trackName.push(p[i].src.match(re)[0]);
@@ -92,18 +94,16 @@ function listTracks(p) {
     a.setAttribute("id", i);
     a.addEventListener("click", retrieveAudio);
     trackContainer.appendChild(a);
-    //trackBox.innerText += p[i].src + "\n";
   }
+}
+
+function toggleOpacity(e) {
+  let opacity = e.style.opacity;
+  e.style.opacity = (opacity == 0) ? 1 : 0;
 }
 
 function retrieveAudio() {
   let id = event.target.id;
   let num = String(id);
-  console.log(id);
-  for (let i = 0; i < playlist[currentPlaylist].length; i++) {
-    if (playlist[currentPlaylist][i].src.includes(trackName[num])) {
-      playlist[currentPlaylist][i].play();
-      break;
-    }
-  }
+  playlist[currentPlaylist][num].play();
 }

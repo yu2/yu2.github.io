@@ -110,5 +110,14 @@ body {
   flex-basis: 100%;
   left: 0;
   top: 1.5em;
-  border: solid blue;
+  opacity: 0;
+  transition: opacity .5s;
+  line-height: 110%;
+}
+
+.tracks_container a {
+  font-family: monospace;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0.1em 0.2em;
 }
