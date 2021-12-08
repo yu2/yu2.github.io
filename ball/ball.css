@@ -120,4 +120,5 @@ body {
   text-decoration: underline;
   cursor: pointer;
   margin: 0.1em 0.2em;
+  user-select:none;
 }
