@@ -48,9 +48,11 @@ function onClick() {
   lastPlayed = currentlyPlaying;
 
   currentTrack++;
+  //check if current track is last track in playlist
   if (currentTrack == playlist[currentPlaylist].length) {
     currentTrack = 0;
     playlist[currentPlaylist] = shuffle(playlist[currentPlaylist]);
+    listTracks(playlist[currentPlaylist]);
   }
 
   tooltip.classList.add("disappear");
